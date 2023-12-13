@@ -1,0 +1,114 @@
+{
+    "BADMINTON": {
+        "step": "sport_loop",
+        "url": "https://www.flashscore.com/badminton/"
+    },
+    "BEACH_SOCCER": {
+        "step": "sport_loop",
+        "url": "https://www.flashscore.com/beach-soccer/"
+    },
+    "BEACH_VOLLEYBALL": {
+        "step": "ligue tornaments loop",
+        "url": "https://www.flashscore.com/beach-volleyball/"
+    },
+    "BOXING": {
+        "step": "sport_loop",
+        "url": "https://www.flashscore.com/boxing/"
+    },
+    "CYCLING": {
+        "step": "ligue tornaments loop",
+        "url": "https://www.flashscore.com/cycling/"
+    },
+    "DARTS": {
+        "step": "loop teams player",
+        "url": "https://www.flashscore.com/darts/"
+    },
+    "ESPORTS": {
+        "step": "sport_loop",
+        "url": "https://www.flashscore.com/esports/"
+    },
+    "FIELD_HOCKEY": {
+        "step": "sport_loop",
+        "url": "https://www.flashscore.com/field-hockey/"
+    },
+    "FLOORBALL": {
+        "step": "sport_loop",
+        "url": "https://www.flashscore.com/floorball/"
+    },
+    "FOOTBALL": {
+        "step": "sport_loop",
+        "url": "https://www.flashscore.com/football/"
+    },
+    "FUTSAL": {
+        "step": "sport_loop",
+        "url": "https://www.flashscore.com/futsal/"
+    },
+    "GOLF": {
+        "step": "sport_loop",
+        "url": "https://www.flashscore.com/golf/"
+    },
+    "HANDBALL": {
+        "step": "sport_loop",
+        "url": "https://www.flashscore.com/handball/"
+    },
+    "HOCKEY": {
+        "step": "sport_loop",
+        "url": "https://www.flashscore.com/hockey/"
+    },
+    "HORSE_RACING": {
+        "step": "sport_loop",
+        "url": "https://www.flashscore.com/horse-racing/"
+    },
+    "KABADDI": {
+        "step": "sport_loop",
+        "url": "https://www.flashscore.com/kabaddi/"
+    },
+    "MMA": {
+        "step": "sport_loop",
+        "url": "https://www.flashscore.com/mma/"
+    },
+    "MOTORSPORT": {
+        "step": "sport_loop",
+        "url": "https://www.flashscore.com/motorsport/"
+    },
+    "NETBALL": {
+        "step": "sport_loop",
+        "url": "https://www.flashscore.com/netball/"
+    },
+    "PES\u00c4PALLO": {
+        "step": "sport_loop",
+        "url": "https://www.flashscore.com/pesapallo/"
+    },
+    "RUGBY_LEAGUE": {
+        "step": "sport_loop",
+        "url": "https://www.flashscore.com/rugby-league/"
+    },
+    "RUGBY_UNION": {
+        "step": "sport_loop",
+        "url": "https://www.flashscore.com/rugby-union/"
+    },
+    "SNOOKER": {
+        "step": "sport_loop",
+        "url": "https://www.flashscore.com/snooker/"
+    },
+    "TABLE_TENNIS": {
+        "step": "sport_loop",
+        "url": "https://www.flashscore.com/table-tennis/"
+    },
+    "TENNIS": {
+        "step": "sport_loop",
+        "url": "https://www.flashscore.com/tennis/"
+    },
+    "VOLLEYBALL": {
+        "step": "sport_loop",
+        "url": "https://www.flashscore.com/volleyball/"
+    },
+    "WATER_POLO": {
+        "step": "sport_loop",
+        "url": "https://www.flashscore.com/water-polo/"
+    },
+    "WINTER_SPORTS": {
+        "step": "sport_loop",
+        "url": "https://www.flashscore.com/winter-sports/"
+    }
+}

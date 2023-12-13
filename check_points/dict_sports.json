@@ -1,0 +1,1166 @@
+{
+    "AM._FOOTBALL": {
+        "CFL": {
+            "CFL": {
+                "url_team": "https://www.flashscore.com/american-football/canada/cfl/",
+                "url_news": "https://www.flashscore.com/american-football/canada/cfl/news/"
+            },
+            "U_Sports": {
+                "url_team": "https://www.flashscore.com/american-football/canada/u-sports/",
+                "url_news": "https://www.flashscore.com/american-football/canada/u-sports/news/"
+            }
+        },
+        "NFL": {
+            "NFL": {
+                "url_team": "https://www.flashscore.com/american-football/usa/nfl/",
+                "url_news": "https://www.flashscore.com/american-football/usa/nfl/news/"
+            },
+            "NCAA": {
+                "url_team": "https://www.flashscore.com/american-football/usa/ncaa/",
+                "url_news": "https://www.flashscore.com/american-football/usa/ncaa/news/"
+            },
+            "AFL": {
+                "url_team": "https://www.flashscore.com/american-football/usa/afl/",
+                "url_news": "https://www.flashscore.com/american-football/usa/afl/news/"
+            },
+            "AAF": {
+                "url_team": "https://www.flashscore.com/american-football/usa/aaf/",
+                "url_news": "https://www.flashscore.com/american-football/usa/aaf/news/"
+            },
+            "USFL": {
+                "url_team": "https://www.flashscore.com/american-football/usa/usfl/",
+                "url_news": "https://www.flashscore.com/american-football/usa/usfl/news/"
+            },
+            "XFL": {
+                "url_team": "https://www.flashscore.com/american-football/usa/xfl/",
+                "url_news": "https://www.flashscore.com/american-football/usa/xfl/news/"
+            }
+        }
+    },
+    "AUSSIE_RULES": {
+        "AFL": {
+            "AFL": {
+                "url_team": "https://www.flashscore.com/aussie-rules/australia/afl/",
+                "url_news": "https://www.flashscore.com/aussie-rules/australia/afl/news/"
+            },
+            "AAMI_Community_Series": {
+                "url_team": "https://www.flashscore.com/aussie-rules/australia/aami-community-series/",
+                "url_news": "https://www.flashscore.com/aussie-rules/australia/aami-community-series/news/"
+            },
+            "NTFL": {
+                "url_team": "https://www.flashscore.com/aussie-rules/australia/ntfl/",
+                "url_news": "https://www.flashscore.com/aussie-rules/australia/ntfl/news/"
+            },
+            "QAFL": {
+                "url_team": "https://www.flashscore.com/aussie-rules/australia/qafl/",
+                "url_news": "https://www.flashscore.com/aussie-rules/australia/qafl/news/"
+            },
+            "SANFL": {
+                "url_team": "https://www.flashscore.com/aussie-rules/australia/sanfl/",
+                "url_news": "https://www.flashscore.com/aussie-rules/australia/sanfl/news/"
+            },
+            "VFL": {
+                "url_team": "https://www.flashscore.com/aussie-rules/australia/vfl/",
+                "url_news": "https://www.flashscore.com/aussie-rules/australia/vfl/news/"
+            },
+            "TSL": {
+                "url_team": "https://www.flashscore.com/aussie-rules/australia/tsl/",
+                "url_news": "https://www.flashscore.com/aussie-rules/australia/tsl/news/"
+            },
+            "WAFL": {
+                "url_team": "https://www.flashscore.com/aussie-rules/australia/wafl/",
+                "url_news": "https://www.flashscore.com/aussie-rules/australia/wafl/news/"
+            },
+            "AFL_Women": {
+                "url_team": "https://www.flashscore.com/aussie-rules/australia/afl-women/",
+                "url_news": "https://www.flashscore.com/aussie-rules/australia/afl-women/news/"
+            }
+        },
+        "SANFL": {
+            "AFL": {
+                "url_team": "https://www.flashscore.com/aussie-rules/australia/afl/",
+                "url_news": "https://www.flashscore.com/aussie-rules/australia/afl/news/"
+            },
+            "AAMI_Community_Series": {
+                "url_team": "https://www.flashscore.com/aussie-rules/australia/aami-community-series/",
+                "url_news": "https://www.flashscore.com/aussie-rules/australia/aami-community-series/news/"
+            },
+            "NTFL": {
+                "url_team": "https://www.flashscore.com/aussie-rules/australia/ntfl/",
+                "url_news": "https://www.flashscore.com/aussie-rules/australia/ntfl/news/"
+            },
+            "QAFL": {
+                "url_team": "https://www.flashscore.com/aussie-rules/australia/qafl/",
+                "url_news": "https://www.flashscore.com/aussie-rules/australia/qafl/news/"
+            },
+            "SANFL": {
+                "url_team": "https://www.flashscore.com/aussie-rules/australia/sanfl/",
+                "url_news": "https://www.flashscore.com/aussie-rules/australia/sanfl/news/"
+            },
+            "VFL": {
+                "url_team": "https://www.flashscore.com/aussie-rules/australia/vfl/",
+                "url_news": "https://www.flashscore.com/aussie-rules/australia/vfl/news/"
+            },
+            "TSL": {
+                "url_team": "https://www.flashscore.com/aussie-rules/australia/tsl/",
+                "url_news": "https://www.flashscore.com/aussie-rules/australia/tsl/news/"
+            },
+            "WAFL": {
+                "url_team": "https://www.flashscore.com/aussie-rules/australia/wafl/",
+                "url_news": "https://www.flashscore.com/aussie-rules/australia/wafl/news/"
+            },
+            "AFL_Women": {
+                "url_team": "https://www.flashscore.com/aussie-rules/australia/afl-women/",
+                "url_news": "https://www.flashscore.com/aussie-rules/australia/afl-women/news/"
+            }
+        },
+        "VFL": {
+            "AFL": {
+                "url_team": "https://www.flashscore.com/aussie-rules/australia/afl/",
+                "url_news": "https://www.flashscore.com/aussie-rules/australia/afl/news/"
+            },
+            "AAMI_Community_Series": {
+                "url_team": "https://www.flashscore.com/aussie-rules/australia/aami-community-series/",
+                "url_news": "https://www.flashscore.com/aussie-rules/australia/aami-community-series/news/"
+            },
+            "NTFL": {
+                "url_team": "https://www.flashscore.com/aussie-rules/australia/ntfl/",
+                "url_news": "https://www.flashscore.com/aussie-rules/australia/ntfl/news/"
+            },
+            "QAFL": {
+                "url_team": "https://www.flashscore.com/aussie-rules/australia/qafl/",
+                "url_news": "https://www.flashscore.com/aussie-rules/australia/qafl/news/"
+            },
+            "SANFL": {
+                "url_team": "https://www.flashscore.com/aussie-rules/australia/sanfl/",
+                "url_news": "https://www.flashscore.com/aussie-rules/australia/sanfl/news/"
+            },
+            "VFL": {
+                "url_team": "https://www.flashscore.com/aussie-rules/australia/vfl/",
+                "url_news": "https://www.flashscore.com/aussie-rules/australia/vfl/news/"
+            },
+            "TSL": {
+                "url_team": "https://www.flashscore.com/aussie-rules/australia/tsl/",
+                "url_news": "https://www.flashscore.com/aussie-rules/australia/tsl/news/"
+            },
+            "WAFL": {
+                "url_team": "https://www.flashscore.com/aussie-rules/australia/wafl/",
+                "url_news": "https://www.flashscore.com/aussie-rules/australia/wafl/news/"
+            },
+            "AFL_Women": {
+                "url_team": "https://www.flashscore.com/aussie-rules/australia/afl-women/",
+                "url_news": "https://www.flashscore.com/aussie-rules/australia/afl-women/news/"
+            }
+        },
+        "WAFL": {
+            "AFL": {
+                "url_team": "https://www.flashscore.com/aussie-rules/australia/afl/",
+                "url_news": "https://www.flashscore.com/aussie-rules/australia/afl/news/"
+            },
+            "AAMI_Community_Series": {
+                "url_team": "https://www.flashscore.com/aussie-rules/australia/aami-community-series/",
+                "url_news": "https://www.flashscore.com/aussie-rules/australia/aami-community-series/news/"
+            },
+            "NTFL": {
+                "url_team": "https://www.flashscore.com/aussie-rules/australia/ntfl/",
+                "url_news": "https://www.flashscore.com/aussie-rules/australia/ntfl/news/"
+            },
+            "QAFL": {
+                "url_team": "https://www.flashscore.com/aussie-rules/australia/qafl/",
+                "url_news": "https://www.flashscore.com/aussie-rules/australia/qafl/news/"
+            },
+            "SANFL": {
+                "url_team": "https://www.flashscore.com/aussie-rules/australia/sanfl/",
+                "url_news": "https://www.flashscore.com/aussie-rules/australia/sanfl/news/"
+            },
+            "VFL": {
+                "url_team": "https://www.flashscore.com/aussie-rules/australia/vfl/",
+                "url_news": "https://www.flashscore.com/aussie-rules/australia/vfl/news/"
+            },
+            "TSL": {
+                "url_team": "https://www.flashscore.com/aussie-rules/australia/tsl/",
+                "url_news": "https://www.flashscore.com/aussie-rules/australia/tsl/news/"
+            },
+            "WAFL": {
+                "url_team": "https://www.flashscore.com/aussie-rules/australia/wafl/",
+                "url_news": "https://www.flashscore.com/aussie-rules/australia/wafl/news/"
+            },
+            "AFL_Women": {
+                "url_team": "https://www.flashscore.com/aussie-rules/australia/afl-women/",
+                "url_news": "https://www.flashscore.com/aussie-rules/australia/afl-women/news/"
+            }
+        }
+    },
+    "BANDY": {
+        "Bandyliiga": {
+            "Bandyliiga": {
+                "url_team": "https://www.flashscore.com/bandy/finland/bandyliiga/",
+                "url_news": "https://www.flashscore.com/bandy/finland/bandyliiga/news/"
+            },
+            "Suomen_Cup": {
+                "url_team": "https://www.flashscore.com/bandy/finland/suomen-cup/",
+                "url_news": "https://www.flashscore.com/bandy/finland/suomen-cup/news/"
+            }
+        },
+        "Elitserien": {
+            "Elitserien": {
+                "url_team": "https://www.flashscore.com/bandy/sweden/elitserien/",
+                "url_news": "https://www.flashscore.com/bandy/sweden/elitserien/news/"
+            },
+            "Allsvenskan": {
+                "url_team": "https://www.flashscore.com/bandy/sweden/allsvenskan/",
+                "url_news": "https://www.flashscore.com/bandy/sweden/allsvenskan/news/"
+            },
+            "Svenska_Cupen": {
+                "url_team": "https://www.flashscore.com/bandy/sweden/svenska-cupen/",
+                "url_news": "https://www.flashscore.com/bandy/sweden/svenska-cupen/news/"
+            },
+            "Elitserien_Women": {
+                "url_team": "https://www.flashscore.com/bandy/sweden/elitserien-women/",
+                "url_news": "https://www.flashscore.com/bandy/sweden/elitserien-women/news/"
+            }
+        },
+        "World_Championship": {
+            "World_Championship": {
+                "url_team": "https://www.flashscore.com/bandy/world/world-championship/",
+                "url_news": "https://www.flashscore.com/bandy/world/world-championship/news/"
+            },
+            "World_Championship_B": {
+                "url_team": "https://www.flashscore.com/bandy/world/world-championship-b/",
+                "url_news": "https://www.flashscore.com/bandy/world/world-championship-b/news/"
+            },
+            "World_Cup": {
+                "url_team": "https://www.flashscore.com/bandy/world/world-cup/",
+                "url_news": "https://www.flashscore.com/bandy/world/world-cup/news/"
+            },
+            "Universiade": {
+                "url_team": "https://www.flashscore.com/bandy/world/universiade/",
+                "url_news": "https://www.flashscore.com/bandy/world/universiade/news/"
+            },
+            "Friendly_International": {
+                "url_team": "https://www.flashscore.com/bandy/world/friendly-international/",
+                "url_news": "https://www.flashscore.com/bandy/world/friendly-international/news/"
+            },
+            "World_Championship_Women": {
+                "url_team": "https://www.flashscore.com/bandy/world/world-championship-women/",
+                "url_news": "https://www.flashscore.com/bandy/world/world-championship-women/news/"
+            },
+            "Universiade_Women": {
+                "url_team": "https://www.flashscore.com/bandy/world/universiade-women/",
+                "url_news": "https://www.flashscore.com/bandy/world/universiade-women/news/"
+            }
+        }
+    },
+    "BASEBALL": {
+        "LIDOM": {
+            "LIDOM": {
+                "url_team": "https://www.flashscore.com/baseball/dominican-republic/lidom/",
+                "url_news": "https://www.flashscore.com/baseball/dominican-republic/lidom/news/"
+            }
+        },
+        "NPB": {
+            "NPB": {
+                "url_team": "https://www.flashscore.com/baseball/japan/npb/",
+                "url_news": "https://www.flashscore.com/baseball/japan/npb/news/"
+            },
+            "Spring_Koshien": {
+                "url_team": "https://www.flashscore.com/baseball/japan/spring-koshien/",
+                "url_news": "https://www.flashscore.com/baseball/japan/spring-koshien/news/"
+            },
+            "Summer_Koshien": {
+                "url_team": "https://www.flashscore.com/baseball/japan/summer-koshien/",
+                "url_news": "https://www.flashscore.com/baseball/japan/summer-koshien/news/"
+            }
+        },
+        "LMB": {
+            "LMB": {
+                "url_team": "https://www.flashscore.com/baseball/mexico/lmb/",
+                "url_news": "https://www.flashscore.com/baseball/mexico/lmb/news/"
+            },
+            "LMP": {
+                "url_team": "https://www.flashscore.com/baseball/mexico/lmp/",
+                "url_news": "https://www.flashscore.com/baseball/mexico/lmp/news/"
+            }
+        },
+        "LBPRC": {
+            "LBPRC": {
+                "url_team": "https://www.flashscore.com/baseball/puerto-rico/lbprc/",
+                "url_news": "https://www.flashscore.com/baseball/puerto-rico/lbprc/news/"
+            }
+        },
+        "KBO": {
+            "KBO": {
+                "url_team": "https://www.flashscore.com/baseball/south-korea/kbo/",
+                "url_news": "https://www.flashscore.com/baseball/south-korea/kbo/news/"
+            }
+        },
+        "MLB": {
+            "MLB": {
+                "url_team": "https://www.flashscore.com/baseball/usa/mlb/",
+                "url_news": "https://www.flashscore.com/baseball/usa/mlb/news/"
+            },
+            "Triple-A_National_Championship": {
+                "url_team": "https://www.flashscore.com/baseball/usa/triple-a-national-championship/",
+                "url_news": "https://www.flashscore.com/baseball/usa/triple-a-national-championship/news/"
+            },
+            "IL": {
+                "url_team": "https://www.flashscore.com/baseball/usa/il/",
+                "url_news": "https://www.flashscore.com/baseball/usa/il/news/"
+            },
+            "PCL": {
+                "url_team": "https://www.flashscore.com/baseball/usa/pcl/",
+                "url_news": "https://www.flashscore.com/baseball/usa/pcl/news/"
+            }
+        },
+        "LVBP": {
+            "LVBP": {
+                "url_team": "https://www.flashscore.com/baseball/venezuela/lvbp/",
+                "url_news": "https://www.flashscore.com/baseball/venezuela/lvbp/news/"
+            },
+            "LMBP": {
+                "url_team": "https://www.flashscore.com/baseball/venezuela/lmbp/",
+                "url_news": "https://www.flashscore.com/baseball/venezuela/lmbp/news/"
+            }
+        },
+        "World_Baseball_Classic": {
+            "Olympic_Games": {
+                "url_team": "https://www.flashscore.com/baseball/world/olympic-games/",
+                "url_news": "https://www.flashscore.com/baseball/world/olympic-games/news/"
+            },
+            "World_Baseball_Classic": {
+                "url_team": "https://www.flashscore.com/baseball/world/world-baseball-classic/",
+                "url_news": "https://www.flashscore.com/baseball/world/world-baseball-classic/news/"
+            },
+            "WBSC_Premier_12": {
+                "url_team": "https://www.flashscore.com/baseball/world/wbsc-premier-12/",
+                "url_news": "https://www.flashscore.com/baseball/world/wbsc-premier-12/news/"
+            },
+            "World_Cup_U23": {
+                "url_team": "https://www.flashscore.com/baseball/world/world-cup-u23/",
+                "url_news": "https://www.flashscore.com/baseball/world/world-cup-u23/news/"
+            },
+            "Champions_League_Americas": {
+                "url_team": "https://www.flashscore.com/baseball/world/champions-league-americas/",
+                "url_news": "https://www.flashscore.com/baseball/world/champions-league-americas/news/"
+            },
+            "All-Star_Series": {
+                "url_team": "https://www.flashscore.com/baseball/world/all-star-series/",
+                "url_news": "https://www.flashscore.com/baseball/world/all-star-series/news/"
+            },
+            "Pan_American_Games": {
+                "url_team": "https://www.flashscore.com/baseball/world/pan-american-games/",
+                "url_news": "https://www.flashscore.com/baseball/world/pan-american-games/news/"
+            },
+            "Universiade": {
+                "url_team": "https://www.flashscore.com/baseball/world/universiade/",
+                "url_news": "https://www.flashscore.com/baseball/world/universiade/news/"
+            },
+            "Friendly_International": {
+                "url_team": "https://www.flashscore.com/baseball/world/friendly-international/",
+                "url_news": "https://www.flashscore.com/baseball/world/friendly-international/news/"
+            },
+            "Club_Friendly": {
+                "url_team": "https://www.flashscore.com/baseball/world/club-friendly/",
+                "url_news": "https://www.flashscore.com/baseball/world/club-friendly/news/"
+            }
+        }
+    },
+    "BASKETBALL": {
+        "Liga_A": {
+            "Liga_A": {
+                "url_team": "https://www.flashscore.com/basketball/argentina/liga-a/",
+                "url_news": "https://www.flashscore.com/basketball/argentina/liga-a/news/"
+            },
+            "Super_4": {
+                "url_team": "https://www.flashscore.com/basketball/argentina/super-4/",
+                "url_news": "https://www.flashscore.com/basketball/argentina/super-4/news/"
+            },
+            "Torneo_Super_20": {
+                "url_team": "https://www.flashscore.com/basketball/argentina/torneo-super-20/",
+                "url_news": "https://www.flashscore.com/basketball/argentina/torneo-super-20/news/"
+            },
+            "Super_Cup": {
+                "url_team": "https://www.flashscore.com/basketball/argentina/super-cup/",
+                "url_news": "https://www.flashscore.com/basketball/argentina/super-cup/news/"
+            },
+            "Liga_Femenina_Women": {
+                "url_team": "https://www.flashscore.com/basketball/argentina/liga-femenina-women/",
+                "url_news": "https://www.flashscore.com/basketball/argentina/liga-femenina-women/news/"
+            }
+        },
+        "NBB": {
+            "NBB": {
+                "url_team": "https://www.flashscore.com/basketball/brazil/nbb/",
+                "url_news": "https://www.flashscore.com/basketball/brazil/nbb/news/"
+            },
+            "Super_8": {
+                "url_team": "https://www.flashscore.com/basketball/brazil/super-8/",
+                "url_news": "https://www.flashscore.com/basketball/brazil/super-8/news/"
+            },
+            "LBF_Women": {
+                "url_team": "https://www.flashscore.com/basketball/brazil/lbf-women/",
+                "url_news": "https://www.flashscore.com/basketball/brazil/lbf-women/news/"
+            }
+        },
+        "CBA": {
+            "CBA": {
+                "url_team": "https://www.flashscore.com/basketball/china/cba/",
+                "url_news": "https://www.flashscore.com/basketball/china/cba/news/"
+            },
+            "WCBA_Women": {
+                "url_team": "https://www.flashscore.com/basketball/china/wcba-women/",
+                "url_news": "https://www.flashscore.com/basketball/china/wcba-women/news/"
+            }
+        },
+        "LNB": {
+            "LNB": {
+                "url_team": "https://www.flashscore.com/basketball/france/lnb/",
+                "url_news": "https://www.flashscore.com/basketball/france/lnb/news/"
+            },
+            "Pro_B": {
+                "url_team": "https://www.flashscore.com/basketball/france/pro-b/",
+                "url_news": "https://www.flashscore.com/basketball/france/pro-b/news/"
+            },
+            "French_Cup": {
+                "url_team": "https://www.flashscore.com/basketball/france/french-cup/",
+                "url_news": "https://www.flashscore.com/basketball/france/french-cup/news/"
+            },
+            "LNB_Super_Cup": {
+                "url_team": "https://www.flashscore.com/basketball/france/lnb-super-cup/",
+                "url_news": "https://www.flashscore.com/basketball/france/lnb-super-cup/news/"
+            },
+            "Leaders_Cup": {
+                "url_team": "https://www.flashscore.com/basketball/france/leaders-cup/",
+                "url_news": "https://www.flashscore.com/basketball/france/leaders-cup/news/"
+            },
+            "All_Stars": {
+                "url_team": "https://www.flashscore.com/basketball/france/all-stars/",
+                "url_news": "https://www.flashscore.com/basketball/france/all-stars/news/"
+            },
+            "Espoirs_U21": {
+                "url_team": "https://www.flashscore.com/basketball/france/espoirs-u21/",
+                "url_news": "https://www.flashscore.com/basketball/france/espoirs-u21/news/"
+            },
+            "LFB_Women": {
+                "url_team": "https://www.flashscore.com/basketball/france/lfb-women/",
+                "url_news": "https://www.flashscore.com/basketball/france/lfb-women/news/"
+            },
+            "Ligue_2_Women": {
+                "url_team": "https://www.flashscore.com/basketball/france/ligue-2-women/",
+                "url_news": "https://www.flashscore.com/basketball/france/ligue-2-women/news/"
+            },
+            "French_Cup_Women": {
+                "url_team": "https://www.flashscore.com/basketball/france/french-cup-women/",
+                "url_news": "https://www.flashscore.com/basketball/france/french-cup-women/news/"
+            },
+            "": {
+                "url_team": "https://www.flashscore.com/basketball/france/lfb-super-cup-women/",
+                "url_news": "https://www.flashscore.com/basketball/france/lfb-super-cup-women/news/"
+            }
+        },
+        "Lega_A": {
+            "Lega_A": {
+                "url_team": "https://www.flashscore.com/basketball/italy/lega-a/",
+                "url_news": "https://www.flashscore.com/basketball/italy/lega-a/news/"
+            },
+            "Serie_A2": {
+                "url_team": "https://www.flashscore.com/basketball/italy/serie-a2/",
+                "url_news": "https://www.flashscore.com/basketball/italy/serie-a2/news/"
+            },
+            "Italian_Cup": {
+                "url_team": "https://www.flashscore.com/basketball/italy/italian-cup/",
+                "url_news": "https://www.flashscore.com/basketball/italy/italian-cup/news/"
+            },
+            "Lega_A_-_Super_Cup": {
+                "url_team": "https://www.flashscore.com/basketball/italy/lega-a-super-cup/",
+                "url_news": "https://www.flashscore.com/basketball/italy/lega-a-super-cup/news/"
+            },
+            "Serie_A1_Women": {
+                "url_team": "https://www.flashscore.com/basketball/italy/serie-a1-women/",
+                "url_news": "https://www.flashscore.com/basketball/italy/serie-a1-women/news/"
+            },
+            "Serie_A2_Women_-_Gr._A": {
+                "url_team": "https://www.flashscore.com/basketball/italy/serie-a2-women-gr-a/",
+                "url_news": "https://www.flashscore.com/basketball/italy/serie-a2-women-gr-a/news/"
+            },
+            "Serie_A2_Women_-_Gr._B": {
+                "url_team": "https://www.flashscore.com/basketball/italy/serie-a2-women-gr-b/",
+                "url_news": "https://www.flashscore.com/basketball/italy/serie-a2-women-gr-b/news/"
+            },
+            "Coppa_Italia_Women": {
+                "url_team": "https://www.flashscore.com/basketball/italy/coppa-italia-women/",
+                "url_news": "https://www.flashscore.com/basketball/italy/coppa-italia-women/news/"
+            },
+            "Super_Cup_Women": {
+                "url_team": "https://www.flashscore.com/basketball/italy/super-cup-women/",
+                "url_news": "https://www.flashscore.com/basketball/italy/super-cup-women/news/"
+            }
+        },
+        "ACB": {
+            "ACB": {
+                "url_team": "https://www.flashscore.com/basketball/spain/acb/",
+                "url_news": "https://www.flashscore.com/basketball/spain/acb/news/"
+            },
+            "LEB_Oro": {
+                "url_team": "https://www.flashscore.com/basketball/spain/leb-oro/",
+                "url_news": "https://www.flashscore.com/basketball/spain/leb-oro/news/"
+            },
+            "LEB_Plata": {
+                "url_team": "https://www.flashscore.com/basketball/spain/leb-plata/",
+                "url_news": "https://www.flashscore.com/basketball/spain/leb-plata/news/"
+            },
+            "Spanish_Cup": {
+                "url_team": "https://www.flashscore.com/basketball/spain/spanish-cup/",
+                "url_news": "https://www.flashscore.com/basketball/spain/spanish-cup/news/"
+            },
+            "Supercopa_ACB": {
+                "url_team": "https://www.flashscore.com/basketball/spain/supercopa-acb/",
+                "url_news": "https://www.flashscore.com/basketball/spain/supercopa-acb/news/"
+            },
+            "Liga_Femenina_Women": {
+                "url_team": "https://www.flashscore.com/basketball/spain/liga-femenina-women/",
+                "url_news": "https://www.flashscore.com/basketball/spain/liga-femenina-women/news/"
+            },
+            "Spanish_Cup_Women": {
+                "url_team": "https://www.flashscore.com/basketball/spain/spanish-cup-women/",
+                "url_news": "https://www.flashscore.com/basketball/spain/spanish-cup-women/news/"
+            },
+            "Supercopa_Women": {
+                "url_team": "https://www.flashscore.com/basketball/spain/supercopa-women/",
+                "url_news": "https://www.flashscore.com/basketball/spain/supercopa-women/news/"
+            }
+        },
+        "Super_Lig": {
+            "Super_Lig": {
+                "url_team": "https://www.flashscore.com/basketball/turkey/super-lig/",
+                "url_news": "https://www.flashscore.com/basketball/turkey/super-lig/news/"
+            },
+            "TBL": {
+                "url_team": "https://www.flashscore.com/basketball/turkey/tbl/",
+                "url_news": "https://www.flashscore.com/basketball/turkey/tbl/news/"
+            },
+            "TB2L": {
+                "url_team": "https://www.flashscore.com/basketball/turkey/tb2l/",
+                "url_news": "https://www.flashscore.com/basketball/turkey/tb2l/news/"
+            },
+            "Turkish_Cup": {
+                "url_team": "https://www.flashscore.com/basketball/turkey/turkish-cup/",
+                "url_news": "https://www.flashscore.com/basketball/turkey/turkish-cup/news/"
+            },
+            "Federation_Cup": {
+                "url_team": "https://www.flashscore.com/basketball/turkey/federation-cup/",
+                "url_news": "https://www.flashscore.com/basketball/turkey/federation-cup/news/"
+            },
+            "Super_Cup": {
+                "url_team": "https://www.flashscore.com/basketball/turkey/super-cup/",
+                "url_news": "https://www.flashscore.com/basketball/turkey/super-cup/news/"
+            },
+            "KBSL_Women": {
+                "url_team": "https://www.flashscore.com/basketball/turkey/kbsl-women/",
+                "url_news": "https://www.flashscore.com/basketball/turkey/kbsl-women/news/"
+            },
+            "TKBL_Women": {
+                "url_team": "https://www.flashscore.com/basketball/turkey/tkbl-women/",
+                "url_news": "https://www.flashscore.com/basketball/turkey/tkbl-women/news/"
+            },
+            "Turkish_Cup_Women": {
+                "url_team": "https://www.flashscore.com/basketball/turkey/turkish-cup-women/",
+                "url_news": "https://www.flashscore.com/basketball/turkey/turkish-cup-women/news/"
+            },
+            "Federation_Cup_Women": {
+                "url_team": "https://www.flashscore.com/basketball/turkey/federation-cup-women/",
+                "url_news": "https://www.flashscore.com/basketball/turkey/federation-cup-women/news/"
+            },
+            "": {
+                "url_team": "https://www.flashscore.com/basketball/turkey/super-cup-women/",
+                "url_news": "https://www.flashscore.com/basketball/turkey/super-cup-women/news/"
+            }
+        },
+        "NBA": {
+            "NBA": {
+                "url_team": "https://www.flashscore.com/basketball/usa/nba/",
+                "url_news": "https://www.flashscore.com/basketball/usa/nba/news/"
+            },
+            "NBA_In-Season_Tournament": {
+                "url_team": "https://www.flashscore.com/basketball/usa/nba-in-season-tournament/",
+                "url_news": "https://www.flashscore.com/basketball/usa/nba-in-season-tournament/news/"
+            },
+            "NBA_Orlando_Summer_League": {
+                "url_team": "https://www.flashscore.com/basketball/usa/nba-orlando-summer-league/",
+                "url_news": "https://www.flashscore.com/basketball/usa/nba-orlando-summer-league/news/"
+            },
+            "NBA_Las_Vegas_Summer_League": {
+                "url_team": "https://www.flashscore.com/basketball/usa/nba-las-vegas-summer-league/",
+                "url_news": "https://www.flashscore.com/basketball/usa/nba-las-vegas-summer-league/news/"
+            },
+            "California_Classic": {
+                "url_team": "https://www.flashscore.com/basketball/usa/california-classic/",
+                "url_news": "https://www.flashscore.com/basketball/usa/california-classic/news/"
+            },
+            "NBA_Salt_Lake_City_Summer_League": {
+                "url_team": "https://www.flashscore.com/basketball/usa/nba-salt-lake-city-summer-league/",
+                "url_news": "https://www.flashscore.com/basketball/usa/nba-salt-lake-city-summer-league/news/"
+            },
+            "NBA_G_League": {
+                "url_team": "https://www.flashscore.com/basketball/usa/nba-g-league/",
+                "url_news": "https://www.flashscore.com/basketball/usa/nba-g-league/news/"
+            },
+            "NCAA": {
+                "url_team": "https://www.flashscore.com/basketball/usa/ncaa/",
+                "url_news": "https://www.flashscore.com/basketball/usa/ncaa/news/"
+            },
+            "NIT": {
+                "url_team": "https://www.flashscore.com/basketball/usa/nit/",
+                "url_news": "https://www.flashscore.com/basketball/usa/nit/news/"
+            },
+            "CIT": {
+                "url_team": "https://www.flashscore.com/basketball/usa/cit/",
+                "url_news": "https://www.flashscore.com/basketball/usa/cit/news/"
+            },
+            "": {
+                "url_team": "https://www.flashscore.com/basketball/usa/big3-3x3/",
+                "url_news": "https://www.flashscore.com/basketball/usa/big3-3x3/news/"
+            }
+        },
+        "Superliga": {
+            "Superliga": {
+                "url_team": "https://www.flashscore.com/basketball/venezuela/superliga/",
+                "url_news": "https://www.flashscore.com/basketball/venezuela/superliga/news/"
+            }
+        },
+        "EuroBasket": {
+            "EuroBasket": {
+                "url_team": "https://www.flashscore.com/basketball/europe/eurobasket/",
+                "url_news": "https://www.flashscore.com/basketball/europe/eurobasket/news/"
+            },
+            "Euroleague": {
+                "url_team": "https://www.flashscore.com/basketball/europe/euroleague/",
+                "url_news": "https://www.flashscore.com/basketball/europe/euroleague/news/"
+            },
+            "Eurocup": {
+                "url_team": "https://www.flashscore.com/basketball/europe/eurocup/",
+                "url_news": "https://www.flashscore.com/basketball/europe/eurocup/news/"
+            },
+            "Champions_League": {
+                "url_team": "https://www.flashscore.com/basketball/europe/champions-league/",
+                "url_news": "https://www.flashscore.com/basketball/europe/champions-league/news/"
+            },
+            "FIBA_Europe_Cup": {
+                "url_team": "https://www.flashscore.com/basketball/europe/fiba-europe-cup/",
+                "url_news": "https://www.flashscore.com/basketball/europe/fiba-europe-cup/news/"
+            },
+            "EuroBasket_B": {
+                "url_team": "https://www.flashscore.com/basketball/europe/eurobasket-b/",
+                "url_news": "https://www.flashscore.com/basketball/europe/eurobasket-b/news/"
+            },
+            "EuroBasket_U20": {
+                "url_team": "https://www.flashscore.com/basketball/europe/eurobasket-u20/",
+                "url_news": "https://www.flashscore.com/basketball/europe/eurobasket-u20/news/"
+            },
+            "EuroBasket_U20_B": {
+                "url_team": "https://www.flashscore.com/basketball/europe/eurobasket-u20-b/",
+                "url_news": "https://www.flashscore.com/basketball/europe/eurobasket-u20-b/news/"
+            },
+            "EuroBasket_U18": {
+                "url_team": "https://www.flashscore.com/basketball/europe/eurobasket-u18/",
+                "url_news": "https://www.flashscore.com/basketball/europe/eurobasket-u18/news/"
+            },
+            "EuroBasket_U18_B": {
+                "url_team": "https://www.flashscore.com/basketball/europe/eurobasket-u18-b/",
+                "url_news": "https://www.flashscore.com/basketball/europe/eurobasket-u18-b/news/"
+            },
+            "": {
+                "url_team": "https://www.flashscore.com/basketball/europe/europe-cup-3x3-u18-women/",
+                "url_news": "https://www.flashscore.com/basketball/europe/europe-cup-3x3-u18-women/news/"
+            }
+        },
+        "Euroleague": {
+            "EuroBasket": {
+                "url_team": "https://www.flashscore.com/basketball/europe/eurobasket/",
+                "url_news": "https://www.flashscore.com/basketball/europe/eurobasket/news/"
+            },
+            "Euroleague": {
+                "url_team": "https://www.flashscore.com/basketball/europe/euroleague/",
+                "url_news": "https://www.flashscore.com/basketball/europe/euroleague/news/"
+            },
+            "Eurocup": {
+                "url_team": "https://www.flashscore.com/basketball/europe/eurocup/",
+                "url_news": "https://www.flashscore.com/basketball/europe/eurocup/news/"
+            },
+            "Champions_League": {
+                "url_team": "https://www.flashscore.com/basketball/europe/champions-league/",
+                "url_news": "https://www.flashscore.com/basketball/europe/champions-league/news/"
+            },
+            "FIBA_Europe_Cup": {
+                "url_team": "https://www.flashscore.com/basketball/europe/fiba-europe-cup/",
+                "url_news": "https://www.flashscore.com/basketball/europe/fiba-europe-cup/news/"
+            },
+            "EuroBasket_B": {
+                "url_team": "https://www.flashscore.com/basketball/europe/eurobasket-b/",
+                "url_news": "https://www.flashscore.com/basketball/europe/eurobasket-b/news/"
+            },
+            "EuroBasket_U20": {
+                "url_team": "https://www.flashscore.com/basketball/europe/eurobasket-u20/",
+                "url_news": "https://www.flashscore.com/basketball/europe/eurobasket-u20/news/"
+            },
+            "EuroBasket_U20_B": {
+                "url_team": "https://www.flashscore.com/basketball/europe/eurobasket-u20-b/",
+                "url_news": "https://www.flashscore.com/basketball/europe/eurobasket-u20-b/news/"
+            },
+            "EuroBasket_U18": {
+                "url_team": "https://www.flashscore.com/basketball/europe/eurobasket-u18/",
+                "url_news": "https://www.flashscore.com/basketball/europe/eurobasket-u18/news/"
+            },
+            "EuroBasket_U18_B": {
+                "url_team": "https://www.flashscore.com/basketball/europe/eurobasket-u18-b/",
+                "url_news": "https://www.flashscore.com/basketball/europe/eurobasket-u18-b/news/"
+            },
+            "": {
+                "url_team": "https://www.flashscore.com/basketball/europe/europe-cup-3x3-u18-women/",
+                "url_news": "https://www.flashscore.com/basketball/europe/europe-cup-3x3-u18-women/news/"
+            }
+        },
+        "Eurocup": {
+            "EuroBasket": {
+                "url_team": "https://www.flashscore.com/basketball/europe/eurobasket/",
+                "url_news": "https://www.flashscore.com/basketball/europe/eurobasket/news/"
+            },
+            "Euroleague": {
+                "url_team": "https://www.flashscore.com/basketball/europe/euroleague/",
+                "url_news": "https://www.flashscore.com/basketball/europe/euroleague/news/"
+            },
+            "Eurocup": {
+                "url_team": "https://www.flashscore.com/basketball/europe/eurocup/",
+                "url_news": "https://www.flashscore.com/basketball/europe/eurocup/news/"
+            },
+            "Champions_League": {
+                "url_team": "https://www.flashscore.com/basketball/europe/champions-league/",
+                "url_news": "https://www.flashscore.com/basketball/europe/champions-league/news/"
+            },
+            "FIBA_Europe_Cup": {
+                "url_team": "https://www.flashscore.com/basketball/europe/fiba-europe-cup/",
+                "url_news": "https://www.flashscore.com/basketball/europe/fiba-europe-cup/news/"
+            },
+            "EuroBasket_B": {
+                "url_team": "https://www.flashscore.com/basketball/europe/eurobasket-b/",
+                "url_news": "https://www.flashscore.com/basketball/europe/eurobasket-b/news/"
+            },
+            "EuroBasket_U20": {
+                "url_team": "https://www.flashscore.com/basketball/europe/eurobasket-u20/",
+                "url_news": "https://www.flashscore.com/basketball/europe/eurobasket-u20/news/"
+            },
+            "EuroBasket_U20_B": {
+                "url_team": "https://www.flashscore.com/basketball/europe/eurobasket-u20-b/",
+                "url_news": "https://www.flashscore.com/basketball/europe/eurobasket-u20-b/news/"
+            },
+            "EuroBasket_U18": {
+                "url_team": "https://www.flashscore.com/basketball/europe/eurobasket-u18/",
+                "url_news": "https://www.flashscore.com/basketball/europe/eurobasket-u18/news/"
+            },
+            "EuroBasket_U18_B": {
+                "url_team": "https://www.flashscore.com/basketball/europe/eurobasket-u18-b/",
+                "url_news": "https://www.flashscore.com/basketball/europe/eurobasket-u18-b/news/"
+            },
+            "": {
+                "url_team": "https://www.flashscore.com/basketball/europe/europe-cup-3x3-u18-women/",
+                "url_news": "https://www.flashscore.com/basketball/europe/europe-cup-3x3-u18-women/news/"
+            }
+        },
+        "Champions_League": {
+            "EuroBasket": {
+                "url_team": "https://www.flashscore.com/basketball/europe/eurobasket/",
+                "url_news": "https://www.flashscore.com/basketball/europe/eurobasket/news/"
+            },
+            "Euroleague": {
+                "url_team": "https://www.flashscore.com/basketball/europe/euroleague/",
+                "url_news": "https://www.flashscore.com/basketball/europe/euroleague/news/"
+            },
+            "Eurocup": {
+                "url_team": "https://www.flashscore.com/basketball/europe/eurocup/",
+                "url_news": "https://www.flashscore.com/basketball/europe/eurocup/news/"
+            },
+            "Champions_League": {
+                "url_team": "https://www.flashscore.com/basketball/europe/champions-league/",
+                "url_news": "https://www.flashscore.com/basketball/europe/champions-league/news/"
+            },
+            "FIBA_Europe_Cup": {
+                "url_team": "https://www.flashscore.com/basketball/europe/fiba-europe-cup/",
+                "url_news": "https://www.flashscore.com/basketball/europe/fiba-europe-cup/news/"
+            },
+            "EuroBasket_B": {
+                "url_team": "https://www.flashscore.com/basketball/europe/eurobasket-b/",
+                "url_news": "https://www.flashscore.com/basketball/europe/eurobasket-b/news/"
+            },
+            "EuroBasket_U20": {
+                "url_team": "https://www.flashscore.com/basketball/europe/eurobasket-u20/",
+                "url_news": "https://www.flashscore.com/basketball/europe/eurobasket-u20/news/"
+            },
+            "EuroBasket_U20_B": {
+                "url_team": "https://www.flashscore.com/basketball/europe/eurobasket-u20-b/",
+                "url_news": "https://www.flashscore.com/basketball/europe/eurobasket-u20-b/news/"
+            },
+            "EuroBasket_U18": {
+                "url_team": "https://www.flashscore.com/basketball/europe/eurobasket-u18/",
+                "url_news": "https://www.flashscore.com/basketball/europe/eurobasket-u18/news/"
+            },
+            "EuroBasket_U18_B": {
+                "url_team": "https://www.flashscore.com/basketball/europe/eurobasket-u18-b/",
+                "url_news": "https://www.flashscore.com/basketball/europe/eurobasket-u18-b/news/"
+            },
+            "": {
+                "url_team": "https://www.flashscore.com/basketball/europe/europe-cup-3x3-u18-women/",
+                "url_news": "https://www.flashscore.com/basketball/europe/europe-cup-3x3-u18-women/news/"
+            }
+        },
+        "World_Cup": {
+            "World_Cup": {
+                "url_team": "https://www.flashscore.com/basketball/world/world-cup/",
+                "url_news": "https://www.flashscore.com/basketball/world/world-cup/news/"
+            },
+            "Olympic_Games": {
+                "url_team": "https://www.flashscore.com/basketball/world/olympic-games/",
+                "url_news": "https://www.flashscore.com/basketball/world/olympic-games/news/"
+            },
+            "Friendly_International": {
+                "url_team": "https://www.flashscore.com/basketball/world/friendly-international/",
+                "url_news": "https://www.flashscore.com/basketball/world/friendly-international/news/"
+            },
+            "Club_Friendly": {
+                "url_team": "https://www.flashscore.com/basketball/world/club-friendly/",
+                "url_news": "https://www.flashscore.com/basketball/world/club-friendly/news/"
+            },
+            "World_Championship_U19": {
+                "url_team": "https://www.flashscore.com/basketball/world/world-championship-u19/",
+                "url_news": "https://www.flashscore.com/basketball/world/world-championship-u19/news/"
+            },
+            "World_Championship_U17": {
+                "url_team": "https://www.flashscore.com/basketball/world/world-championship-u17/",
+                "url_news": "https://www.flashscore.com/basketball/world/world-championship-u17/news/"
+            },
+            "Champions_League_Americas": {
+                "url_team": "https://www.flashscore.com/basketball/world/champions-league-americas/",
+                "url_news": "https://www.flashscore.com/basketball/world/champions-league-americas/news/"
+            },
+            "Americas_League": {
+                "url_team": "https://www.flashscore.com/basketball/world/americas-league/",
+                "url_news": "https://www.flashscore.com/basketball/world/americas-league/news/"
+            },
+            "AmeriCup": {
+                "url_team": "https://www.flashscore.com/basketball/world/americup/",
+                "url_news": "https://www.flashscore.com/basketball/world/americup/news/"
+            },
+            "Pan_American_Games": {
+                "url_team": "https://www.flashscore.com/basketball/world/pan-american-games/",
+                "url_news": "https://www.flashscore.com/basketball/world/pan-american-games/news/"
+            },
+            "": {
+                "url_team": "https://www.flashscore.com/basketball/world/mediterranean-games-3x3-women/",
+                "url_news": "https://www.flashscore.com/basketball/world/mediterranean-games-3x3-women/news/"
+            }
+        }
+    },
+    "CRICKET": {
+        "Big_Bash_League": {
+            "Big_Bash_League": {
+                "url_team": "https://www.flashscore.com/cricket/australia/big-bash-league/",
+                "url_news": "https://www.flashscore.com/cricket/australia/big-bash-league/news/"
+            },
+            "One-Day_Cup": {
+                "url_team": "https://www.flashscore.com/cricket/australia/one-day-cup/",
+                "url_news": "https://www.flashscore.com/cricket/australia/one-day-cup/news/"
+            },
+            "Sheffield_Shield": {
+                "url_team": "https://www.flashscore.com/cricket/australia/sheffield-shield/",
+                "url_news": "https://www.flashscore.com/cricket/australia/sheffield-shield/news/"
+            },
+            "Big_Bash_League_Women": {
+                "url_team": "https://www.flashscore.com/cricket/australia/big-bash-league-women/",
+                "url_news": "https://www.flashscore.com/cricket/australia/big-bash-league-women/news/"
+            },
+            "National_League_Women": {
+                "url_team": "https://www.flashscore.com/cricket/australia/national-league-women/",
+                "url_news": "https://www.flashscore.com/cricket/australia/national-league-women/news/"
+            },
+            "Ford_Ranger_Cup": {
+                "url_team": "https://www.flashscore.com/cricket/australia/ford-ranger-cup/",
+                "url_news": "https://www.flashscore.com/cricket/australia/ford-ranger-cup/news/"
+            }
+        },
+        "IPL": {
+            "IPL": {
+                "url_team": "https://www.flashscore.com/ipl/",
+                "url_news": "https://www.flashscore.com/ipl/news/"
+            },
+            "Vijay_Hazare_Trophy": {
+                "url_team": "https://www.flashscore.com/cricket/india/vijay-hazare-trophy/",
+                "url_news": "https://www.flashscore.com/cricket/india/vijay-hazare-trophy/news/"
+            },
+            "Ranji_Trophy": {
+                "url_team": "https://www.flashscore.com/cricket/india/ranji-trophy/",
+                "url_news": "https://www.flashscore.com/cricket/india/ranji-trophy/news/"
+            },
+            "Syed_Mushtaq_Ali_Trophy": {
+                "url_team": "https://www.flashscore.com/cricket/india/syed-mushtaq-ali-trophy/",
+                "url_news": "https://www.flashscore.com/cricket/india/syed-mushtaq-ali-trophy/news/"
+            },
+            "Tamil_Nadu_Premier_League": {
+                "url_team": "https://www.flashscore.com/cricket/india/tamil-nadu-premier-league/",
+                "url_news": "https://www.flashscore.com/cricket/india/tamil-nadu-premier-league/news/"
+            },
+            "Maharaja_T20_Trophy": {
+                "url_team": "https://www.flashscore.com/cricket/india/maharaja-t20-trophy/",
+                "url_news": "https://www.flashscore.com/cricket/india/maharaja-t20-trophy/news/"
+            },
+            "Deodhar_Trophy": {
+                "url_team": "https://www.flashscore.com/cricket/india/deodhar-trophy/",
+                "url_news": "https://www.flashscore.com/cricket/india/deodhar-trophy/news/"
+            },
+            "Irani_Cup": {
+                "url_team": "https://www.flashscore.com/cricket/india/irani-cup/",
+                "url_news": "https://www.flashscore.com/cricket/india/irani-cup/news/"
+            },
+            "Duleep_Trophy": {
+                "url_team": "https://www.flashscore.com/cricket/india/duleep-trophy/",
+                "url_news": "https://www.flashscore.com/cricket/india/duleep-trophy/news/"
+            },
+            "Punjab_T10_League": {
+                "url_team": "https://www.flashscore.com/cricket/india/punjab-t10-league/",
+                "url_news": "https://www.flashscore.com/cricket/india/punjab-t10-league/news/"
+            },
+            "": {
+                "url_team": "https://www.flashscore.com/cricket/india/north-india-champions-league/",
+                "url_news": "https://www.flashscore.com/cricket/india/north-india-champions-league/news/"
+            }
+        },
+        "The_Hundred": {
+            "The_Hundred": {
+                "url_team": "https://www.flashscore.com/cricket/united-kingdom/the-hundred/",
+                "url_news": "https://www.flashscore.com/cricket/united-kingdom/the-hundred/news/"
+            },
+            "Vitality_Blast": {
+                "url_team": "https://www.flashscore.com/cricket/united-kingdom/vitality-blast/",
+                "url_news": "https://www.flashscore.com/cricket/united-kingdom/vitality-blast/news/"
+            },
+            "One-Day_Cup": {
+                "url_team": "https://www.flashscore.com/cricket/united-kingdom/one-day-cup/",
+                "url_news": "https://www.flashscore.com/cricket/united-kingdom/one-day-cup/news/"
+            },
+            "County_Championship_One": {
+                "url_team": "https://www.flashscore.com/cricket/united-kingdom/county-championship-one/",
+                "url_news": "https://www.flashscore.com/cricket/united-kingdom/county-championship-one/news/"
+            },
+            "County_Championship_Two": {
+                "url_team": "https://www.flashscore.com/cricket/united-kingdom/county-championship-two/",
+                "url_news": "https://www.flashscore.com/cricket/united-kingdom/county-championship-two/news/"
+            },
+            "Bob_Willis_Trophy": {
+                "url_team": "https://www.flashscore.com/cricket/united-kingdom/bob-willis-trophy/",
+                "url_news": "https://www.flashscore.com/cricket/united-kingdom/bob-willis-trophy/news/"
+            },
+            "MCC_University_Matches": {
+                "url_team": "https://www.flashscore.com/cricket/united-kingdom/mcc-university-matches/",
+                "url_news": "https://www.flashscore.com/cricket/united-kingdom/mcc-university-matches/news/"
+            },
+            "Varsity_Match": {
+                "url_team": "https://www.flashscore.com/cricket/united-kingdom/varsity-match/",
+                "url_news": "https://www.flashscore.com/cricket/united-kingdom/varsity-match/news/"
+            },
+            "The_Hundred_Women": {
+                "url_team": "https://www.flashscore.com/cricket/united-kingdom/the-hundred-women/",
+                "url_news": "https://www.flashscore.com/cricket/united-kingdom/the-hundred-women/news/"
+            },
+            "Charlotte_Edwards_Cup_Women": {
+                "url_team": "https://www.flashscore.com/cricket/united-kingdom/charlotte-edwards-cup-women/",
+                "url_news": "https://www.flashscore.com/cricket/united-kingdom/charlotte-edwards-cup-women/news/"
+            },
+            "": {
+                "url_team": "https://www.flashscore.com/cricket/united-kingdom/super-league-women/",
+                "url_news": "https://www.flashscore.com/cricket/united-kingdom/super-league-women/news/"
+            }
+        },
+        "ICC_World_Cup": {
+            "ICC_World_Cup": {
+                "url_team": "https://www.flashscore.com/cricket/world/icc-world-cup/",
+                "url_news": "https://www.flashscore.com/cricket/world/icc-world-cup/news/"
+            },
+            "T20_World_Cup": {
+                "url_team": "https://www.flashscore.com/cricket/world/t20-world-cup/",
+                "url_news": "https://www.flashscore.com/cricket/world/t20-world-cup/news/"
+            },
+            "Test_Series": {
+                "url_team": "https://www.flashscore.com/cricket/world/test-series/",
+                "url_news": "https://www.flashscore.com/cricket/world/test-series/news/"
+            },
+            "One_Day_International": {
+                "url_team": "https://www.flashscore.com/cricket/world/one-day-international/",
+                "url_news": "https://www.flashscore.com/cricket/world/one-day-international/news/"
+            },
+            "Twenty20_International": {
+                "url_team": "https://www.flashscore.com/cricket/world/twenty20-international/",
+                "url_news": "https://www.flashscore.com/cricket/world/twenty20-international/news/"
+            },
+            "The_Ashes": {
+                "url_team": "https://www.flashscore.com/cricket/world/the-ashes/",
+                "url_news": "https://www.flashscore.com/cricket/world/the-ashes/news/"
+            },
+            "T20_Tri-Nation_Series": {
+                "url_team": "https://www.flashscore.com/cricket/world/t20-tri-nation-series/",
+                "url_news": "https://www.flashscore.com/cricket/world/t20-tri-nation-series/news/"
+            },
+            "Tri_Series": {
+                "url_team": "https://www.flashscore.com/cricket/world/tri-series/",
+                "url_news": "https://www.flashscore.com/cricket/world/tri-series/news/"
+            },
+            "Tri-Nation_Series": {
+                "url_team": "https://www.flashscore.com/cricket/world/tri-nation-series/",
+                "url_news": "https://www.flashscore.com/cricket/world/tri-nation-series/news/"
+            },
+            "Friendly_International": {
+                "url_team": "https://www.flashscore.com/cricket/world/friendly-international/",
+                "url_news": "https://www.flashscore.com/cricket/world/friendly-international/news/"
+            },
+            "": {
+                "url_team": "https://www.flashscore.com/cricket/world/50-over-tri-series-women/",
+                "url_news": "https://www.flashscore.com/cricket/world/50-over-tri-series-women/news/"
+            }
+        },
+        "Test_Series": {
+            "ICC_World_Cup": {
+                "url_team": "https://www.flashscore.com/cricket/world/icc-world-cup/",
+                "url_news": "https://www.flashscore.com/cricket/world/icc-world-cup/news/"
+            },
+            "T20_World_Cup": {
+                "url_team": "https://www.flashscore.com/cricket/world/t20-world-cup/",
+                "url_news": "https://www.flashscore.com/cricket/world/t20-world-cup/news/"
+            },
+            "Test_Series": {
+                "url_team": "https://www.flashscore.com/cricket/world/test-series/",
+                "url_news": "https://www.flashscore.com/cricket/world/test-series/news/"
+            },
+            "One_Day_International": {
+                "url_team": "https://www.flashscore.com/cricket/world/one-day-international/",
+                "url_news": "https://www.flashscore.com/cricket/world/one-day-international/news/"
+            },
+            "Twenty20_International": {
+                "url_team": "https://www.flashscore.com/cricket/world/twenty20-international/",
+                "url_news": "https://www.flashscore.com/cricket/world/twenty20-international/news/"
+            },
+            "The_Ashes": {
+                "url_team": "https://www.flashscore.com/cricket/world/the-ashes/",
+                "url_news": "https://www.flashscore.com/cricket/world/the-ashes/news/"
+            },
+            "T20_Tri-Nation_Series": {
+                "url_team": "https://www.flashscore.com/cricket/world/t20-tri-nation-series/",
+                "url_news": "https://www.flashscore.com/cricket/world/t20-tri-nation-series/news/"
+            },
+            "Tri_Series": {
+                "url_team": "https://www.flashscore.com/cricket/world/tri-series/",
+                "url_news": "https://www.flashscore.com/cricket/world/tri-series/news/"
+            },
+            "Tri-Nation_Series": {
+                "url_team": "https://www.flashscore.com/cricket/world/tri-nation-series/",
+                "url_news": "https://www.flashscore.com/cricket/world/tri-nation-series/news/"
+            },
+            "Friendly_International": {
+                "url_team": "https://www.flashscore.com/cricket/world/friendly-international/",
+                "url_news": "https://www.flashscore.com/cricket/world/friendly-international/news/"
+            },
+            "": {
+                "url_team": "https://www.flashscore.com/cricket/world/50-over-tri-series-women/",
+                "url_news": "https://www.flashscore.com/cricket/world/50-over-tri-series-women/news/"
+            }
+        },
+        "One_Day_International": {
+            "ICC_World_Cup": {
+                "url_team": "https://www.flashscore.com/cricket/world/icc-world-cup/",
+                "url_news": "https://www.flashscore.com/cricket/world/icc-world-cup/news/"
+            },
+            "T20_World_Cup": {
+                "url_team": "https://www.flashscore.com/cricket/world/t20-world-cup/",
+                "url_news": "https://www.flashscore.com/cricket/world/t20-world-cup/news/"
+            },
+            "Test_Series": {
+                "url_team": "https://www.flashscore.com/cricket/world/test-series/",
+                "url_news": "https://www.flashscore.com/cricket/world/test-series/news/"
+            },
+            "One_Day_International": {
+                "url_team": "https://www.flashscore.com/cricket/world/one-day-international/",
+                "url_news": "https://www.flashscore.com/cricket/world/one-day-international/news/"
+            },
+            "Twenty20_International": {
+                "url_team": "https://www.flashscore.com/cricket/world/twenty20-international/",
+                "url_news": "https://www.flashscore.com/cricket/world/twenty20-international/news/"
+            },
+            "The_Ashes": {
+                "url_team": "https://www.flashscore.com/cricket/world/the-ashes/",
+                "url_news": "https://www.flashscore.com/cricket/world/the-ashes/news/"
+            },
+            "T20_Tri-Nation_Series": {
+                "url_team": "https://www.flashscore.com/cricket/world/t20-tri-nation-series/",
+                "url_news": "https://www.flashscore.com/cricket/world/t20-tri-nation-series/news/"
+            },
+            "Tri_Series": {
+                "url_team": "https://www.flashscore.com/cricket/world/tri-series/",
+                "url_news": "https://www.flashscore.com/cricket/world/tri-series/news/"
+            },
+            "Tri-Nation_Series": {
+                "url_team": "https://www.flashscore.com/cricket/world/tri-nation-series/",
+                "url_news": "https://www.flashscore.com/cricket/world/tri-nation-series/news/"
+            },
+            "Friendly_International": {
+                "url_team": "https://www.flashscore.com/cricket/world/friendly-international/",
+                "url_news": "https://www.flashscore.com/cricket/world/friendly-international/news/"
+            },
+            "": {
+                "url_team": "https://www.flashscore.com/cricket/world/50-over-tri-series-women/",
+                "url_news": "https://www.flashscore.com/cricket/world/50-over-tri-series-women/news/"
+            }
+        },
+        "Twenty20_International": {
+            "ICC_World_Cup": {
+                "url_team": "https://www.flashscore.com/cricket/world/icc-world-cup/",
+                "url_news": "https://www.flashscore.com/cricket/world/icc-world-cup/news/"
+            },
+            "T20_World_Cup": {
+                "url_team": "https://www.flashscore.com/cricket/world/t20-world-cup/",
+                "url_news": "https://www.flashscore.com/cricket/world/t20-world-cup/news/"
+            },
+            "Test_Series": {
+                "url_team": "https://www.flashscore.com/cricket/world/test-series/",
+                "url_news": "https://www.flashscore.com/cricket/world/test-series/news/"
+            },
+            "One_Day_International": {
+                "url_team": "https://www.flashscore.com/cricket/world/one-day-international/",
+                "url_news": "https://www.flashscore.com/cricket/world/one-day-international/news/"
+            },
+            "Twenty20_International": {
+                "url_team": "https://www.flashscore.com/cricket/world/twenty20-international/",
+                "url_news": "https://www.flashscore.com/cricket/world/twenty20-international/news/"
+            },
+            "The_Ashes": {
+                "url_team": "https://www.flashscore.com/cricket/world/the-ashes/",
+                "url_news": "https://www.flashscore.com/cricket/world/the-ashes/news/"
+            },
+            "T20_Tri-Nation_Series": {
+                "url_team": "https://www.flashscore.com/cricket/world/t20-tri-nation-series/",
+                "url_news": "https://www.flashscore.com/cricket/world/t20-tri-nation-series/news/"
+            },
+            "Tri_Series": {
+                "url_team": "https://www.flashscore.com/cricket/world/tri-series/",
+                "url_news": "https://www.flashscore.com/cricket/world/tri-series/news/"
+            },
+            "Tri-Nation_Series": {
+                "url_team": "https://www.flashscore.com/cricket/world/tri-nation-series/",
+                "url_news": "https://www.flashscore.com/cricket/world/tri-nation-series/news/"
+            },
+            "Friendly_International": {
+                "url_team": "https://www.flashscore.com/cricket/world/friendly-international/",
+                "url_news": "https://www.flashscore.com/cricket/world/friendly-international/news/"
+            },
+            "": {
+                "url_team": "https://www.flashscore.com/cricket/world/50-over-tri-series-women/",
+                "url_news": "https://www.flashscore.com/cricket/world/50-over-tri-series-women/news/"
+            }
+        }
+    }
+}
