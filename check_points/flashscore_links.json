@@ -1,0 +1,602 @@
+{
+    "FOOTBALL": {
+        "Premier_League": {
+            "Premier_League": {
+                "url_team": "https://www.flashscore.com/football/england/premier-league/",
+                "url_news": "https://www.flashscore.com/football/england/premier-league/news/"
+            },
+            "Championship": {
+                "url_team": "https://www.flashscore.com/football/england/championship/",
+                "url_news": "https://www.flashscore.com/football/england/championship/news/"
+            },
+            "League_One": {
+                "url_team": "https://www.flashscore.com/football/england/league-one/",
+                "url_news": "https://www.flashscore.com/football/england/league-one/news/"
+            },
+            "League_Two": {
+                "url_team": "https://www.flashscore.com/football/england/league-two/",
+                "url_news": "https://www.flashscore.com/football/england/league-two/news/"
+            },
+            "National_League": {
+                "url_team": "https://www.flashscore.com/football/england/national-league/",
+                "url_news": "https://www.flashscore.com/football/england/national-league/news/"
+            },
+            "National_League_North": {
+                "url_team": "https://www.flashscore.com/football/england/national-league-north/",
+                "url_news": "https://www.flashscore.com/football/england/national-league-north/news/"
+            },
+            "National_League_South": {
+                "url_team": "https://www.flashscore.com/football/england/national-league-south/",
+                "url_news": "https://www.flashscore.com/football/england/national-league-south/news/"
+            },
+            "NPL_Premier_Division": {
+                "url_team": "https://www.flashscore.com/football/england/npl-premier-division/",
+                "url_news": "https://www.flashscore.com/football/england/npl-premier-division/news/"
+            },
+            "Southern_League_Central_Division": {
+                "url_team": "https://www.flashscore.com/football/england/southern-league-central-division/",
+                "url_news": "https://www.flashscore.com/football/england/southern-league-central-division/news/"
+            },
+            "Southern_League_South_Division": {
+                "url_team": "https://www.flashscore.com/football/england/southern-league-south-division/",
+                "url_news": "https://www.flashscore.com/football/england/southern-league-south-division/news/"
+            },
+            "": {
+                "url_team": "https://www.flashscore.com/football/england/women-s-fa-community-shield/",
+                "url_news": "https://www.flashscore.com/football/england/women-s-fa-community-shield/news/"
+            }
+        },
+        "Ligue_1": {
+            "Ligue_1": {
+                "url_team": "https://www.flashscore.com/football/france/ligue-1/",
+                "url_news": "https://www.flashscore.com/football/france/ligue-1/news/"
+            },
+            "Ligue_2": {
+                "url_team": "https://www.flashscore.com/football/france/ligue-2/",
+                "url_news": "https://www.flashscore.com/football/france/ligue-2/news/"
+            },
+            "National": {
+                "url_team": "https://www.flashscore.com/football/france/national/",
+                "url_news": "https://www.flashscore.com/football/france/national/news/"
+            },
+            "National_2_-_Group_A": {
+                "url_team": "https://www.flashscore.com/football/france/national-2-group-a/",
+                "url_news": "https://www.flashscore.com/football/france/national-2-group-a/news/"
+            },
+            "National_2_-_Group_B": {
+                "url_team": "https://www.flashscore.com/football/france/national-2-group-b/",
+                "url_news": "https://www.flashscore.com/football/france/national-2-group-b/news/"
+            },
+            "National_2_-_Group_C": {
+                "url_team": "https://www.flashscore.com/football/france/national-2-group-c/",
+                "url_news": "https://www.flashscore.com/football/france/national-2-group-c/news/"
+            },
+            "National_2_-_Group_D": {
+                "url_team": "https://www.flashscore.com/football/france/national-2-group-d/",
+                "url_news": "https://www.flashscore.com/football/france/national-2-group-d/news/"
+            },
+            "Coupe_de_la_Ligue": {
+                "url_team": "https://www.flashscore.com/football/france/coupe-de-la-ligue/",
+                "url_news": "https://www.flashscore.com/football/france/coupe-de-la-ligue/news/"
+            },
+            "Coupe_de_France": {
+                "url_team": "https://www.flashscore.com/football/france/coupe-de-france/",
+                "url_news": "https://www.flashscore.com/football/france/coupe-de-france/news/"
+            },
+            "Super_Cup": {
+                "url_team": "https://www.flashscore.com/football/france/super-cup/",
+                "url_news": "https://www.flashscore.com/football/france/super-cup/news/"
+            },
+            "": {
+                "url_team": "https://www.flashscore.com/football/france/super-cup-women/",
+                "url_news": "https://www.flashscore.com/football/france/super-cup-women/news/"
+            }
+        },
+        "Bundesliga": {
+            "Bundesliga": {
+                "url_team": "https://www.flashscore.com/football/germany/bundesliga/",
+                "url_news": "https://www.flashscore.com/football/germany/bundesliga/news/"
+            },
+            "2._Bundesliga": {
+                "url_team": "https://www.flashscore.com/football/germany/2-bundesliga/",
+                "url_news": "https://www.flashscore.com/football/germany/2-bundesliga/news/"
+            },
+            "3._Liga": {
+                "url_team": "https://www.flashscore.com/football/germany/3-liga/",
+                "url_news": "https://www.flashscore.com/football/germany/3-liga/news/"
+            },
+            "Regionalliga_North": {
+                "url_team": "https://www.flashscore.com/football/germany/regionalliga-north/",
+                "url_news": "https://www.flashscore.com/football/germany/regionalliga-north/news/"
+            },
+            "Regionalliga_Nordost": {
+                "url_team": "https://www.flashscore.com/football/germany/regionalliga-nordost/",
+                "url_news": "https://www.flashscore.com/football/germany/regionalliga-nordost/news/"
+            },
+            "Regionalliga_West": {
+                "url_team": "https://www.flashscore.com/football/germany/regionalliga-west/",
+                "url_news": "https://www.flashscore.com/football/germany/regionalliga-west/news/"
+            },
+            "Regionalliga_Sudwest": {
+                "url_team": "https://www.flashscore.com/football/germany/regionalliga-sudwest/",
+                "url_news": "https://www.flashscore.com/football/germany/regionalliga-sudwest/news/"
+            },
+            "Regionalliga_Bayern": {
+                "url_team": "https://www.flashscore.com/football/germany/regionalliga-bayern/",
+                "url_news": "https://www.flashscore.com/football/germany/regionalliga-bayern/news/"
+            },
+            "Regionalliga_Play_Offs": {
+                "url_team": "https://www.flashscore.com/football/germany/regionalliga-play-offs/",
+                "url_news": "https://www.flashscore.com/football/germany/regionalliga-play-offs/news/"
+            },
+            "Oberliga_NOFV-Nord": {
+                "url_team": "https://www.flashscore.com/football/germany/oberliga-nofv-nord/",
+                "url_news": "https://www.flashscore.com/football/germany/oberliga-nofv-nord/news/"
+            },
+            "": {
+                "url_team": "https://www.flashscore.com/football/germany/dfb-pokal-women/",
+                "url_news": "https://www.flashscore.com/football/germany/dfb-pokal-women/news/"
+            }
+        },
+        "Serie_A": {
+            "Serie_A": {
+                "url_team": "https://www.flashscore.com/football/italy/serie-a/",
+                "url_news": "https://www.flashscore.com/football/italy/serie-a/news/"
+            },
+            "Serie_B": {
+                "url_team": "https://www.flashscore.com/football/italy/serie-b/",
+                "url_news": "https://www.flashscore.com/football/italy/serie-b/news/"
+            },
+            "Serie_C_-_Group_A": {
+                "url_team": "https://www.flashscore.com/football/italy/serie-c-group-a/",
+                "url_news": "https://www.flashscore.com/football/italy/serie-c-group-a/news/"
+            },
+            "Serie_C_-_Group_B": {
+                "url_team": "https://www.flashscore.com/football/italy/serie-c-group-b/",
+                "url_news": "https://www.flashscore.com/football/italy/serie-c-group-b/news/"
+            },
+            "Serie_C_-_Group_C": {
+                "url_team": "https://www.flashscore.com/football/italy/serie-c-group-c/",
+                "url_news": "https://www.flashscore.com/football/italy/serie-c-group-c/news/"
+            },
+            "Serie_C_-_Promotion_-_Play_Offs": {
+                "url_team": "https://www.flashscore.com/football/italy/serie-c-promotion-play-offs/",
+                "url_news": "https://www.flashscore.com/football/italy/serie-c-promotion-play-offs/news/"
+            },
+            "Serie_C_-_Play_Out": {
+                "url_team": "https://www.flashscore.com/football/italy/serie-c-play-out/",
+                "url_news": "https://www.flashscore.com/football/italy/serie-c-play-out/news/"
+            },
+            "Serie_D_-_Group_A": {
+                "url_team": "https://www.flashscore.com/football/italy/serie-d-group-a/",
+                "url_news": "https://www.flashscore.com/football/italy/serie-d-group-a/news/"
+            },
+            "Serie_D_-_Group_B": {
+                "url_team": "https://www.flashscore.com/football/italy/serie-d-group-b/",
+                "url_news": "https://www.flashscore.com/football/italy/serie-d-group-b/news/"
+            },
+            "Serie_D_-_Group_C": {
+                "url_team": "https://www.flashscore.com/football/italy/serie-d-group-c/",
+                "url_news": "https://www.flashscore.com/football/italy/serie-d-group-c/news/"
+            },
+            "": {
+                "url_team": "https://www.flashscore.com/football/italy/super-cup-women/",
+                "url_news": "https://www.flashscore.com/football/italy/super-cup-women/news/"
+            }
+        },
+        "Eredivisie": {
+            "Eredivisie": {
+                "url_team": "https://www.flashscore.com/football/netherlands/eredivisie/",
+                "url_news": "https://www.flashscore.com/football/netherlands/eredivisie/news/"
+            },
+            "Eerste_Divisie": {
+                "url_team": "https://www.flashscore.com/football/netherlands/eerste-divisie/",
+                "url_news": "https://www.flashscore.com/football/netherlands/eerste-divisie/news/"
+            },
+            "Tweede_Divisie": {
+                "url_team": "https://www.flashscore.com/football/netherlands/tweede-divisie/",
+                "url_news": "https://www.flashscore.com/football/netherlands/tweede-divisie/news/"
+            },
+            "Derde_Divisie": {
+                "url_team": "https://www.flashscore.com/football/netherlands/derde-divisie/",
+                "url_news": "https://www.flashscore.com/football/netherlands/derde-divisie/news/"
+            },
+            "Reserve_League": {
+                "url_team": "https://www.flashscore.com/football/netherlands/reserve-league/",
+                "url_news": "https://www.flashscore.com/football/netherlands/reserve-league/news/"
+            },
+            "KNVB_Beker": {
+                "url_team": "https://www.flashscore.com/football/netherlands/knvb-beker/",
+                "url_news": "https://www.flashscore.com/football/netherlands/knvb-beker/news/"
+            },
+            "Super_Cup": {
+                "url_team": "https://www.flashscore.com/football/netherlands/super-cup/",
+                "url_news": "https://www.flashscore.com/football/netherlands/super-cup/news/"
+            },
+            "Divisie_1_U21": {
+                "url_team": "https://www.flashscore.com/football/netherlands/divisie-1-u21/",
+                "url_news": "https://www.flashscore.com/football/netherlands/divisie-1-u21/news/"
+            },
+            "Divisie_1_U18": {
+                "url_team": "https://www.flashscore.com/football/netherlands/divisie-1-u18/",
+                "url_news": "https://www.flashscore.com/football/netherlands/divisie-1-u18/news/"
+            },
+            "Eredivisie_Women": {
+                "url_team": "https://www.flashscore.com/football/netherlands/eredivisie-women/",
+                "url_news": "https://www.flashscore.com/football/netherlands/eredivisie-women/news/"
+            },
+            "": {
+                "url_team": "https://www.flashscore.com/football/netherlands/super-cup-women/",
+                "url_news": "https://www.flashscore.com/football/netherlands/super-cup-women/news/"
+            }
+        },
+        "LaLiga": {
+            "LaLiga": {
+                "url_team": "https://www.flashscore.com/football/spain/laliga/",
+                "url_news": "https://www.flashscore.com/football/spain/laliga/news/"
+            },
+            "LaLiga2": {
+                "url_team": "https://www.flashscore.com/football/spain/laliga2/",
+                "url_news": "https://www.flashscore.com/football/spain/laliga2/news/"
+            },
+            "Primera_RFEF_-_Group_1": {
+                "url_team": "https://www.flashscore.com/football/spain/primera-rfef-group-1/",
+                "url_news": "https://www.flashscore.com/football/spain/primera-rfef-group-1/news/"
+            },
+            "Primera_RFEF_-_Group_2": {
+                "url_team": "https://www.flashscore.com/football/spain/primera-rfef-group-2/",
+                "url_news": "https://www.flashscore.com/football/spain/primera-rfef-group-2/news/"
+            },
+            "Primera_RFEF_-_Play_Offs": {
+                "url_team": "https://www.flashscore.com/football/spain/primera-rfef-play-offs/",
+                "url_news": "https://www.flashscore.com/football/spain/primera-rfef-play-offs/news/"
+            },
+            "Primera_RFEF_-_Promotion_Play_Offs": {
+                "url_team": "https://www.flashscore.com/football/spain/primera-rfef-promotion-play-offs/",
+                "url_news": "https://www.flashscore.com/football/spain/primera-rfef-promotion-play-offs/news/"
+            },
+            "Segunda_RFEF_-_Group_1": {
+                "url_team": "https://www.flashscore.com/football/spain/segunda-rfef-group-1/",
+                "url_news": "https://www.flashscore.com/football/spain/segunda-rfef-group-1/news/"
+            },
+            "Segunda_RFEF_-_Group_2": {
+                "url_team": "https://www.flashscore.com/football/spain/segunda-rfef-group-2/",
+                "url_news": "https://www.flashscore.com/football/spain/segunda-rfef-group-2/news/"
+            },
+            "Segunda_RFEF_-_Group_3": {
+                "url_team": "https://www.flashscore.com/football/spain/segunda-rfef-group-3/",
+                "url_news": "https://www.flashscore.com/football/spain/segunda-rfef-group-3/news/"
+            },
+            "Segunda_RFEF_-_Group_4": {
+                "url_team": "https://www.flashscore.com/football/spain/segunda-rfef-group-4/",
+                "url_news": "https://www.flashscore.com/football/spain/segunda-rfef-group-4/news/"
+            },
+            "": {
+                "url_team": "https://www.flashscore.com/football/spain/super-cup-women/",
+                "url_news": "https://www.flashscore.com/football/spain/super-cup-women/news/"
+            }
+        },
+        "Euro": {
+            "Euro": {
+                "url_team": "https://www.flashscore.com/football/europe/euro/",
+                "url_news": "https://www.flashscore.com/football/europe/euro/news/"
+            },
+            "Champions_League": {
+                "url_team": "https://www.flashscore.com/football/europe/champions-league/",
+                "url_news": "https://www.flashscore.com/football/europe/champions-league/news/"
+            },
+            "Europa_League": {
+                "url_team": "https://www.flashscore.com/football/europe/europa-league/",
+                "url_news": "https://www.flashscore.com/football/europe/europa-league/news/"
+            },
+            "Europa_Conference_League": {
+                "url_team": "https://www.flashscore.com/football/europe/europa-conference-league/",
+                "url_news": "https://www.flashscore.com/football/europe/europa-conference-league/news/"
+            },
+            "UEFA_Nations_League": {
+                "url_team": "https://www.flashscore.com/football/europe/uefa-nations-league/",
+                "url_news": "https://www.flashscore.com/football/europe/uefa-nations-league/news/"
+            },
+            "Euro_U21": {
+                "url_team": "https://www.flashscore.com/football/europe/euro-u21/",
+                "url_news": "https://www.flashscore.com/football/europe/euro-u21/news/"
+            },
+            "Euro_U19": {
+                "url_team": "https://www.flashscore.com/football/europe/euro-u19/",
+                "url_news": "https://www.flashscore.com/football/europe/euro-u19/news/"
+            },
+            "World_Championship": {
+                "url_team": "https://www.flashscore.com/football/world/world-championship/",
+                "url_news": "https://www.flashscore.com/football/world/world-championship/news/"
+            },
+            "Euro_U17": {
+                "url_team": "https://www.flashscore.com/football/europe/euro-u17/",
+                "url_news": "https://www.flashscore.com/football/europe/euro-u17/news/"
+            },
+            "UEFA_Super_Cup": {
+                "url_team": "https://www.flashscore.com/football/europe/uefa-super-cup/",
+                "url_news": "https://www.flashscore.com/football/europe/uefa-super-cup/news/"
+            },
+            "": {
+                "url_team": "https://www.flashscore.com/football/europe/all-island-cup-women/",
+                "url_news": "https://www.flashscore.com/football/europe/all-island-cup-women/news/"
+            }
+        },
+        "Champions_League": {
+            "Euro": {
+                "url_team": "https://www.flashscore.com/football/europe/euro/",
+                "url_news": "https://www.flashscore.com/football/europe/euro/news/"
+            },
+            "Champions_League": {
+                "url_team": "https://www.flashscore.com/football/europe/champions-league/",
+                "url_news": "https://www.flashscore.com/football/europe/champions-league/news/"
+            },
+            "Europa_League": {
+                "url_team": "https://www.flashscore.com/football/europe/europa-league/",
+                "url_news": "https://www.flashscore.com/football/europe/europa-league/news/"
+            },
+            "Europa_Conference_League": {
+                "url_team": "https://www.flashscore.com/football/europe/europa-conference-league/",
+                "url_news": "https://www.flashscore.com/football/europe/europa-conference-league/news/"
+            },
+            "UEFA_Nations_League": {
+                "url_team": "https://www.flashscore.com/football/europe/uefa-nations-league/",
+                "url_news": "https://www.flashscore.com/football/europe/uefa-nations-league/news/"
+            },
+            "Euro_U21": {
+                "url_team": "https://www.flashscore.com/football/europe/euro-u21/",
+                "url_news": "https://www.flashscore.com/football/europe/euro-u21/news/"
+            },
+            "Euro_U19": {
+                "url_team": "https://www.flashscore.com/football/europe/euro-u19/",
+                "url_news": "https://www.flashscore.com/football/europe/euro-u19/news/"
+            },
+            "World_Championship": {
+                "url_team": "https://www.flashscore.com/football/world/world-championship/",
+                "url_news": "https://www.flashscore.com/football/world/world-championship/news/"
+            },
+            "Euro_U17": {
+                "url_team": "https://www.flashscore.com/football/europe/euro-u17/",
+                "url_news": "https://www.flashscore.com/football/europe/euro-u17/news/"
+            },
+            "UEFA_Super_Cup": {
+                "url_team": "https://www.flashscore.com/football/europe/uefa-super-cup/",
+                "url_news": "https://www.flashscore.com/football/europe/uefa-super-cup/news/"
+            },
+            "": {
+                "url_team": "https://www.flashscore.com/football/europe/all-island-cup-women/",
+                "url_news": "https://www.flashscore.com/football/europe/all-island-cup-women/news/"
+            }
+        },
+        "Europa_League": {
+            "Euro": {
+                "url_team": "https://www.flashscore.com/football/europe/euro/",
+                "url_news": "https://www.flashscore.com/football/europe/euro/news/"
+            },
+            "Champions_League": {
+                "url_team": "https://www.flashscore.com/football/europe/champions-league/",
+                "url_news": "https://www.flashscore.com/football/europe/champions-league/news/"
+            },
+            "Europa_League": {
+                "url_team": "https://www.flashscore.com/football/europe/europa-league/",
+                "url_news": "https://www.flashscore.com/football/europe/europa-league/news/"
+            },
+            "Europa_Conference_League": {
+                "url_team": "https://www.flashscore.com/football/europe/europa-conference-league/",
+                "url_news": "https://www.flashscore.com/football/europe/europa-conference-league/news/"
+            },
+            "UEFA_Nations_League": {
+                "url_team": "https://www.flashscore.com/football/europe/uefa-nations-league/",
+                "url_news": "https://www.flashscore.com/football/europe/uefa-nations-league/news/"
+            },
+            "Euro_U21": {
+                "url_team": "https://www.flashscore.com/football/europe/euro-u21/",
+                "url_news": "https://www.flashscore.com/football/europe/euro-u21/news/"
+            },
+            "Euro_U19": {
+                "url_team": "https://www.flashscore.com/football/europe/euro-u19/",
+                "url_news": "https://www.flashscore.com/football/europe/euro-u19/news/"
+            },
+            "World_Championship": {
+                "url_team": "https://www.flashscore.com/football/world/world-championship/",
+                "url_news": "https://www.flashscore.com/football/world/world-championship/news/"
+            },
+            "Euro_U17": {
+                "url_team": "https://www.flashscore.com/football/europe/euro-u17/",
+                "url_news": "https://www.flashscore.com/football/europe/euro-u17/news/"
+            },
+            "UEFA_Super_Cup": {
+                "url_team": "https://www.flashscore.com/football/europe/uefa-super-cup/",
+                "url_news": "https://www.flashscore.com/football/europe/uefa-super-cup/news/"
+            },
+            "": {
+                "url_team": "https://www.flashscore.com/football/europe/all-island-cup-women/",
+                "url_news": "https://www.flashscore.com/football/europe/all-island-cup-women/news/"
+            }
+        },
+        "Europa_Conference_League": {
+            "Euro": {
+                "url_team": "https://www.flashscore.com/football/europe/euro/",
+                "url_news": "https://www.flashscore.com/football/europe/euro/news/"
+            },
+            "Champions_League": {
+                "url_team": "https://www.flashscore.com/football/europe/champions-league/",
+                "url_news": "https://www.flashscore.com/football/europe/champions-league/news/"
+            },
+            "Europa_League": {
+                "url_team": "https://www.flashscore.com/football/europe/europa-league/",
+                "url_news": "https://www.flashscore.com/football/europe/europa-league/news/"
+            },
+            "Europa_Conference_League": {
+                "url_team": "https://www.flashscore.com/football/europe/europa-conference-league/",
+                "url_news": "https://www.flashscore.com/football/europe/europa-conference-league/news/"
+            },
+            "UEFA_Nations_League": {
+                "url_team": "https://www.flashscore.com/football/europe/uefa-nations-league/",
+                "url_news": "https://www.flashscore.com/football/europe/uefa-nations-league/news/"
+            },
+            "Euro_U21": {
+                "url_team": "https://www.flashscore.com/football/europe/euro-u21/",
+                "url_news": "https://www.flashscore.com/football/europe/euro-u21/news/"
+            },
+            "Euro_U19": {
+                "url_team": "https://www.flashscore.com/football/europe/euro-u19/",
+                "url_news": "https://www.flashscore.com/football/europe/euro-u19/news/"
+            },
+            "World_Championship": {
+                "url_team": "https://www.flashscore.com/football/world/world-championship/",
+                "url_news": "https://www.flashscore.com/football/world/world-championship/news/"
+            },
+            "Euro_U17": {
+                "url_team": "https://www.flashscore.com/football/europe/euro-u17/",
+                "url_news": "https://www.flashscore.com/football/europe/euro-u17/news/"
+            },
+            "UEFA_Super_Cup": {
+                "url_team": "https://www.flashscore.com/football/europe/uefa-super-cup/",
+                "url_news": "https://www.flashscore.com/football/europe/uefa-super-cup/news/"
+            },
+            "": {
+                "url_team": "https://www.flashscore.com/football/europe/all-island-cup-women/",
+                "url_news": "https://www.flashscore.com/football/europe/all-island-cup-women/news/"
+            }
+        },
+        "UEFA_Nations_League": {
+            "Euro": {
+                "url_team": "https://www.flashscore.com/football/europe/euro/",
+                "url_news": "https://www.flashscore.com/football/europe/euro/news/"
+            },
+            "Champions_League": {
+                "url_team": "https://www.flashscore.com/football/europe/champions-league/",
+                "url_news": "https://www.flashscore.com/football/europe/champions-league/news/"
+            },
+            "Europa_League": {
+                "url_team": "https://www.flashscore.com/football/europe/europa-league/",
+                "url_news": "https://www.flashscore.com/football/europe/europa-league/news/"
+            },
+            "Europa_Conference_League": {
+                "url_team": "https://www.flashscore.com/football/europe/europa-conference-league/",
+                "url_news": "https://www.flashscore.com/football/europe/europa-conference-league/news/"
+            },
+            "UEFA_Nations_League": {
+                "url_team": "https://www.flashscore.com/football/europe/uefa-nations-league/",
+                "url_news": "https://www.flashscore.com/football/europe/uefa-nations-league/news/"
+            },
+            "Euro_U21": {
+                "url_team": "https://www.flashscore.com/football/europe/euro-u21/",
+                "url_news": "https://www.flashscore.com/football/europe/euro-u21/news/"
+            },
+            "Euro_U19": {
+                "url_team": "https://www.flashscore.com/football/europe/euro-u19/",
+                "url_news": "https://www.flashscore.com/football/europe/euro-u19/news/"
+            },
+            "World_Championship": {
+                "url_team": "https://www.flashscore.com/football/world/world-championship/",
+                "url_news": "https://www.flashscore.com/football/world/world-championship/news/"
+            },
+            "Euro_U17": {
+                "url_team": "https://www.flashscore.com/football/europe/euro-u17/",
+                "url_news": "https://www.flashscore.com/football/europe/euro-u17/news/"
+            },
+            "UEFA_Super_Cup": {
+                "url_team": "https://www.flashscore.com/football/europe/uefa-super-cup/",
+                "url_news": "https://www.flashscore.com/football/europe/uefa-super-cup/news/"
+            },
+            "": {
+                "url_team": "https://www.flashscore.com/football/europe/all-island-cup-women/",
+                "url_news": "https://www.flashscore.com/football/europe/all-island-cup-women/news/"
+            }
+        },
+        "World_Championship": {
+            "World_Championship": {
+                "url_team": "https://www.flashscore.com/football/world/world-championship/",
+                "url_news": "https://www.flashscore.com/football/world/world-championship/news/"
+            },
+            "Olympic_Games": {
+                "url_team": "https://www.flashscore.com/football/world/olympic-games/",
+                "url_news": "https://www.flashscore.com/football/world/olympic-games/news/"
+            },
+            "FIFA_Club_World_Cup": {
+                "url_team": "https://www.flashscore.com/football/world/fifa-club-world-cup/",
+                "url_news": "https://www.flashscore.com/football/world/fifa-club-world-cup/news/"
+            },
+            "FIFA_Confederations_Cup": {
+                "url_team": "https://www.flashscore.com/football/world/fifa-confederations-cup/",
+                "url_news": "https://www.flashscore.com/football/world/fifa-confederations-cup/news/"
+            },
+            "World_Cup_U20": {
+                "url_team": "https://www.flashscore.com/football/world/world-cup-u20/",
+                "url_news": "https://www.flashscore.com/football/world/world-cup-u20/news/"
+            },
+            "World_Cup_U17": {
+                "url_team": "https://www.flashscore.com/football/world/world-cup-u17/",
+                "url_news": "https://www.flashscore.com/football/world/world-cup-u17/news/"
+            },
+            "Finalissima": {
+                "url_team": "https://www.flashscore.com/football/world/finalissima/",
+                "url_news": "https://www.flashscore.com/football/world/finalissima/news/"
+            },
+            "UEFA_CONMEBOL_Club_Challenge": {
+                "url_team": "https://www.flashscore.com/football/world/uefa-conmebol-club-challenge/",
+                "url_news": "https://www.flashscore.com/football/world/uefa-conmebol-club-challenge/news/"
+            },
+            "Friendly_International": {
+                "url_team": "https://www.flashscore.com/football/world/friendly-international/",
+                "url_news": "https://www.flashscore.com/football/world/friendly-international/news/"
+            },
+            "Club_Friendly": {
+                "url_team": "https://www.flashscore.com/football/world/club-friendly/",
+                "url_news": "https://www.flashscore.com/football/world/club-friendly/news/"
+            },
+            "": {
+                "url_team": "https://www.flashscore.com/football/world/universiade-women/",
+                "url_news": "https://www.flashscore.com/football/world/universiade-women/news/"
+            }
+        },
+        "FIFA_Club_World_Cup": {
+            "World_Championship": {
+                "url_team": "https://www.flashscore.com/football/world/world-championship/",
+                "url_news": "https://www.flashscore.com/football/world/world-championship/news/"
+            },
+            "Olympic_Games": {
+                "url_team": "https://www.flashscore.com/football/world/olympic-games/",
+                "url_news": "https://www.flashscore.com/football/world/olympic-games/news/"
+            },
+            "FIFA_Club_World_Cup": {
+                "url_team": "https://www.flashscore.com/football/world/fifa-club-world-cup/",
+                "url_news": "https://www.flashscore.com/football/world/fifa-club-world-cup/news/"
+            },
+            "FIFA_Confederations_Cup": {
+                "url_team": "https://www.flashscore.com/football/world/fifa-confederations-cup/",
+                "url_news": "https://www.flashscore.com/football/world/fifa-confederations-cup/news/"
+            },
+            "World_Cup_U20": {
+                "url_team": "https://www.flashscore.com/football/world/world-cup-u20/",
+                "url_news": "https://www.flashscore.com/football/world/world-cup-u20/news/"
+            },
+            "World_Cup_U17": {
+                "url_team": "https://www.flashscore.com/football/world/world-cup-u17/",
+                "url_news": "https://www.flashscore.com/football/world/world-cup-u17/news/"
+            },
+            "Finalissima": {
+                "url_team": "https://www.flashscore.com/football/world/finalissima/",
+                "url_news": "https://www.flashscore.com/football/world/finalissima/news/"
+            },
+            "UEFA_CONMEBOL_Club_Challenge": {
+                "url_team": "https://www.flashscore.com/football/world/uefa-conmebol-club-challenge/",
+                "url_news": "https://www.flashscore.com/football/world/uefa-conmebol-club-challenge/news/"
+            },
+            "Friendly_International": {
+                "url_team": "https://www.flashscore.com/football/world/friendly-international/",
+                "url_news": "https://www.flashscore.com/football/world/friendly-international/news/"
+            },
+            "Club_Friendly": {
+                "url_team": "https://www.flashscore.com/football/world/club-friendly/",
+                "url_news": "https://www.flashscore.com/football/world/club-friendly/news/"
+            },
+            "": {
+                "url_team": "https://www.flashscore.com/football/world/universiade-women/",
+                "url_news": "https://www.flashscore.com/football/world/universiade-women/news/"
+            }
+        }
+    }
+}
