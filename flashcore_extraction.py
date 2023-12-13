@@ -8,7 +8,7 @@ from selenium.webdriver.common.by import By
 import chromedriver_autoinstaller
 from selenium import webdriver
 from datetime import datetime
-import pandas as pd
+# import pandas as pd
 import random
 import time
 import json
@@ -19,7 +19,7 @@ from datetime import date, timedelta
 import os
 import requests
 import string
-import psycopg2
+# import psycopg2
 from check_points import *
 
 def launch_navigator(url):
