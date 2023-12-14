@@ -27,7 +27,7 @@ def launch_navigator(url):
 	options.add_argument("--disable-blink-features=AutomationControlled") 
 	options.add_experimental_option("excludeSwitches", ["enable-automation"]) 
 	options.add_experimental_option("useAutomationExtension", False)	
-	options.add_argument('--headless')
+	# options.add_argument('--headless')
 	options.add_argument('--no-sandbox')
 	options.add_argument('--disable-dev-shm-usage')
 	#options.add_argument(r"user-data-dir=/home/jorge/.config/google-chrome/")
@@ -82,17 +82,6 @@ def find_ligues_torneos(driver):
 		dict_liguies['_'.join(ligue.text.split())] = ligue.get_attribute('href')
 	return dict_liguies
 
-def find_teams_players(driver):
-	wait = WebDriverWait(driver, 10)
-	xpath_expression = '//div[@class="menu selected-country-list leftMenu leftMenu--selected"]/div/a'
-	teams_players = wait.until(EC.element_to_be_clickable((By.XPATH, xpath_expression)))    
-	teams_players = driver.find_elements(By.XPATH,xpath_expression)
-
-	dict_teams_players = {}
-	for team_player in teams_players:
-		dict_teams_players['_'.join(team_player.text.split())] = team_player.get_attribute('href')
-	return dict_teams_players
-
 def getdb():
 	return psycopg2.connect(
 		host="172.17.0.2",
@@ -142,23 +131,28 @@ def wait_update_page(driver, url, class_name):
 		element_updated = wait.until(EC.staleness_of(current_tab[0]))		
 	
 def find_ligues_torneos(driver):
-	wait = WebDriverWait(driver, 10)
+	wait = WebDriverWait(driver, 5)
 	ligues = wait.until(EC.element_to_be_clickable((By.XPATH, '//div[@id="my-leagues-list"]/div/div/a')))    
 	ligues = driver.find_elements(By.XPATH, '//div[@id="my-leagues-list"]/div/div/a')
 	dict_liguies = {}
 	for ligue in ligues:
 		dict_liguies['_'.join(ligue.text.split())] = ligue.get_attribute('href')
+
 	return dict_liguies
 
 def find_teams_players(driver):
-	wait = WebDriverWait(driver, 10)
-	xpath_expression = '//div[@class="menu selected-country-list leftMenu leftMenu--selected"]/div/a'
-	teams_players = wait.until(EC.element_to_be_clickable((By.XPATH, xpath_expression)))    
-	teams_players = driver.find_elements(By.XPATH,xpath_expression)
+	wait = WebDriverWait(driver, 4)
+	try:
+		xpath_expression = '//div[@class="menu selected-country-list leftMenu leftMenu--selected"]/div/a'
+		teams_players = wait.until(EC.element_to_be_clickable((By.XPATH, xpath_expression)))    
+		teams_players = driver.find_elements(By.XPATH,xpath_expression)
 
-	dict_teams_players = {}
-	for team_player in teams_players:
-		dict_teams_players['_'.join(team_player.text.split())] = team_player.get_attribute('href')
+		dict_teams_players = {}
+		for team_player in teams_players:
+			dict_teams_players['_'.join(team_player.text.split())] = team_player.get_attribute('href')
+
+	except:
+		dict_teams_players = {}
 	return dict_teams_players
 
 def click_news(driver):
@@ -190,7 +184,7 @@ def build_dict_urls(driver, dict_sports,
 	dict_urls = {}
 	dict_with_issues = {}
 	for sport, url_sport in dict_sports.items():
-		try:
+		# try:
 			print("Current sport: ", sport)
 			if sport in dict_scraper_control.keys():
 				pass
@@ -213,32 +207,38 @@ def build_dict_urls(driver, dict_sports,
 					dict_teams_players = find_teams_players(driver)
 					
 					dict_teams_url = {}
-
-					for team_player, url_team in dict_teams_players.items():            
-						step = 'loop teams player'
-						wait_update_page(driver, url_team, "heading__title")
-						print("#"*30, "Team Player: ", url_team)
-
-						print("Click on news: ")
-						click_news(driver)
-						if flag_news:
-							process_current_news_link(driver, driver.current_url)
+					if len(dict_teams_players)!= 0:
+						for team_player, url_team in dict_teams_players.items():            
+							step = 'loop teams player'
 							wait_update_page(driver, url_team, "heading__title")
+							print("#"*30, "Team Player: ", url_team)
 
-						url_news = driver.current_url
-						dict_teams_url[team_player] = {'url_team':url_team, 'url_news':url_news}
+							print("Click on news: ")
+							click_news(driver)
+							if flag_news:
+								process_current_news_link(driver, driver.current_url)
+								wait_update_page(driver, url_team, "heading__title")
+
+							url_news = driver.current_url
+							dict_teams_url[team_player] = {'url_team':url_team, 'url_news':url_news}
 					
-					dict_url_ligues_tournaments[ligue_name] = dict_teams_url
+						dict_url_ligues_tournaments[ligue_name] = dict_teams_url
+					else:
+
+						click_news(driver)
+						url_news = driver.current_url
+						process_current_news_link(driver, url_news)
+						dict_url_ligues_tournaments[ligue_name] = {'url':ligue_url, 'url_news':url_news}
 					
 				dict_urls[sport] = dict_url_ligues_tournaments
 				save_check_point(file_main_dict, dict_urls)
 				dict_scraper_control[sport] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")        
 				save_check_point('check_points/scraper_control.json', dict_scraper_control)
 					
-		except:
-			print("Don't found team player")			
-			dict_with_issues[sport] = {'step':step, 'url':url_sport}
-			save_check_point('check_points/flashscore_issues.json', dict_with_issues)
+		# except:
+		# 	print("Don't found team player")			
+		# 	dict_with_issues[sport] = {'step':step, 'url':url_sport}
+		# 	save_check_point('check_points/flashscore_issues.json', dict_with_issues)
 			
 
 def process_date(date):
@@ -321,9 +321,14 @@ def get_news_info(driver, date):
 				 'news_content':body_html, 'image':image_path,
 				'published':date,'news_tags': mentions}
 	
-	for key, field in dict_news.items():
-		print(key, len(str(field)), end='--')
-		
+	dict_max_len = {'news_id':40, 'title':255, 'news_summary':4196, 'news_content':8392, 'news_tags':255}
+
+	for field_name, max_len in dict_max_len.items():
+		if len(str(dict_news[field_name])) > max_len:
+			print(field_name, "Exceed max len: ", max_len,'/',len(str(dict_news[dict_news])))
+	# for key, field in dict_news.items():
+	# 	print(key, len(str(field)), end='--')
+
 	print('\n')
 
 	dict_news = {'news_id':random_id(), 'title':title[0:255], 'news_summary':summary.text[0:4196],
