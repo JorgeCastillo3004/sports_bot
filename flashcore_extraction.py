@@ -27,7 +27,7 @@ def launch_navigator(url):
 	options.add_argument("--disable-blink-features=AutomationControlled") 
 	options.add_experimental_option("excludeSwitches", ["enable-automation"]) 
 	options.add_experimental_option("useAutomationExtension", False)	
-	# options.add_argument('--headless')
+	options.add_argument('--headless') #test-
 	options.add_argument('--no-sandbox')
 	options.add_argument('--disable-dev-shm-usage')
 	#options.add_argument(r"user-data-dir=/home/jorge/.config/google-chrome/")
@@ -181,7 +181,8 @@ def build_dict_urls(driver, dict_sports,
 
 	dict_scraper_control = check_previous_execution()
 
-	dict_urls = {}
+	dict_urls = load_json('check_points/flashscore_links.json')
+
 	dict_with_issues = {}
 	for sport, url_sport in dict_sports.items():
 		# try:
@@ -400,7 +401,7 @@ def main():
 		save_check_point('check_points/sports_url.json', dict_sports)
 
 	if config_dict['update_links']:
-		if not os.file.exists('check_points/sports_url.json'):
+		if not os.path.isfile('check_points/sports_url.json'):
 			dict_sports = get_sports_links(driver)
 			save_check_point('check_points/sports_url.json', dict_sports)
 		else:
