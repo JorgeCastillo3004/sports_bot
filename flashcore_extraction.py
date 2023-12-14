@@ -317,7 +317,7 @@ def get_news_info(driver, date):
 	save_image(driver, image_url, image_path)
 	mentions = get_mentions(driver)
 
-	dict_news = {'news_id':random_id(), 'title':title[0:128], 'news_summary':summary.text[0:2098],
+	dict_news = {'news_id':random_id(), 'title':title[0:128], 'news_summary':summary.text[0:512],
 				 'news_content':body_html[0:4196], 'image':image_path,
 				'published':date,'news_tags': mentions[0:128]}
 
