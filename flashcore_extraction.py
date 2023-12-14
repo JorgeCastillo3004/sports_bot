@@ -27,8 +27,12 @@ def launch_navigator(url):
 	options.add_argument("--disable-blink-features=AutomationControlled") 
 	options.add_experimental_option("excludeSwitches", ["enable-automation"]) 
 	options.add_experimental_option("useAutomationExtension", False)
-	options.add_argument("--headless")
-	drive_path = Service('/usr/bin/chromedriver')	
+	# options.add_argument("--headless")
+	#options.add_argument(r"user-data-dir=/home/jorge/.config/google-chrome/")
+	#options.add_argument(r"profile-directory=Profile 6")
+
+	drive_path = Service('/usr/local/bin/chromedriver')
+	# drive_path = Service('/home/jorge/Work_may_2023/Mitsoku_project/Tool_TO_GET_PERSON_CONTACT/chrome_driver/chromedriver-linux64/chromedriver')
 	driver = webdriver.Chrome(service=drive_path,  options=options)
 	# driver = webdriver.Chrome(service=drive_path)
 	driver.get(url)
@@ -351,7 +355,7 @@ def process_current_news_link(driver, current_news_link):
 
 		load_detailed_news(driver, url_date_news['url'])
 		dict_new = get_news_info(driver, url_date_news['date'])
-		# save_news_database(dict_new) #test-
+		save_news_database(dict_new) #test-
 		# dict to save in database dict_new	
 
 def get_all_news(driver, dict_news_links ='check_points/flashscore_links.json'):
@@ -393,8 +397,8 @@ def main():
 	if config_dict['get_news']:
 		get_all_news(driver, dict_news_links ='check_points/flashscore_links.json')
 
-# con = getdb() #test-
+con = getdb() #test-
 
-if __name__ == "__main__":  	#test-
-	main()            			#test-
-	# con.close()					#test-
+if __name__ == "__main__":  	
+	main()            			
+	con.close()					#test-
