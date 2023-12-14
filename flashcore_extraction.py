@@ -26,15 +26,16 @@ def launch_navigator(url):
 	options = webdriver.ChromeOptions()
 	options.add_argument("--disable-blink-features=AutomationControlled") 
 	options.add_experimental_option("excludeSwitches", ["enable-automation"]) 
-	options.add_experimental_option("useAutomationExtension", False)
-	# options.add_argument("--headless")
+	options.add_experimental_option("useAutomationExtension", False)	
+	options.add_argument('--headless')
+	options.add_argument('--no-sandbox')
+	options.add_argument('--disable-dev-shm-usage')
 	#options.add_argument(r"user-data-dir=/home/jorge/.config/google-chrome/")
 	#options.add_argument(r"profile-directory=Profile 6")
 
-	drive_path = Service('/usr/local/bin/chromedriver')
-	# drive_path = Service('/home/jorge/Work_may_2023/Mitsoku_project/Tool_TO_GET_PERSON_CONTACT/chrome_driver/chromedriver-linux64/chromedriver')
+	drive_path = Service('/usr/local/bin/chromedriver')	
 	driver = webdriver.Chrome(service=drive_path,  options=options)
-	# driver = webdriver.Chrome(service=drive_path)
+	
 	driver.get(url)
 	return driver
 
@@ -400,5 +401,6 @@ def main():
 con = getdb() #test-
 
 if __name__ == "__main__":  	
+	int_folders()
 	main()            			
 	con.close()					#test-
