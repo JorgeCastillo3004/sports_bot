@@ -325,7 +325,7 @@ def get_news_info(driver, date):
 
 	for field_name, max_len in dict_max_len.items():
 		if len(str(dict_news[field_name])) > max_len:
-			print(field_name, "Exceed max len: ", max_len,'/',len(str(dict_news[dict_news])))
+			print(field_name, "Exceed max len: ", max_len,'/',len(str(dict_news[field_name])))
 	# for key, field in dict_news.items():
 	# 	print(key, len(str(field)), end='--')
 
