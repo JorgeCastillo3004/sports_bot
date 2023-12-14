@@ -320,7 +320,10 @@ def get_news_info(driver, date):
 	dict_news = {'news_id':random_id(), 'title':title, 'news_summary':summary.text,
 				 'news_content':body_html, 'image':image_path,
 				'published':date,'news_tags': mentions}
-
+	
+	for key, field in dict_news.items():
+		print(key, len(str(field)))
+		
 	return dict_news
 
 def random_name(folder = 'news_images'):
