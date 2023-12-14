@@ -326,9 +326,9 @@ def get_news_info(driver, date):
 		
 	print('\n')
 
-	# dict_news = {'news_id':random_id(), 'title':title[0:255], 'news_summary':summary.text[0:4196],
-				 # 'news_content':body_html[0:8392], 'image':image_path,
-				# 'published':date,'news_tags': mentions[0:255]}
+	dict_news = {'news_id':random_id(), 'title':title[0:255], 'news_summary':summary.text[0:4196],
+				 'news_content':body_html[0:8392], 'image':image_path,
+				'published':date,'news_tags': mentions[0:255]}
 
 	return dict_news
 
