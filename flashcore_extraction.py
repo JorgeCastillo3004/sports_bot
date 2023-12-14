@@ -317,13 +317,13 @@ def get_news_info(driver, date):
 	save_image(driver, image_url, image_path)
 	mentions = get_mentions(driver)
 
-	dict_news = {'news_id':random_id(), 'title':title, 'news_summary':summary.text,
-				 'news_content':body_html, 'image':image_path,
-				'published':date,'news_tags': mentions}
+	dict_news = {'news_id':random_id()[0:], 'title':title[0:255], 'news_summary':summary.text[0:4196],
+				 'news_content':body_html[0:8392], 'image':image_path,
+				'published':date,'news_tags': mentions[0:255]}
 	
 	for key, field in dict_news.items():
-		print(key, len(str(field)))
-		
+		print(key, len(str(field)), end='--')
+
 	return dict_news
 
 def random_name(folder = 'news_images'):
