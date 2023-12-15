@@ -44,7 +44,9 @@ def int_folders():
 		os.mkdir('check_points')
 	if not os.path.exists('news_images'):
 		os.mkdir('news_images')
-
+	if not os.path.exists('logo_images'):
+		os.mkdir('logo_images')
+	
 def get_sports_links(driver):
 	wait = WebDriverWait(driver, 10)
 	buttonmore = wait.until(EC.element_to_be_clickable((By.CLASS_NAME, 'menuMinority__arrow')))
@@ -212,12 +214,14 @@ def build_dict_urls(driver, dict_sports,
 						for team_player, url_team in dict_teams_players.items():            
 							step = 'loop teams player'
 							wait_update_page(driver, url_team, "heading__title")
+							ligue_tornamen_info = get_ligues_data(driver)
+							save_ligue_tornament_info(ligue_tornamen_info)
 							print("#"*30, "Team Player: ", url_team)
 
 							print("Click on news: ")
 							click_news(driver)
 							if flag_news:
-								process_current_news_link(driver, driver.current_url)
+								process_current_news_link(driver, driver.current_url)								
 								wait_update_page(driver, url_team, "heading__title")
 
 							url_news = driver.current_url
@@ -299,13 +303,13 @@ def load_detailed_news(driver, url_news):
 
 def get_news_info(driver, date):
 	   #  news_id      varchar(40) not null
-    #     primary key,
-    # news_content varchar(8392),
-    # image        varchar(255),
-    # published    timestamp(6),
-    # news_summary varchar(4196),
-    # news_tags    varchar(255),
-    # title        varchar(255)
+	#     primary key,
+	# news_content varchar(8392),
+	# image        varchar(255),
+	# published    timestamp(6),
+	# news_summary varchar(4196),
+	# news_tags    varchar(255),
+	# title        varchar(255)
 
 	title = driver.find_element(By.CLASS_NAME, 'fsNewsArticle__title').text
 	image = driver.find_element(By.XPATH, '//div[@class="imageContainer__element"]/figure/picture/img')
@@ -365,6 +369,11 @@ def save_news_database(dict_news):
 	cur.execute(query, dict_news)
 	con.commit()
 
+def save_ligue_tornament_info(dict_ligue_tornament):
+	print("Info ligue tournament info save")
+	for field, value in dict_ligue_tornament.items():
+		print(field, value, end ='-')
+
 def process_current_news_link(driver, current_news_link):	
 	flashscore_url_news = get_news_url_date(driver, current_news_link)
 
@@ -389,6 +398,43 @@ def get_all_news(driver, dict_news_links ='check_points/flashscore_links.json'):
 				driver.get(current_news_link)	            
 				process_current_news_link(driver, current_news_link)
 
+
+def get_teams_info(driver, dict_news_links ='check_points/flashscore_links.json'):
+	dict_sports = load_json(dict_news_links)
+	for sport, dict_sport in dict_sports.items():
+		print("--------------------------- SPORT---------------------------")
+		for country, country_info in dict_sport.items():
+			print("--------------------------- COUNTRY-------------------")
+			for team, team_info in country_info.items():        
+				print("--------------------------- LIGUE-TOURNAMENTS ------------")
+				print(team, team_info)
+				current_news_link = team_info['url_team']
+
+				driver.get(current_news_link)
+
+				input_user = input("Type s to stop process: ")
+				if input_user == 's':
+					print(stop)
+
+
+
+########################################################## MILESTONE 2 ###################################################
+def get_ligues_data(driver):
+	block_ligue_team = driver.find_element(By.CLASS_NAME, 'container__heading')
+	sport = block_ligue_team.find_element(By.XPATH, './/h2[@class= "breadcrumb"]/a[1]').text
+	country = block_ligue_team.find_element(By.XPATH, './/h2[@class= "breadcrumb"]/a[2]').text
+
+	name_ligue_tournament = block_ligue_team.find_element(By.CLASS_NAME,'heading__title').text
+	temporada = block_ligue_team.find_element(By.CLASS_NAME, 'heading__info').text
+
+	image_url = block_ligue_team.find_element(By.XPATH, './/div[@class= "heading"]/img').get_attribute('src')
+
+	image_path = random_name(folder = 'logo_images')
+	save_image(driver, image_url, image_path)
+
+	ligue_tornamen = {'sport':sport, 'country': country, 'name_ligue_tournament': name_ligue_tournament,
+					'temporada':temporada, 'image_path':image_path}
+	return ligue_tornamen
 
 def main():
 	config_dict = load_json('check_points/config.json')
@@ -415,8 +461,8 @@ def main():
 		get_all_news(driver, dict_news_links ='check_points/flashscore_links.json')
 
 con = getdb() #test-
-
-if __name__ == "__main__":  	
-	int_folders()
-	main()            			
+int_folders()
+# if __name__ == "__main__":  	
+# 	int_folders()
+# 	main()            			
 	con.close()					#test-
