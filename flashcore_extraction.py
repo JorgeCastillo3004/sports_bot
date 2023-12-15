@@ -462,7 +462,8 @@ def main():
 
 con = getdb() #test-
 int_folders()
-# if __name__ == "__main__":  	
-# 	int_folders()
-# 	main()            			
+
+if __name__ == "__main__":  	
+	int_folders()
+	main()            			
 	con.close()					#test-
