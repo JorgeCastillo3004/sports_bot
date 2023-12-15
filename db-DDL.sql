@@ -15,12 +15,12 @@ create table news
 (
     news_id      varchar(40) not null
         primary key,
-    news_content varchar(4196),
+    news_content varchar(16392),
     image        varchar(255),
     published    timestamp(6),
-    news_summary varchar(512),
-    news_tags    varchar(128),
-    title        varchar(255)
+    news_summary varchar(8196),
+    news_tags    varchar(255),
+    title        varchar(400)
 );
 
 alter table news
