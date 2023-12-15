@@ -326,19 +326,19 @@ def get_news_info(driver, date):
 				 'news_content':body_html, 'image':image_path,
 				'published':date,'news_tags': mentions}
 	
-	dict_max_len = {'news_id':40, 'title':255, 'news_summary':4196, 'news_content':8392, 'news_tags':255}
+	# dict_max_len = {'news_id':40, 'title':255, 'news_summary':4196, 'news_content':8392, 'news_tags':255}
 
-	for field_name, max_len in dict_max_len.items():
-		if len(str(dict_news[field_name])) > max_len:
-			print(field_name, "Exceed max len: ", max_len,'/',len(str(dict_news[field_name])))
+	# for field_name, max_len in dict_max_len.items():
+	# 	if len(str(dict_news[field_name])) > max_len:
+	# 		print(field_name, "Exceed max len: ", max_len,'/',len(str(dict_news[field_name])))
 	# for key, field in dict_news.items():
 	# 	print(key, len(str(field)), end='--')
 
-	print('\n')
+	# print('\n')
 
-	dict_news = {'news_id':random_id(), 'title':title[0:255], 'news_summary':summary.text[0:4196],
-				 'news_content':body_html[0:8392], 'image':image_path,
-				'published':date,'news_tags': mentions[0:255]}
+	dict_news = {'news_id':random_id(), 'title':title, 'news_summary':summary.text,
+				 'news_content':body_html, 'image':image_path,
+				'published':date,'news_tags': mentions}
 
 	return dict_news
 
