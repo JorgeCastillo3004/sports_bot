@@ -48,8 +48,8 @@ def launch_navigator(url):
 def int_folders():
 	if not os.path.exists('check_points'):
 		os.mkdir('check_points')
-	if not os.path.exists('news_images'):
-		os.mkdir('news_images')
+	# if not os.path.exists('news_images'):
+	# 	os.mkdir('news_images')
 	if not os.path.exists('logo_images'):
 		os.mkdir('logo_images')
 	if not os.path.exists('images'):
@@ -57,7 +57,7 @@ def int_folders():
 	if not os.path.exists('images/news'):
 		os.mkdir("images/news")
 	if not os.path.exists('images/news/small_images'):
-		os.mkdir("images/news/full_images/")
+		os.mkdir("images/news/small_images/")
 	if not os.path.exists('images/news/full_images'):
 		os.mkdir("images/news/full_images/")
 
@@ -673,6 +673,7 @@ con = getdb() #test-
 int_folders()
 
 if __name__ == "__main__":  	#test-
-	int_folders()				#test-
-	main()            			#test-
+	# int_folders()				#test-
+	# main()            			#test-
 	con.close()					#test-
+# 
