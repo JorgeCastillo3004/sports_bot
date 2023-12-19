@@ -92,6 +92,7 @@ def get_sports_links_news(driver):
 
 def get_list_recent_news(driver):
 	# container_news = driver.find_elements(By.XPATH, '//div[@data-testid="wcl-elementBodyNews" and contains(.,"More Football News")]/div/a')
+	wait = WebDriverWait(driver, 10)
 	webdriver.ActionChains(driver).send_keys(Keys.END).perform()
 	xpath_expression = '//div[@class="fsNewsSection fsNewsSection__mostRecent fsNewsSection__noTopped"]/a'
 	container_news = driver.find_elements(By.XPATH, xpath_expression)
@@ -101,6 +102,7 @@ def get_list_recent_news(driver):
 		news_date = block.find_element(By.CLASS_NAME, '_newsMeta_gh8ui_5').text
 		data_utc = process_date(news_date)
 		title = block.find_element(By.XPATH, './/div[@role="heading"]').text
+		image = wait.until(EC.element_to_be_clickable((By.XPATH, './/figure/picture/img')))
 		image_url = block.find_element(By.XPATH, './/figure/picture/source').get_attribute('srcset').split(', ')[0]
 		image_url = re.sub(r'\s+\d+\w','', image_url)
 	#     if title not in database:
