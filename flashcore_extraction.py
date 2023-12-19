@@ -670,10 +670,9 @@ def main():
 		get_all_news(driver, dict_news_links ='check_points/flashscore_links.json')
 
 con = getdb() #test-
-int_folders()
+int_folders()			
 
-if __name__ == "__main__":  	#test-
-	# int_folders()				#test-
-	# main()            			#test-
+if __name__ == "__main__":  	#test-	
+	main()            			#test-
 	con.close()					#test-
 # 
