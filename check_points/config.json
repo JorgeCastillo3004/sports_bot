@@ -1,5 +1,6 @@
 {
     "sports_link": false,
     "update_links": false,
+    "get_news_m1": true,
     "get_news": true
 }
