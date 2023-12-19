@@ -25,3 +25,10 @@ def load_check_point(filename):
     else:
         json_object = {}
     return json_object
+
+def check_previous_execution(file_path = 'check_points/scraper_control.json'):
+    if os.path.isfile(file_path):
+        dict_scraper_control = load_json(file_path)
+    else:
+        dict_scraper_control = {}
+    return dict_scraper_control
