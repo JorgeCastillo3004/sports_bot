@@ -103,8 +103,9 @@ def get_list_recent_news(driver):
 		data_utc = process_date(news_date)
 		title = block.find_element(By.XPATH, './/div[@role="heading"]').text
 		image = wait.until(EC.element_to_be_clickable((By.XPATH, './/figure/picture/img')))
-		image_url = block.find_element(By.XPATH, './/figure/picture/source').get_attribute('srcset').split(', ')[0]
-		image_url = re.sub(r'\s+\d+\w','', image_url)
+		image = image.get_attribute('src')
+		# image_url = block.find_element(By.XPATH, './/figure/picture/source').get_attribute('srcset').split(', ')[0]
+		# image_url = re.sub(r'\s+\d+\w','', image_url)
 	#     if title not in database:
 		if True:
 			image_path_small = random_name(folder = 'images/news/small_images', termination = '.avif')
