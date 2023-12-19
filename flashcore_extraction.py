@@ -646,7 +646,7 @@ def main():
 
 	driver = launch_navigator('https://www.flashscore.com')
 
-	if config_dictp['get_news_m1']:
+	if config_dict['get_news_m1']:
 		dict_url_news_m1 = load_json('check_points/sports_url_m1.json')
 		main_extract_news(driver, dict_url_news)
 
