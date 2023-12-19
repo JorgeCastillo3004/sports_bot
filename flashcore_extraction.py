@@ -506,7 +506,8 @@ def extract_news_info(driver, list_upate_news, dict_check_point):
 					print("Start process: ", index, dict_check_point['index'], len(list_upate_news))
 					current_url = current_dict['news_link']
 					wait_load_detailed_news(driver, current_url)
-					dict_new = get_news_info_v2(driver, current_dict)					
+					dict_new = get_news_info_v2(driver, current_dict)
+					save_news_database(dict_news)
 					dict_check_point['index'] = index
 					save_check_point('check_points/check_point_m1_news.json', dict_check_point)
 					pending_extract = False
