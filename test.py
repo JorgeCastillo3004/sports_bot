@@ -10,8 +10,20 @@ def getdb():
         dbname='sports_db',
         )
 
-con = getdb()
+def save_news_database(dict_news):	
+	query = "INSERT INTO news VALUES(%(news_id)s, %(news_content)s, %(image)s,\
+			 %(published)s, %(news_summary)s, %(news_tags)s, %(title)s)"
+	cur = con.cursor()
+	cur.execute(query, dict_news)
+	con.commit
+
 print("Connections stablished")
+
+con = getdb()
+query = "SELECT * FROM news;"
+cur = con.cursor()
+cur.execute(query)
+
 con.close()
 # save_news_database(con, dict_news)
 
