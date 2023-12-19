@@ -109,7 +109,7 @@ def get_list_recent_news(driver):
 	#     if title not in database:
 		if True:
 			image_path_small = random_name(folder = 'images/news/small_images', termination = '.avif')
-			save_image(driver, image_url, image_path_small)
+			# save_image(driver, image_url, image_path_small)
 			dict_current_news = {'title':title, 'published':data_utc, 'image_path_small':image_path_small, 'news_link':news_link} 
 			list_upate_news.append(dict_current_news)
 	return list_upate_news
