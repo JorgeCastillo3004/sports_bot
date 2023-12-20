@@ -5,10 +5,10 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 import time
 from common_functions import *
-from main import database_enable
 from common_functions import utc_time_naive
 from data_base import *
 
+database_enable = True
 def get_list_recent_news(driver, sport, max_older_news):
 	last_news_saved = check_previous_execution(file_path = 'check_points/last_saved_news.json')
 	try:
