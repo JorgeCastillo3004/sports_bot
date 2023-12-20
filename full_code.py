@@ -342,7 +342,7 @@ def extract_news_info(driver, list_upate_news, dict_check_point):
 			print("-", index, '/',len(list_upate_news), end= ' ')
 			current_url = current_dict['news_link']
 			wait_load_detailed_news(driver, current_url)
-			dict_new = get_news_info_v2(driver, current_dict)
+			dict_news = get_news_info_v2(driver, current_dict)
 			if database_enable:
 				save_news_database(dict_news)
 			dict_check_point['index'] = index
