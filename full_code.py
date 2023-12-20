@@ -651,7 +651,7 @@ def build_dict_urls_v2(driver, dict_sports, file_main_dict = 'check_points/flash
 
 	dict_with_issues = {}
 	for sport, url_sport in dict_sports.items():
-		try:
+		# try:
 			if conf_enable_news['SPORTS'][sport]:
 				step = 'sport_loop'
 				print("Start process: ", sport, url_sport)
@@ -690,12 +690,11 @@ def build_dict_urls_v2(driver, dict_sports, file_main_dict = 'check_points/flash
 							save_check_point(file_main_dict, dict_urls)
 
 				sports_ready[sport] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")        
-				save_check_point('check_points/scraper_control_get_URL.json', sports_ready)
-					
-		except:
-			print("-*CHECK EXCEPTION -*", end='')
-			dict_with_issues[sport] = {'step':step, 'url':url_sport}
-			save_check_point('check_points/flashscore_issues.json', dict_with_issues)
+				save_check_point('check_points/scraper_control_get_URL.json', sports_ready)					
+		# except:
+		# 	print("-*CHECK EXCEPTION -*", end='')
+		# 	dict_with_issues[sport] = {'step':step, 'url':url_sport}
+		# 	save_check_point('check_points/flashscore_issues.json', dict_with_issues)
 
 ######################## NEWS EXTRACTION BLOCK 
 def get_news_url_date(driver, current_news_link, source_new = 'Flashscore News'):
