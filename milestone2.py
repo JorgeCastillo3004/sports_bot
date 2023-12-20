@@ -4,6 +4,7 @@ from selenium.webdriver.support.ui import Select
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 import time
+import psycopg2
 
 from common_functions import *
 # from main import database_enable
@@ -34,13 +35,6 @@ def getdb():
 				password="caracas123",
 		dbname='sports_db',
 		)
-
-def save_news_database(dict_news):	
-	query = "INSERT INTO news VALUES(%(news_id)s, %(news_content)s, %(image)s,\
-			 %(published)s, %(news_summary)s, %(news_tags)s, %(title)s)"
-	cur = con.cursor()
-	cur.execute(query, dict_news)
-	con.commit()
 
 def save_ligue_tornament_info(dict_ligue_tornament):
 	print("Info ligue tournament info save")
