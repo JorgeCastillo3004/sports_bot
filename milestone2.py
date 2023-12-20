@@ -8,7 +8,7 @@ import time
 from common_functions import *
 # from main import database_enable
 # from common_functions import utc_time_naive
-from data_base import *
+# from data_base import *
 
 # import argparse
 # parser = argparse.ArgumentParser()
@@ -25,6 +25,32 @@ from data_base import *
 # 	print("Don't write in database")
 
 database_enable = True
+
+
+def getdb():
+	return psycopg2.connect(
+				host="localhost",
+				user="wohhu",
+				password="caracas123",
+		dbname='sports_db',
+		)
+
+def save_news_database(dict_news):	
+	query = "INSERT INTO news VALUES(%(news_id)s, %(news_content)s, %(image)s,\
+			 %(published)s, %(news_summary)s, %(news_tags)s, %(title)s)"
+	cur = con.cursor()
+	cur.execute(query, dict_news)
+	con.commit()
+
+def save_ligue_tornament_info(dict_ligue_tornament):
+	print("Info ligue tournament info save")
+	for field, value in dict_ligue_tornament.items():
+		print(field, value, end ='-')
+
+	query = "INSERT INTO league VALUES(%(league_id)s, %(league_country)s, %(league_logo)s, %(league_name)s, %(league_name_i18n)s)"     	 
+	cur = con.cursor()																			 
+	cur.execute(query, dict_ligue_tornament)														 
+	con.commit()
 
 def get_sports_links(driver):
 	wait = WebDriverWait(driver, 10)
