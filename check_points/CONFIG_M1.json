@@ -17,5 +17,6 @@
         "AFRICAN_FOOTBALL": false,
         "GHANA": false
     },
-    "MAX_OLDER_DATE_ALLOWED": 31
+    "MAX_OLDER_DATE_ALLOWED": 31,
+    "DATA_BASE": true
 }

@@ -25,7 +25,7 @@ from common_functions import *
 # else:
 # 	print("Don't write in database")
 
-database_enable = True
+
 
 def getdb():
 	return psycopg2.connect(
@@ -118,8 +118,8 @@ def find_ligues_torneos(driver):
             dict_liguies['_'.join(ligue.text.split())] = ligue.get_attribute('href')
     return dict_liguies
 
-def extract_ligues_tournaments(driver, flag_news = False):
-	dict_sports = load_json('check_points/sports_url_m1.json')	
+def main_m2(driver, flag_news = False):
+	dict_sports = load_json('check_points/sports_url_m2.json')
 	conf_enable_news = check_previous_execution(file_path = 'check_points/CONFIG_M2.json')
 	
 	dict_with_issues = {}
@@ -152,16 +152,15 @@ def extract_ligues_tournaments(driver, flag_news = False):
 
 						url_news = driver.current_url
 
-def main_m2(driver):	
 
-	extract_ligues_tournaments(driver, flag_news = False)
-
+CONFIG = load_json('check_points/CONFIG.json')
+database_enable = CONFIG['DATA_BASE']
 if database_enable:
 	con = getdb()
 
 if __name__ == "__main__":  	
 	driver = launch_navigator('https://www.flashscore.com', database_enable)
 	login(driver, email_= "jignacio@jweglobal.com", password_ = "Caracas5050@\n")
-	main_m2(driver)
+	main_m2(driver, flag_news = False)
 	if database_enable:
 		con.close()

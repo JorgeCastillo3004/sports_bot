@@ -5,11 +5,10 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 import time
 from common_functions import *
-from common_functions import utc_time_naive
-from common_functions import launch_navigator
+# from main import database_enable
+# from common_functions import utc_time_naive
 from data_base import *
 
-database_enable = True
 def get_list_recent_news(driver, sport, max_older_news):
 	last_news_saved = check_previous_execution(file_path = 'check_points/last_saved_news.json')
 	try:
@@ -211,7 +210,14 @@ def main_extract_news(driver, dict_url_news):
 				extract_news_info(driver, list_upate_news, dict_check_point)
 				dict_check_point['index'] = 0
 
-driver = launch_navigator('https://www.flashscore.com')
-database_enable = True
-dict_url_news_m1 = load_json('check_points/sports_url_m1.json')
-main_extract_news(driver, dict_url_news_m1)
+
+CONFIG = load_json('check_points/CONFIG.json')
+database_enable = CONFIG['DATA_BASE']
+if database_enable:
+	con = getdb()
+	
+if __name__ == "__main__":	
+	driver = launch_navigator('https://www.flashscore.com', database_enable)
+	login(driver, email_= "jignacio@jweglobal.com", password_ = "Caracas5050@\n")
+	dict_url_news_m1 = load_json('check_points/sports_url_m1.json')
+	main_extract_news(driver, dict_url_news_m1)
