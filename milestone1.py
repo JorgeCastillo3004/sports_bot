@@ -6,6 +6,7 @@ from selenium.webdriver.common.by import By
 import time
 from common_functions import *
 from common_functions import utc_time_naive
+from common_fucntions import launch_navigator
 from data_base import *
 
 database_enable = True
