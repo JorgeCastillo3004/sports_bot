@@ -88,8 +88,9 @@ def launch_navigator(url, database_enable):
 		options.add_argument('--headless')
 	options.add_argument('--no-sandbox')
 	options.add_argument('--disable-dev-shm-usage')
-
-	options.add_argument(r"user-data-dir=./chrome_files")
+	chrome_path = os.getcwd()+'/chrome_files'
+	print("chrome_path: ", chrome_path)
+	options.add_argument(r"user-data-dir={}".format(chrome_path))
 	options.add_argument(r"profile-directory=Profile1")
 
 	drive_path = Service('/usr/local/bin/chromedriver')
