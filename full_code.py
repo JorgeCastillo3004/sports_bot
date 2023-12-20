@@ -687,13 +687,13 @@ def build_dict_urls_v2(driver, dict_sports, file_main_dict = 'check_points/flash
 								wait_update_page(current_url)
 
 							url_news = driver.current_url
-							dict_teams_url[ligue_tournament] = {'url':ligue_tornament_url, 'url_news':''}
+							# dict_teams_url[ligue_tournament] = {'url':ligue_tournament_url, 'url_news':''}
 							# dict_check_point['ligue_tournament'] = ligue_tournament
 							# save_check_point('check_points/check_point_URL_extraction.json', dict_check_point)
 					
-							dict_url_ligues_tournaments[ligue_tournament] = dict_teams_url
-							dict_urls[sport] = dict_url_ligues_tournaments
-							save_check_point(file_main_dict, dict_urls)
+							# dict_url_ligues_tournaments[ligue_tournament] = {'url':ligue_tournament_url, 'url_news':''}
+							# dict_urls[sport] = dict_url_ligues_tournaments
+							# save_check_point(file_main_dict, dict_urls)
 
 				sports_ready[sport] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")        
 				save_check_point('check_points/scraper_control_get_URL.json', sports_ready)					
