@@ -23,14 +23,32 @@ con = getdb()
 dict_news = dict_news = {'news_id':"asd223ddsf13", 'title':"insert new news" ,'news_summary':"summary.text",\
                                  'news_content':"body_html", 'image':"image_path",\
                                 'published':datetime.now(),'news_tags': "mentions"}     
-save_news_database(dict_news)
+#save_news_database(dict_news)
 
-query = "SELECT * FROM news;"
+option = 1
+if option  == 1:
+    query = "SELECT title FROM news;"
+
+if option == 2:
+    query = "SELECT title, COUNT(*) as count\
+    FROM news\
+    GROUP BY title\
+    HAVING COUNT(*) > 1;"
+
+if option == 3:
+    query = "DELETE FROM news;"
+
 cur = con.cursor()
 cur.execute(query)
-results = cur.fetchall()
-for result in results:
-    print(result)
 
-con.close()
+if option != 3:
+    results = cur.fetchall()
+    print(len(results))
+
+    for result in results:
+        print(result)
+else:
+    con.commit()
+
+cur.close()
 
