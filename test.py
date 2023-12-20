@@ -1,7 +1,16 @@
 import psycopg2
 from datetime import date, timedelta
 from datetime import datetime
-import sys
+import argparse
+
+# parser = argparse.ArgumentParser()
+# parser.add_argument('--option')
+# parser.add_argument('--table')
+parser = argparse.ArgumentParser()
+parser.add_argument('--option', type=int, default=1)
+parser.add_argument('--table', type=str, default='news')
+
+# parser.add_argument('--option', type=int, default=1, '--table', type=str, default='news')
 
 def getdb():
         return psycopg2.connect(
@@ -18,18 +27,24 @@ def save_news_database(dict_news):
         cur.execute(query, dict_news)
         con.commit
 
-print("Connections stablished")
+
+args = parser.parse_args()
+
+
+
+option = args.option
+table = args.table
+print("Option: ", option)
+print("Table: ", table)
 
 con = getdb()
+print("Connections stablished")
 dict_news = dict_news = {'news_id':"asd223ddsf13", 'title':"insert new news" ,'news_summary':"summary.text",\
                                  'news_content':"body_html", 'image':"image_path",\
                                 'published':datetime.now(),'news_tags': "mentions"}     
 #save_news_database(dict_news)
 
-option = int(sys.argv[1])
-table = int(sys.argv[2])
-print("Option: ", option)
-print("Table: ", table)
+
 
 if option  == 1:
     print("Select all from news")
