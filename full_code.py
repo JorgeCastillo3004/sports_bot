@@ -680,8 +680,8 @@ def build_dict_urls_v2(driver, dict_sports, file_main_dict = 'check_points/flash
 							ligue_tornamen_info = get_ligues_data(driver)
 							if database_enable:
 								save_ligue_tornament_info(ligue_tornamen_info) 							
-							print("Click on news: ")
-							click_news(driver)
+							# print("Click on news: ")
+							# click_news(driver)
 							if flag_news:
 								process_current_news_link(driver, driver.current_url)								
 								wait_update_page(current_url)
