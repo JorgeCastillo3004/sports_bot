@@ -89,11 +89,8 @@ def launch_navigator(url, database_enable):
 	options.add_argument('--no-sandbox')
 	options.add_argument('--disable-dev-shm-usage')
 
-	options.add_argument(r"user-data-dir=/home/jorge/.config/google-chrome/")
-	options.add_argument(r"profile-directory=Profile 6")
-
-	options.add_argument(r"user-data-dir=/home/jorge/.config/google-chrome/")
-	options.add_argument(r"profile-directory=Profile 6")
+	options.add_argument(r"user-data-dir=./chrome_files")
+	options.add_argument(r"profile-directory=Profile1")
 
 	drive_path = Service('/usr/local/bin/chromedriver')
 
