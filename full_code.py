@@ -643,6 +643,13 @@ def build_dict_urls(driver, dict_sports, file_main_dict = 'check_points/flashsco
 			dict_with_issues[sport] = {'step':step, 'url':url_sport}
 			save_check_point('check_points/flashscore_issues.json', dict_with_issues)
 
+def check_pin(driver):
+	pin = driver.find_element(By.ID, "toMyLeagues")
+	if 'pinMyLeague active 'in pin.get_attribute('outerHTML'):
+		return True
+	else:
+		return False
+		
 def build_dict_urls_v2(driver, dict_sports, file_main_dict = 'check_points/flashscore_links.json',dict_issues = 'check_points/flashscore_issues.json', flag_news = False):
 
 	dict_urls = load_json('check_points/flashscore_links.json')
