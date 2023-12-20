@@ -1,6 +1,7 @@
 import psycopg2
 from datetime import date, timedelta
 from datetime import datetime
+import sys
 
 def getdb():
         return psycopg2.connect(
@@ -25,17 +26,21 @@ dict_news = dict_news = {'news_id':"asd223ddsf13", 'title':"insert new news" ,'n
                                 'published':datetime.now(),'news_tags': "mentions"}     
 #save_news_database(dict_news)
 
-option = 1
+option = sys.argv[1]
 if option  == 1:
+    print("Select all from news")
     query = "SELECT title FROM news;"
 
 if option == 2:
+    print("Cound duplicates")
     query = "SELECT title, COUNT(*) as count\
     FROM news\
     GROUP BY title\
     HAVING COUNT(*) > 1;"
 
 if option == 3:
+    print("Delete all")
+    input_user = input("Type Y to continue")
     query = "DELETE FROM news;"
 
 cur = con.cursor()
@@ -48,7 +53,8 @@ if option != 3:
     for result in results:
         print(result)
 else:
-    con.commit()
+    if input_user == 'Y':
+        con.commit()
 
 cur.close()
 
