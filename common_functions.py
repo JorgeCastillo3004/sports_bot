@@ -19,7 +19,7 @@ import re
 local_time_naive = datetime.now()
 utc_time_naive = datetime.utcnow()
 time_difference_naive = utc_time_naive - local_time_naive
-
+from main import database_enable
 #####################################################################
 #					CHECK POINTS BLOCK 								#
 #####################################################################
@@ -56,8 +56,8 @@ def launch_navigator(url):
 	options.add_argument("--disable-blink-features=AutomationControlled") 
 	options.add_experimental_option("excludeSwitches", ["enable-automation"]) 
 	options.add_experimental_option("useAutomationExtension", False)
-	# if database_enable:
-	# 	options.add_argument('--headless')
+	if database_enable:
+		options.add_argument('--headless')
 	options.add_argument('--no-sandbox')
 	options.add_argument('--disable-dev-shm-usage')
 
