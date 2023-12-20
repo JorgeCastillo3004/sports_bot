@@ -90,9 +90,9 @@ def launch_navigator(url, database_enable):
 	options.add_argument('--disable-dev-shm-usage')
 	chrome_path = os.getcwd()+'/chrome_files/'
 	print("chrome_path: ", chrome_path)
+	print("user-data-dir={}".format(chrome_path))
 	options.add_argument(r"user-data-dir={}".format(chrome_path))
 	options.add_argument(r"profile-directory=Profile1")
-
 	drive_path = Service('/usr/local/bin/chromedriver')
 
 	driver = webdriver.Chrome(service=drive_path,  options=options)
