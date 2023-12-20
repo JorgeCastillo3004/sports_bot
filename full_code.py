@@ -17,7 +17,7 @@ import os
 import re
 import time
 
-database_enable = False
+database_enable = True
 
 #####################################################################
 #					DATA BASE        								#
