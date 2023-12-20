@@ -170,6 +170,7 @@ def extract_news_info(driver, list_upate_news, dict_check_point):
 			wait_load_detailed_news(driver, current_url)
 			dict_new = get_news_info_v2(driver, current_dict)
 			if database_enable:
+				print("Insert in db ")
 				save_news_database(dict_news)
 			dict_check_point['index'] = index
 			# save_check_point('check_points/check_point_m1_news.json', dict_check_point)
@@ -215,7 +216,7 @@ CONFIG = load_json('check_points/CONFIG.json')
 database_enable = CONFIG['DATA_BASE']
 if database_enable:
 	con = getdb()
-	
+
 if __name__ == "__main__":	
 	driver = launch_navigator('https://www.flashscore.com', database_enable)
 	login(driver, email_= "jignacio@jweglobal.com", password_ = "Caracas5050@\n")
