@@ -4,16 +4,27 @@ from selenium.webdriver.support.ui import Select
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 import time
-import argparse
+
 from common_functions import *
 # from main import database_enable
 # from common_functions import utc_time_naive
 from data_base import *
 
-parser = argparse.ArgumentParser()
-parser.add_argument('--db', type=bool, default=True)
-args = parser.parse_args()
-database_enable = args.db
+# import argparse
+# parser = argparse.ArgumentParser()
+# parser.add_argument('--db', type=bool, default=False)
+# args = parser.parse_args()
+# database_enable = args.db
+
+# print("Type: ", type(database_enable))
+
+# print("database_enable: ", database_enable)
+# if database_enable:
+# 	print("Write on db activate")
+# else:
+# 	print("Don't write in database")
+
+database_enable = True
 
 def get_sports_links(driver):
 	wait = WebDriverWait(driver, 10)
@@ -113,6 +124,7 @@ def extract_ligues_tournaments(driver, flag_news = False):
 						ligue_tornamen_info = get_ligues_data(driver)
 						print(ligue_tornamen_info)
 						print("#"*30, '\n')
+						print("database_enable: ", database_enable)
 						if database_enable:
 							save_ligue_tornament_info(ligue_tornamen_info) 							
 						if flag_news:
@@ -126,5 +138,5 @@ def main_m2(driver):
 	extract_ligues_tournaments(driver, flag_news = False)
 
 if __name__ == "__main__":  	
-	driver = launch_navigator('https://www.flashscore.com')
+	driver = launch_navigator('https://www.flashscore.com', database_enable)
 	main_m2(driver)
