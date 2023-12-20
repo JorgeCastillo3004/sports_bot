@@ -19,7 +19,7 @@ import re
 from common_functions import *
 
 import time
-driver = launch_navigator('https://www.flashscore.com', False)
+driver = launch_navigator('https://www.flashscore.com', True)
 wait = WebDriverWait(driver, 10)
 # user_menu = driver.find_element(By.ID,'user-menu')
 user_menu = wait.until(EC.element_to_be_clickable((By.ID, 'user-menu')))
