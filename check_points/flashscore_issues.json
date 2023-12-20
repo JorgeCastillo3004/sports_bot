@@ -1,58 +1,102 @@
 {
+    "FOOTBALL": {
+        "step": "Ligues extraction",
+        "url": "https://www.flashscore.com/football/"
+    },
+    "TENNIS": {
+        "step": "Ligues extraction",
+        "url": "https://www.flashscore.com/tennis/"
+    },
+    "BASKETBALL": {
+        "step": "Ligues extraction",
+        "url": "https://www.flashscore.com/basketball/"
+    },
+    "HOCKEY": {
+        "step": "Ligues extraction",
+        "url": "https://www.flashscore.com/hockey/"
+    },
+    "DARTS": {
+        "step": "Ligues extraction",
+        "url": "https://www.flashscore.com/darts/"
+    },
+    "SNOOKER": {
+        "step": "Ligues extraction",
+        "url": "https://www.flashscore.com/snooker/"
+    },
+    "HANDBALL": {
+        "step": "Ligues extraction",
+        "url": "https://www.flashscore.com/handball/"
+    },
+    "GOLF": {
+        "step": "Ligues extraction",
+        "url": "https://www.flashscore.com/golf/"
+    },
+    "AM._FOOTBALL": {
+        "step": "Ligues extraction",
+        "url": "https://www.flashscore.com/american-football/"
+    },
+    "AUSSIE_RULES": {
+        "step": "Ligues extraction",
+        "url": "https://www.flashscore.com/aussie-rules/"
+    },
     "BADMINTON": {
-        "step": "sport_loop",
+        "step": "Ligues extraction",
         "url": "https://www.flashscore.com/badminton/"
     },
+    "BANDY": {
+        "step": "Ligues extraction",
+        "url": "https://www.flashscore.com/bandy/"
+    },
     "BASEBALL": {
-        "step": "sport_loop",
+        "step": "Ligues extraction",
         "url": "https://www.flashscore.com/baseball/"
     },
     "BEACH_SOCCER": {
-        "step": "sport_loop",
+        "step": "Ligues extraction",
         "url": "https://www.flashscore.com/beach-soccer/"
     },
     "BEACH_VOLLEYBALL": {
-        "step": "sport_loop",
+        "step": "Ligues extraction",
         "url": "https://www.flashscore.com/beach-volleyball/"
     },
     "BOXING": {
-        "step": "sport_loop",
+        "step": "Ligues extraction",
         "url": "https://www.flashscore.com/boxing/"
     },
     "CRICKET": {
-        "step": "sport_loop",
+        "step": "Ligues extraction",
         "url": "https://www.flashscore.com/cricket/"
     },
     "CYCLING": {
-        "step": "sport_loop",
+        "step": "Ligues extraction",
         "url": "https://www.flashscore.com/cycling/"
     },
     "ESPORTS": {
-        "step": "sport_loop",
+        "step": "Ligues extraction",
         "url": "https://www.flashscore.com/esports/"
     },
     "FIELD_HOCKEY": {
-        "step": "sport_loop",
+        "step": "Ligues extraction",
         "url": "https://www.flashscore.com/field-hockey/"
     },
     "FLOORBALL": {
-        "step": "sport_loop",
+        "step": "Ligues extraction",
         "url": "https://www.flashscore.com/floorball/"
     },
     "FUTSAL": {
-        "step": "sport_loop",
+        "step": "Ligues extraction",
         "url": "https://www.flashscore.com/futsal/"
     },
     "HORSE_RACING": {
-        "step": "sport_loop",
+        "step": "Ligues extraction",
         "url": "https://www.flashscore.com/horse-racing/"
     },
     "KABADDI": {
-        "step": "sport_loop",
+        "step": "Ligues extraction",
         "url": "https://www.flashscore.com/kabaddi/"
     },
     "MMA": {
-        "step": "sport_loop",
+        "step": "Ligues extraction",
         "url": "https://www.flashscore.com/mma/"
     },
     "MOTORSPORT": {
@@ -71,10 +115,6 @@
         "step": "sport_loop",
         "url": "https://www.flashscore.com/rugby-league/"
     },
-    "RUGBY_UNION": {
-        "step": "sport_loop",
-        "url": "https://www.flashscore.com/rugby-union/"
-    },
     "TABLE_TENNIS": {
         "step": "sport_loop",
         "url": "https://www.flashscore.com/table-tennis/"
@@ -86,9 +126,5 @@
     "WATER_POLO": {
         "step": "sport_loop",
         "url": "https://www.flashscore.com/water-polo/"
-    },
-    "WINTER_SPORTS": {
-        "step": "sport_loop",
-        "url": "https://www.flashscore.com/winter-sports/"
     }
 }

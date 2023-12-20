@@ -643,6 +643,60 @@ def build_dict_urls(driver, dict_sports, file_main_dict = 'check_points/flashsco
 			dict_with_issues[sport] = {'step':step, 'url':url_sport}
 			save_check_point('check_points/flashscore_issues.json', dict_with_issues)
 
+def build_dict_urls_v2(driver, dict_sports, file_main_dict = 'check_points/flashscore_links.json',dict_issues = 'check_points/flashscore_issues.json', flag_news = False):
+
+	dict_urls = load_json('check_points/flashscore_links.json')
+	conf_enable_news = check_previous_execution(file_path = 'check_points/CONFIG_M1.json')	
+
+
+	dict_with_issues = {}
+	for sport, url_sport in dict_sports.items():
+		try:
+			if conf_enable_news['SPORTS'][sport]:
+				step = 'sport_loop'
+				print("Start process: ", sport, url_sport)
+				wait_update_page(driver, url_sport, "container__heading")
+				
+				dict_ligues_tornaments = find_ligues_torneos(driver)
+				print('List liguies-torneos: ', len(dict_ligues_tornaments) )
+
+				for ligue_tournament, ligue_tournament_url in dict_ligues_tornaments.items():
+
+						step = 'ligue_tournament'						
+						print(" "*15, "############ Ligue: ", ligue_tournament_url)
+						wait_update_page(driver, ligue_tournament_url, "container__heading")
+						step = 'Ligues extraction'								
+						# wait_update_page(driver, ligue_tornament_url, "heading__title")
+						pin_activate = check_pin(driver)
+						if pin_activate:
+							print("Extract ligue info: ")
+							ligue_tornamen_info = get_ligues_data(driver)
+							if database_enable:
+								save_ligue_tornament_info(ligue_tornamen_info) 
+							print("#"*30, "LIGUE-TOURNAMENTS: ", ligue_tornament_url)
+							print("Click on news: ")
+							click_news(driver)
+							if flag_news:
+								process_current_news_link(driver, driver.current_url)								
+								wait_update_page(current_url)
+
+							url_news = driver.current_url
+							dict_teams_url[ligue_tournament] = {'url':ligue_tornament_url, 'url_news':url_news}
+							# dict_check_point['ligue_tournament'] = ligue_tournament
+							# save_check_point('check_points/check_point_URL_extraction.json', dict_check_point)
+					
+							dict_url_ligues_tournaments[ligue_tournament] = dict_teams_url
+							dict_urls[sport] = dict_url_ligues_tournaments
+							save_check_point(file_main_dict, dict_urls)
+
+				sports_ready[sport] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")        
+				save_check_point('check_points/scraper_control_get_URL.json', sports_ready)
+					
+		except:
+			print("-*CHECK EXCEPTION -*", end='')
+			dict_with_issues[sport] = {'step':step, 'url':url_sport}
+			save_check_point('check_points/flashscore_issues.json', dict_with_issues)
+
 ######################## NEWS EXTRACTION BLOCK 
 def get_news_url_date(driver, current_news_link, source_new = 'Flashscore News'):
 	wait = WebDriverWait(driver, 15)
@@ -756,8 +810,7 @@ def main():
 		dict_url_news_m1 = load_json('check_points/sports_url_m1.json')
 		main_extract_news(driver, dict_url_news_m1)
 
-	if config_dict['sports_link']:	
-
+	if config_dict['sports_link']:
 		dict_sports = get_sports_links(driver)
 		save_check_point('check_points/sports_url.json', dict_sports)
 
@@ -768,7 +821,7 @@ def main():
 		else:
 			dict_sports = load_json('check_points/sports_url.json')
 
-		build_dict_urls(driver, dict_sports, 
+		build_dict_urls_v2(driver, dict_sports, 
 				file_main_dict = 'check_points/flashscore_links.json',
 				 dict_issues = 'check_points/flashscore_issues.json')
 
