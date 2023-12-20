@@ -687,7 +687,7 @@ def build_dict_urls_v2(driver, dict_sports, file_main_dict = 'check_points/flash
 								wait_update_page(current_url)
 
 							url_news = driver.current_url
-							dict_teams_url[ligue_tournament] = {'url':ligue_tornament_url, 'url_news':url_news}
+							dict_teams_url[ligue_tournament] = {'url':ligue_tornament_url, 'url_news':''}
 							# dict_check_point['ligue_tournament'] = ligue_tournament
 							# save_check_point('check_points/check_point_URL_extraction.json', dict_check_point)
 					
