@@ -13,7 +13,7 @@ from common_functions import *
 from data_base import *
 from milestone1 import *
 
-database_enable = False
+database_enable = True
 
 def int_folders():
 	if not os.path.exists('check_points'):
