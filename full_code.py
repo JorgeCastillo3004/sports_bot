@@ -22,7 +22,7 @@ import argparse
 parser = argparse.ArgumentParser()
 parser.add_argument('--db', type=bool, default=True)
 args = parser.parse_args()
-database_enable = arg.db
+database_enable = args.db
 #####################################################################
 #					DATA BASE        								#
 #####################################################################
