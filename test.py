@@ -27,9 +27,13 @@ dict_news = dict_news = {'news_id':"asd223ddsf13", 'title':"insert new news" ,'n
 #save_news_database(dict_news)
 
 option = int(sys.argv[1])
+table = int(sys.argv[2])
+print("Option: ", option)
+print("Table: ", table)
+
 if option  == 1:
     print("Select all from news")
-    query = "SELECT title FROM news;"
+    query = "SELECT {} FROM news;".format(table)
 
 if option == 2:
     print("Cound duplicates")
@@ -41,7 +45,7 @@ if option == 2:
 if option == 3:
     print("Delete all")
     input_user = input("Type Y to continue")
-    query = "DELETE FROM news;"
+    query = "DELETE FROM {};".format(table)
 
 cur = con.cursor()
 cur.execute(query)
@@ -57,4 +61,3 @@ else:
         con.commit()
 
 cur.close()
-
