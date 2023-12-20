@@ -3,9 +3,6 @@ from common_functions import load_json
 CONFIG = load_json('check_points/CONFIG.json')
 database_enable = CONFIG['DATA_BASE']
 
-if database_enable:
-	con = getdb()
-
 def getdb():
 	return psycopg2.connect(
 				host="localhost",
@@ -30,3 +27,6 @@ def save_ligue_tornament_info(dict_ligue_tornament):
 	cur = con.cursor()																			 
 	cur.execute(query, dict_ligue_tornament)														 
 	con.commit()																					 
+
+if database_enable:
+	con = getdb()
