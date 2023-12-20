@@ -659,8 +659,7 @@ def build_dict_urls_v2(driver, dict_sports, file_main_dict = 'check_points/flash
 	dict_urls = load_json('check_points/flashscore_links.json')
 	conf_enable_news = check_previous_execution(file_path = 'check_points/CONFIG_M1.json')	
 
-	print("dict_sports: ", dict_sports.keys())
-	print(stop)
+	print("dict_sports: ", dict_sports.keys())	
 	dict_with_issues = {}
 	for sport, flag_load in conf_enable_news.items():
 		if flag_load:			
