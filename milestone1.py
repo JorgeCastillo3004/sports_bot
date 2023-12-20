@@ -35,24 +35,23 @@ def get_list_recent_news(driver, sport, max_older_news):
 		title = block.find_element(By.XPATH, './/div[@role="heading"]').text
 		image = wait.until(EC.element_to_be_clickable((By.XPATH, './/figure/picture/img')))
 		image = image.get_attribute('src')
-		print("date_utc: ", date_utc)
-		print("title: ", title)
+		print('*', end ='')
+		
 		# image_url = block.find_element(By.XPATH, './/figure/picture/source').get_attribute('srcset').split(', ')[0]
 		# image_url = re.sub(r'\s+\d+\w','', image_url)
 		# if utc_time_naive - date_utc <timedelta(days=max_older_news):
 		if utc_time_naive - date_utc < timedelta(days=max_older_news):
-			if previous_list and count_match < 2:
+			if previous_list and count_match < 3:
 				if title in last_news_list:
 					enable_save_new = False
-					count_match += 1
-					print("Title: ", title)
+					count_match += 1					
 					# input_user = input("Type any to continue s to stop ")
 					# if input_user =='s':
 					# 	print(stop)
 				else:
 					enable_save_new = True
 					if count < 5:                
-						more_recent_news.append(title)                
+						more_recent_news.append(title)						
 						count += 1
 					# if count == 5:
 					# 	more_recent_news.extend(last_news_list)
@@ -60,24 +59,30 @@ def get_list_recent_news(driver, sport, max_older_news):
 			if not previous_list:
 				enable_save_new = True
 				if count < 5:
-					last_news_list.append(title)
+					last_news_list.append(title)					
 					count += 1		
 			if enable_save_new:
 				# Verificar base de datos
+				print("Save recent news: ")
+				print("Title: ", title)
 				image_path_small = random_name(folder = 'images/news/small_images', termination = '.avif')
 				# save_image(driver, image_url, image_path_small)
 				image_name_file = image_path_small.split('/')[-1]
-				dict_current_news = {'title':title, 'published':date_utc, 'image':image_name_file, 'news_link':news_link} 
-				print("dict_current_news: ", dict_current_news)
+				dict_current_news = {'title':title, 'published':date_utc, 'image':image_name_file, 'news_link':news_link}
 				list_upate_news.append(dict_current_news)
-		else:
-			print("Old new it is not necessary ")
+			else:
+				print("Duplicate news: ")
+				print("Title: ", title)
 		enable_save_new = False
-	if len(more_recent_news) != 0:
-		last_news_list = more_recent_news + last_news_list
-		last_news_saved[sport] = last_news_list[0:5]
-	print("Saving new list of last news by the sport: ", sport)
+	# print("len more_recent_news, last_news_list ", len(more_recent_news), len(last_news_list))
+	# print("more_recent_news: ", more_recent_news)
+	# print("last_news_list: ", last_news_list)
+	last_news_list = more_recent_news + last_news_list
+	last_news_saved[sport] = last_news_list[0:5]
+	# print("Saving new list of last news by the sport: ", sport)
+	# print("last_news_saved: ", last_news_saved)
 	save_check_point('check_points/last_saved_news.json', last_news_saved)
+	
 	return list_upate_news
 
 def click_show_more_news(driver, max_older_news):
@@ -119,8 +124,7 @@ def click_show_more_news(driver, max_older_news):
 		# container_news = driver.find_elements(By.XPATH, '//div[@class="fsNewsSection fsNewsSection__mostRecent fsNewsSection__noTopped"]/a')
 		print("Total news found: ", len(container_news))
 
-def get_news_info_v2(driver, dict_news):
-	print("start get_news_info_v2 ")
+def get_news_info_v2(driver, dict_news):	
 	wait = WebDriverWait(driver, 10)
 	image = wait.until(EC.element_to_be_clickable((By.XPATH, '//div[@class="imageContainer__element"]/figure/picture/img')))
 	image_url = image.get_attribute('src')
@@ -161,7 +165,7 @@ def extract_news_info(driver, list_upate_news, dict_check_point):
 			count = 0
 			# while pending_extract and count < 5:
 			# 	try:
-			print("Start process: ", index, '/',len(list_upate_news), "Check Point Index: ",dict_check_point['index'])
+			print("-", index, '/',len(list_upate_news), end= ' ')
 			current_url = current_dict['news_link']
 			wait_load_detailed_news(driver, current_url)
 			dict_new = get_news_info_v2(driver, current_dict)
@@ -176,8 +180,7 @@ def extract_news_info(driver, list_upate_news, dict_check_point):
 
 def main_extract_news(driver, dict_url_news):
 	dict_check_point = {} #check_previous_execution(file_path = 'check_points/check_point_m1_news.json')
-	conf_enable_news = check_previous_execution(file_path = 'check_points/CONFIG_M1.json')
-	
+	conf_enable_news = check_previous_execution(file_path = 'check_points/CONFIG_M1.json')	
 	
 	print("New update function: ")
 
@@ -195,7 +198,8 @@ def main_extract_news(driver, dict_url_news):
 			if dict_check_point['sport'] == sport:
 				print("Process sport activated: ")
 				continue_sport = True
-
+			if sport == "FOOTBALL":
+				conf_enable_news['MAX_OLDER_DATE_ALLOWED'] = 8
 			if continue_sport:
 				dict_check_point['sport'] = sport
 				print(sport, news_url)

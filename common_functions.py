@@ -83,8 +83,7 @@ def wait_update_page(driver, url, class_name):
 	else:
 		element_updated = wait.until(EC.staleness_of(current_tab[0]))	
 
-def wait_load_detailed_news(driver, url_news):
-	print("Start wait load detailed news")
+def wait_load_detailed_news(driver, url_news):	
 	wait = WebDriverWait(driver, 10)
 	class_name = 'fsNewsArticle__title'
 	title = driver.find_elements(By.CLASS_NAME, class_name)
@@ -93,7 +92,7 @@ def wait_load_detailed_news(driver, url_news):
 		title = wait.until(EC.visibility_of_element_located((By.CLASS_NAME, class_name)))
 	else:
 		wait.until(EC.staleness_of(title[0]))
-		
+
 def get_mentions(driver):
 	mention_list = ''
 	mentions = driver.find_elements(By.XPATH, '//div[@class="fsNewsArticle__mentions"]/a')

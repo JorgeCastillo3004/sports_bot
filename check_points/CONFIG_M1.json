@@ -1,0 +1,21 @@
+{
+    "SPORTS": {
+        "FOOTBALL": true,
+        "TENNIS": true,
+        "BASKETBALL": true,
+        "FEATURES": false,
+        "AMERICAN_SPORTS": true,
+        "CRICKET": true,
+        "GOLF": true,
+        "MOTORSPORT": true,
+        "HOCKEY": true,
+        "RUGBY_UNION": false,
+        "WINTER_SPORTS": false,
+        "COMBAT_SPORTS": true,
+        "ROAD_CYCLING": false,
+        "ATHLETICS": false,
+        "AFRICAN_FOOTBALL": false,
+        "GHANA": false
+    },
+    "MAX_OLDER_DATE_ALLOWED": 31
+}
