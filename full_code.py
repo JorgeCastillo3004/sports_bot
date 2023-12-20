@@ -22,7 +22,7 @@ import argparse
 parser = argparse.ArgumentParser()
 parser.add_argument('--db', type=bool, default=True)
 args = parser.parse_args()
-database_enable = args.db
+database_enable = arg.db
 #####################################################################
 #					DATA BASE        								#
 #####################################################################
@@ -661,7 +661,7 @@ def build_dict_urls_v2(driver, dict_sports, file_main_dict = 'check_points/flash
 
 	print("dict_sports: ", dict_sports.keys())	
 	dict_with_issues = {}
-	for sport, flag_load in conf_enable_news.items():
+	for sport, flag_load in conf_enable_news['SPORTS'].items():
 		if flag_load:			
 			step = 'sport_loop'			
 			print("Start process: ", sport, dict_sports[sport])
