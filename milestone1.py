@@ -199,8 +199,8 @@ def main_extract_news(driver, dict_url_news):
 			if dict_check_point['sport'] == sport:
 				print("Process sport activated: ")
 				continue_sport = True
-			if sport == "FOOTBALL":
-				conf_enable_news['MAX_OLDER_DATE_ALLOWED'] = 8
+			# if sport == "FOOTBALL":
+			# 	conf_enable_news['MAX_OLDER_DATE_ALLOWED'] = 8
 			if continue_sport:
 				dict_check_point['sport'] = sport
 				print(sport, news_url)
@@ -214,8 +214,7 @@ def main_extract_news(driver, dict_url_news):
 
 CONFIG = load_json('check_points/CONFIG.json')
 database_enable = CONFIG['DATA_BASE']
-if database_enable:
-	con = getdb()
+
 
 if __name__ == "__main__":	
 	driver = launch_navigator('https://www.flashscore.com', database_enable)
