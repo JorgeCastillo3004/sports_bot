@@ -19,10 +19,38 @@ import re
 local_time_naive = datetime.now()
 utc_time_naive = datetime.utcnow()
 time_difference_naive = utc_time_naive - local_time_naive
-from main import database_enable
+
 #####################################################################
 #					CHECK POINTS BLOCK 								#
 #####################################################################
+def get_sports_links_news(driver):
+	wait = WebDriverWait(driver, 1)
+	buttonmore = wait.until(EC.element_to_be_clickable((By.CLASS_NAME, 'arrow.topMenuSpecific__moreIcon')))
+
+	mainsports = driver.find_elements(By.XPATH, '//div[@class="topMenuSpecific__items"]/a')
+
+	dict_links = {}
+
+	for link in mainsports[1:]:		
+		sport_name = '_'.join(link.text.split())
+		sport_url = link.get_attribute('href')
+		if sport_name != '':			
+			dict_links[sport_name] = sport_url	
+	buttonmore.click()
+
+	list_links = wait.until(EC.visibility_of_element_located((By.CLASS_NAME, 'topMenuSpecific__dropdownItem')))
+	list_links = driver.find_elements(By.CLASS_NAME, 'topMenuSpecific__dropdownItem')
+
+	for link in list_links:
+		sport_name = '_'.join(link.text.split())
+		sport_url = link.get_attribute('href')		
+		if sport_name == '':
+			sport_name = sport_url.split('/')[-2].upper()
+		dict_links[sport_name] = sport_url
+
+	buttonminus = wait.until(EC.element_to_be_clickable((By.CLASS_NAME, 'arrow.topMenuSpecific__moreIcon')))
+	buttonminus.click()
+	return dict_links
 
 def load_json(filename):
     # Opening JSON file
@@ -56,8 +84,8 @@ def launch_navigator(url):
 	options.add_argument("--disable-blink-features=AutomationControlled") 
 	options.add_experimental_option("excludeSwitches", ["enable-automation"]) 
 	options.add_experimental_option("useAutomationExtension", False)
-	if database_enable:
-		options.add_argument('--headless')
+	# if database_enable:
+	# 	options.add_argument('--headless')
 	options.add_argument('--no-sandbox')
 	options.add_argument('--disable-dev-shm-usage')
 

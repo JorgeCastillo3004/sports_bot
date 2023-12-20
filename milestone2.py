@@ -6,15 +6,13 @@ from selenium.webdriver.common.by import By
 import time
 from common_functions import *
 # from main import database_enable
-from common_functions import utc_time_naive
+# from common_functions import utc_time_naive
 from data_base import *
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--db', type=bool, default=True)
 args = parser.parse_args()
 database_enable = args.db
-# database_enable = True
-
 
 def get_sports_links(driver):
 	wait = WebDriverWait(driver, 10)
