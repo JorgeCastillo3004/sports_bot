@@ -47,11 +47,11 @@ cur = con.cursor()
 cur.execute(query)
 
 if option != 3:
-    results = cur.fetchall()
-    print(len(results))
+    results = cur.fetchall()   
 
     for result in results:
         print(result)
+    print("Total results: ", len(results))
 else:
     if input_user == 'Y':
         con.commit()
