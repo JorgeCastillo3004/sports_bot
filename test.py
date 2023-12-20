@@ -9,6 +9,7 @@ import argparse
 parser = argparse.ArgumentParser()
 parser.add_argument('--option', type=int, default=1)
 parser.add_argument('--table', type=str, default='news')
+parser.add_argument('--column', type=str, default='title')
 
 # parser.add_argument('--option', type=int, default=1, '--table', type=str, default='news')
 
@@ -34,6 +35,7 @@ args = parser.parse_args()
 
 option = args.option
 table = args.table
+column = args.column
 print("Option: ", option)
 print("Table: ", table)
 
@@ -48,7 +50,7 @@ dict_news = dict_news = {'news_id':"asd223ddsf13", 'title':"insert new news" ,'n
 
 if option  == 1:
     print("Select all from news")
-    query = "SELECT {} FROM news;".format(table)
+    query = "SELECT {} FROM {};".format(column, table)
 
 if option == 2:
     print("Cound duplicates")
