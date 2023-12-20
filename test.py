@@ -26,7 +26,7 @@ dict_news = dict_news = {'news_id':"asd223ddsf13", 'title':"insert new news" ,'n
                                 'published':datetime.now(),'news_tags': "mentions"}     
 #save_news_database(dict_news)
 
-option = sys.argv[1]
+option = int(sys.argv[1])
 if option  == 1:
     print("Select all from news")
     query = "SELECT title FROM news;"
