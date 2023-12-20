@@ -510,7 +510,7 @@ def get_ligues_data(driver):
 	image_path = random_name(folder = 'logo_images')
 	save_image(driver, image_url, image_path)
 	league_id = random_id()
-	ligue_tornamen = {"league_id":league_id, 'sport':sport, 'league_country': country,
+	ligue_tornamen = {"league_id":league_id, 'sport':sport, 'league_country': country[0:3],
 					 'league_name': name_ligue_tournament,
 					'temporada':temporada, 'league_logo':image_path}
 	ligue_tornamen['league_name_i18n'] = 'ADITIONAL'
@@ -649,7 +649,7 @@ def check_pin(driver):
 		return True
 	else:
 		return False
-		
+
 def build_dict_urls_v2(driver, dict_sports, file_main_dict = 'check_points/flashscore_links.json',dict_issues = 'check_points/flashscore_issues.json', flag_news = False):
 
 	dict_urls = load_json('check_points/flashscore_links.json')
