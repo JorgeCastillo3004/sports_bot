@@ -3,7 +3,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 # from selenium.webdriver.support.ui import Select
-# from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 
 from datetime import date, timedelta, datetime
@@ -15,7 +15,7 @@ import requests
 import json
 import os
 import re
-
+import time
 local_time_naive = datetime.now()
 utc_time_naive = datetime.utcnow()
 time_difference_naive = utc_time_naive - local_time_naive
@@ -88,16 +88,41 @@ def launch_navigator(url, database_enable):
 		options.add_argument('--headless')
 	options.add_argument('--no-sandbox')
 	options.add_argument('--disable-dev-shm-usage')
-	chrome_path = os.getcwd()+'/chrome_files/'
-	print("chrome_path: ", chrome_path)
-	print("user-data-dir={}".format(chrome_path))
-	options.add_argument(r"user-data-dir={}".format(chrome_path))
-	options.add_argument(r"profile-directory=Profile1")
+	# chrome_path = os.getcwd()+'/chrome_files'
+	# print("chrome_path: ", chrome_path)
+	# options.add_argument(r"user-data-dir={}".format(chrome_path))
+	# options.add_argument(r"profile-directory=Profile1")
+
 	drive_path = Service('/usr/local/bin/chromedriver')
 
 	driver = webdriver.Chrome(service=drive_path,  options=options)
 	driver.get(url)
 	return driver
+
+def login(driver, email_= "jignacio@jweglobal.com", password_ = "Caracas5050@\n"):
+    wait = WebDriverWait(driver, 10)
+
+    # Accept cookies
+    accept_button = wait.until(EC.element_to_be_clickable((By.ID, "onetrust-accept-btn-handler")))
+    accept_button.click()
+    # Click on login
+    login_button = wait.until(EC.element_to_be_clickable((By.CLASS_NAME, 'header__icon.header__icon--user')))
+    # login_button = driver.find_element(By.CLASS_NAME, 'header__icon.header__icon--user')
+    login_button.click()
+    # Select login mode
+    continue_email = wait.until(EC.element_to_be_clickable((By.CLASS_NAME, "ui-button.ui-formButton.social__button.email")))
+    continue_email.click()
+
+    email = driver.find_element(By.ID,'email')
+    email = wait.until(EC.visibility_of_element_located((By.ID,'email')))
+    email.send_keys(email_)
+
+    email = driver.find_element(By.ID,'passwd')
+    email.send_keys(password_)
+    time.sleep(6)
+    print("Login...")
+    # webdriver.ActionChains(driver).send_keys(Keys.ESCAPE).perform()
+
 
 def wait_update_page(driver, url, class_name):
 	wait = WebDriverWait(driver, 10)

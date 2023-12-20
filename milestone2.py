@@ -27,7 +27,6 @@ from common_functions import *
 
 database_enable = True
 
-
 def getdb():
 	return psycopg2.connect(
 				host="localhost",
@@ -162,6 +161,7 @@ if database_enable:
 
 if __name__ == "__main__":  	
 	driver = launch_navigator('https://www.flashscore.com', database_enable)
+	login(driver, email_= "jignacio@jweglobal.com", password_ = "Caracas5050@\n")
 	main_m2(driver)
 	if database_enable:
 		con.close()
