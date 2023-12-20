@@ -122,7 +122,7 @@ def extract_ligues_tournaments(driver, flag_news = False):
 						url_news = driver.current_url
 
 def main_m2(driver):
-	# driver = launch_navigator('https://www.flashscore.com')
+	driver = launch_navigator('https://www.flashscore.com')
 
 	extract_ligues_tournaments(driver, flag_news = False)
 
