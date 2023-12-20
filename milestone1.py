@@ -209,3 +209,8 @@ def main_extract_news(driver, dict_url_news):
 
 				extract_news_info(driver, list_upate_news, dict_check_point)
 				dict_check_point['index'] = 0
+
+driver = launch_navigator('https://www.flashscore.com')
+database_enable = True
+dict_url_news_m1 = load_json('check_points/sports_url_m1.json')
+main_extract_news(driver, dict_url_news_m1)
