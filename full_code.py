@@ -17,7 +17,7 @@ import os
 import re
 import time
 
-database_enable = True
+database_enable = False
 
 #####################################################################
 #					DATA BASE        								#
@@ -26,6 +26,7 @@ import psycopg2
 
 
 def getdb():
+	print('Connection stablished')
 	return psycopg2.connect(
 				host="localhost",
 				user="wohhu",
@@ -39,6 +40,7 @@ def save_news_database(dict_news):
 	cur = con.cursor()
 	cur.execute(query, dict_news)
 	con.commit()
+	print("Inserted in database")
 
 def save_ligue_tornament_info(dict_ligue_tornament):
 	print("Info ligue tournament info save")
@@ -93,13 +95,16 @@ def launch_navigator(url):
 	options.add_experimental_option("excludeSwitches", ["enable-automation"]) 
 	options.add_experimental_option("useAutomationExtension", False)
 	if database_enable:
-	    print("HEADLESS")
-	    options.add_argument('--headless')
+		options.add_argument('--headless')
 	options.add_argument('--no-sandbox')
 	options.add_argument('--disable-dev-shm-usage')
 
-	#options.add_argument(r"user-data-dir=/home/jorge/.config/google-chrome/")
-	#options.add_argument(r"profile-directory=Profile 6")	
+	options.add_argument(r"user-data-dir=/home/jorge/.config/google-chrome/")
+	options.add_argument(r"profile-directory=Profile 6")
+
+	options.add_argument(r"user-data-dir=/home/jorge/.config/google-chrome/")
+	options.add_argument(r"profile-directory=Profile 6")
+
 	drive_path = Service('/usr/local/bin/chromedriver')
 
 	driver = webdriver.Chrome(service=drive_path,  options=options)
@@ -344,6 +349,7 @@ def extract_news_info(driver, list_upate_news, dict_check_point):
 			wait_load_detailed_news(driver, current_url)
 			dict_news = get_news_info_v2(driver, current_dict)
 			if database_enable:
+				print('Save in data base')
 				save_news_database(dict_news)
 			dict_check_point['index'] = index
 			# save_check_point('check_points/check_point_m1_news.json', dict_check_point)
@@ -378,7 +384,7 @@ def main_extract_news(driver, dict_url_news):
 				dict_check_point['sport'] = sport
 				print(sport, news_url)
 				wait_update_page(driver, news_url, "section__mainTitle")
-				#click_show_more_news(driver,  conf_enable_news['MAX_OLDER_DATE_ALLOWED'])
+				# click_show_more_news(driver,  conf_enable_news['MAX_OLDER_DATE_ALLOWED'])
 				list_upate_news = get_list_recent_news(driver, sport, conf_enable_news['MAX_OLDER_DATE_ALLOWED'])
 
 				extract_news_info(driver, list_upate_news, dict_check_point)
