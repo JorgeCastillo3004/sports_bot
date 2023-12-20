@@ -137,6 +137,11 @@ def main_m2(driver):
 
 	extract_ligues_tournaments(driver, flag_news = False)
 
+if database_enable:
+	con = getdb()
+
 if __name__ == "__main__":  	
 	driver = launch_navigator('https://www.flashscore.com', database_enable)
 	main_m2(driver)
+	if database_enable:
+		con.close()
