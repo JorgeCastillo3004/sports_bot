@@ -96,9 +96,9 @@ def get_ligues_data(driver):
 	name_ligue_tournament = block_ligue_team.find_element(By.CLASS_NAME,'heading__title').text
 	temporada = block_ligue_team.find_element(By.CLASS_NAME, 'heading__info').text
 	image_url = block_ligue_team.find_element(By.XPATH, './/div[@class= "heading"]/img').get_attribute('src')
-	image_path = random_name(folder = 'images/logos')
+	image_path = random_name(folder = 'images/logos/')
 	save_image(driver, image_url, image_path)
-	image_path = image_path.replace('images/logos','')
+	image_path = image_path.replace('images/logos/','')
 	league_id = random_id()
 	ligue_tornamen = {"league_id":league_id, 'sport':sport, 'league_country': country,
 					 'league_name': name_ligue_tournament,
