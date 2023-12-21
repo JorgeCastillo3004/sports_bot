@@ -4,7 +4,7 @@
         "TENNIS": true,
         "BASKETBALL": false,
         "FEATURES": false,
-        "AMERICAN_SPORTS": true,
+        "AMERICAN_SPORTS": false,
         "CRICKET": true,
         "GOLF": true,
         "MOTORSPORT": true,
