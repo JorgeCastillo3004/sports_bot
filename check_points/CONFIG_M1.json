@@ -8,7 +8,7 @@
         "CRICKET": true,
         "GOLF": true,
         "MOTORSPORT": true,
-        "HOCKEY": true,
+        "HOCKEY": false,
         "RUGBY_UNION": false,
         "WINTER_SPORTS": false,
         "COMBAT_SPORTS": true,
