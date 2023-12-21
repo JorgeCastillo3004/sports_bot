@@ -177,7 +177,7 @@ def extract_news_info(driver, list_upate_news, dict_check_point):
 					max_size = load_check_point('check_points/max_size.json')
 					for key, field in dict_news.items():
 						if key != 'published':
-							if len(max_size)!= 0								
+							if len(max_size)!= 0:
 								if max_size[key] < len(field):
 									max_size[key] = len(field)
 							else:								
