@@ -170,8 +170,22 @@ def extract_news_info(driver, list_upate_news, dict_check_point):
 			wait_load_detailed_news(driver, current_url)
 			dict_news = get_news_info_v2(driver, current_dict)
 			if database_enable:
-				print("Insert in db ")
-				save_news_database(dict_news)
+				
+				try:
+					save_news_database(dict_news)
+				except:
+					max_size = load_check_point('check_points/max_size.json')
+					for key, field in dict_news.items():
+						if key != 'published':
+							if len(max_size)!= 0								
+								if max_size[key] < len(field):
+									max_size[key] = len(field)
+							else:								
+								max_size[key] = len(field)
+					save_check_point('check_points/max_size.json', max_size)
+
+
+
 			dict_check_point['index'] = index
 			# save_check_point('check_points/check_point_m1_news.json', dict_check_point)
 			pending_extract = False
@@ -199,8 +213,8 @@ def main_extract_news(driver, dict_url_news):
 			if dict_check_point['sport'] == sport:
 				print("Process sport activated: ")
 				continue_sport = True
-			#if sport == "FOOTBALL":
-			#	conf_enable_news['MAX_OLDER_DATE_ALLOWED'] = 8
+			# if sport == "FOOTBALL":
+			# 	conf_enable_news['MAX_OLDER_DATE_ALLOWED'] = 8
 			if continue_sport:
 				dict_check_point['sport'] = sport
 				print(sport, news_url)
