@@ -1,6 +1,6 @@
 {
     "SPORTS": {
-        "FOOTBALL": true,
+        "FOOTBALL": false,
         "TENNIS": true,
         "BASKETBALL": true,
         "FEATURES": false,
