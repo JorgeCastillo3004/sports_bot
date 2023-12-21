@@ -23,6 +23,20 @@ time_difference_naive = utc_time_naive - local_time_naive
 #####################################################################
 #					CHECK POINTS BLOCK 								#
 #####################################################################
+def int_folders():
+	if not os.path.exists('check_points'):
+		os.mkdir('check_points')
+	if not os.path.exists('images'):
+		os.mkdir("images")
+	if not os.path.exists('images/logos'):
+		os.mkdir('images/logos')
+	if not os.path.exists('images/news'):
+		os.mkdir("images/news")
+	if not os.path.exists('images/news/small_images'):
+		os.mkdir("images/news/small_images/")
+	if not os.path.exists('images/news/full_images'):
+		os.mkdir("images/news/full_images/")
+
 def get_sports_links_news(driver):
 	wait = WebDriverWait(driver, 1)
 	buttonmore = wait.until(EC.element_to_be_clickable((By.CLASS_NAME, 'arrow.topMenuSpecific__moreIcon')))
@@ -198,3 +212,5 @@ def random_id():
 	rand_id = rand_id + str(random.choice([0, 9]))
 	digits = ''.join([str(random.randint(0, 9)) for i in range(4)])
 	return rand_id+digits
+
+int_folders()
