@@ -1,6 +1,6 @@
 {
     "SPORTS": {
-        "FOOTBALL": false,
+        "FOOTBALL": true,
         "TENNIS": true,
         "BASKETBALL": true,
         "FEATURES": false,
@@ -8,7 +8,7 @@
         "CRICKET": true,
         "GOLF": true,
         "MOTORSPORT": true,
-        "HOCKEY": false,
+        "HOCKEY": true,
         "RUGBY_UNION": false,
         "WINTER_SPORTS": false,
         "COMBAT_SPORTS": true,
