@@ -63,8 +63,7 @@ def get_list_recent_news(driver, sport, max_older_news):
 					count += 1		
 			if enable_save_new:
 				# Verificar base de datos
-				print("Save recent news: ")
-				print("Title: ", title)
+				print("--", end = '')
 				image_path_small = random_name(folder = 'images/news/small_images', termination = '.avif')
 				# save_image(driver, image_url, image_path_small)
 				image_name_file = image_path_small.split('/')[-1]
@@ -185,8 +184,7 @@ def extract_news_info(driver, list_upate_news, dict_check_point):
 							if compare:
 								if max_size[key] < len(field):
 									max_size[key] = len(field)
-							else:
-								print("Empty dict")
+							else:								
 								max_size[key] = len(field)
 					save_check_point('check_points/max_size.json', max_size)
 
@@ -214,21 +212,21 @@ def main_extract_news(driver, dict_url_news):
 
 	for sport, news_url in dict_url_news.items():
 		if conf_enable_news['SPORTS'][sport]:
-			print("Current sport: ", sport, "#", dict_check_point['sport'], '#')
-			if dict_check_point['sport'] == sport:
-				print("Process sport activated: ")
-				continue_sport = True
+			print("Current sport: ", sport, "#")
+			# if dict_check_point['sport'] == sport:
+			# 	print("Process sport activated: ")
+			# 	continue_sport = True
 			# if sport == "FOOTBALL":
 			# 	conf_enable_news['MAX_OLDER_DATE_ALLOWED'] = 8
 			if continue_sport:
-				dict_check_point['sport'] = sport
+				# dict_check_point['sport'] = sport
 				print(sport, news_url)
 				wait_update_page(driver, news_url, "section__mainTitle")
 				click_show_more_news(driver,  conf_enable_news['MAX_OLDER_DATE_ALLOWED'])
 				list_upate_news = get_list_recent_news(driver, sport, conf_enable_news['MAX_OLDER_DATE_ALLOWED'])
 
 				extract_news_info(driver, list_upate_news, dict_check_point)
-				dict_check_point['index'] = 0
+				# dict_check_point['index'] = 0
 
 
 CONFIG = load_json('check_points/CONFIG.json')
