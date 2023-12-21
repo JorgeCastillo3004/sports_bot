@@ -2,7 +2,7 @@
     "SPORTS": {
         "FOOTBALL": false,
         "TENNIS": true,
-        "BASKETBALL": true,
+        "BASKETBALL": false,
         "FEATURES": false,
         "AMERICAN_SPORTS": true,
         "CRICKET": true,
