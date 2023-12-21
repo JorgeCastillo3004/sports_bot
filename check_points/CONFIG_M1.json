@@ -1,10 +1,10 @@
 {
     "SPORTS": {
-        "FOOTBALL": false,
+        "FOOTBALL": true,
         "TENNIS": true,
-        "BASKETBALL": false,
+        "BASKETBALL": true,
         "FEATURES": false,
-        "AMERICAN_SPORTS": false,
+        "AMERICAN_SPORTS": true,
         "CRICKET": true,
         "GOLF": true,
         "MOTORSPORT": true,
