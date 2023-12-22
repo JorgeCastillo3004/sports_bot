@@ -36,6 +36,13 @@ def int_folders():
 		os.mkdir("images/news/small_images/")
 	if not os.path.exists('images/news/full_images'):
 		os.mkdir("images/news/full_images/")
+	if not os.path.isfile('check_points/CONFIG.json'):
+		CONFIG = {"get_news_m1": True, 	# Activate M1
+			"sports_link": False, 		# 
+			"update_links": True,    	#
+			"get_news": False,			# Get news from each sport
+			"DATA_BASE": False}			# Save in data base
+		save_check_point('check_points/CONFIG.json', CONFIG)
 
 def get_sports_links_news(driver):
 	wait = WebDriverWait(driver, 1)
@@ -136,7 +143,6 @@ def login(driver, email_= "jignacio@jweglobal.com", password_ = "Caracas5050@\n"
     time.sleep(6)
     print("Login...")
     # webdriver.ActionChains(driver).send_keys(Keys.ESCAPE).perform()
-
 
 def wait_update_page(driver, url, class_name):
 	wait = WebDriverWait(driver, 10)

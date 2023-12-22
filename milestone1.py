@@ -84,6 +84,69 @@ def get_list_recent_news(driver, sport, max_older_news):
 	
 	return list_upate_news
 
+def get_list_recent_news_v2(driver, sport, max_older_news):
+	last_news_saved = check_previous_execution(file_path = 'check_points/last_saved_news.json')
+	try:
+		last_news_list = last_news_saved[sport]
+		previous_list = True		
+		count_match = 0
+		
+	except:
+		last_news_list = []
+		previous_list = False
+	
+	more_recent_news = []
+	count = 0
+	print("Case previous list: ", previous_list)
+	wait = WebDriverWait(driver, 10)
+	webdriver.ActionChains(driver).send_keys(Keys.END).perform()
+	xpath_expression = '//div[@class="fsNewsSection fsNewsSection__mostRecent fsNewsSection__noTopped"]/a'
+	container_news = driver.find_elements(By.XPATH, xpath_expression)
+	list_upate_news = []
+	for i, block in enumerate(container_news):
+		news_link = block.get_attribute('href')
+		news_date = block.find_element(By.CLASS_NAME, '_newsMeta_gh8ui_5').text
+		date_utc = process_date(news_date)
+		title = block.find_element(By.XPATH, './/div[@role="heading"]').text
+		image = wait.until(EC.element_to_be_clickable((By.XPATH, './/figure/picture/img')))
+		image = image.get_attribute('src')
+		print('*', end ='')		
+
+		if utc_time_naive - date_utc < timedelta(days=max_older_news):
+			if previous_list and count_match < 3:
+				if title in last_news_list:
+					enable_save_new = False
+					count_match += 1
+				else:
+					enable_save_new = True
+					if count < 5:                
+						more_recent_news.append(title)						
+						count += 1						
+			if not previous_list:
+				enable_save_new = True
+				if count < 5:
+					last_news_list.append(title)					
+					count += 1		
+			if enable_save_new:
+				# Verificar base de datos
+				print("--", end = '')
+				image_path_small = random_name(folder = 'images/news/small_images', termination = '.avif')
+				# save_image(driver, image_url, image_path_small)
+				image_name_file = image_path_small.split('/')[-1]
+				dict_current_news = {'title':title, 'published':date_utc, 'image':image_name_file, 'news_link':news_link}
+				list_upate_news.append(dict_current_news)
+			else:
+				print("Duplicate news: ")
+				print("Title: ", title)
+		enable_save_new = False
+	last_news_list = more_recent_news + last_news_list
+	last_news_saved[sport] = last_news_list[0:5]
+	save_check_point('check_points/last_saved_news.json', last_news_saved)
+	
+	return list_upate_news
+
+# def check_process_news(driver, sport, conf_enable_news['MAX_OLDER_DATE_ALLOWED'])
+
 def click_show_more_news(driver, max_older_news):
 	wait = WebDriverWait(driver, 5)	
 	count = 0 
@@ -196,9 +259,10 @@ def extract_news_info(driver, list_upate_news, dict_check_point):
 				# 	count += 1
 				# 	print("Loading again")
 
-def main_extract_news(driver, dict_url_news):
+def main_extract_news(driver):
 	dict_check_point = {} #check_previous_execution(file_path = 'check_points/check_point_m1_news.json')
-	conf_enable_news = check_previous_execution(file_path = 'check_points/CONFIG_M1.json')	
+	conf_enable_news = check_previous_execution(file_path = 'check_points/CONFIG_M1.json')
+	dict_url_news = load_json('check_points/sports_url_m1.json')
 	
 	print("New update function: ")
 
@@ -211,7 +275,7 @@ def main_extract_news(driver, dict_url_news):
 		continue_sport = False
 
 	for sport, news_url in dict_url_news.items():
-		if conf_enable_news['SPORTS'][sport]:
+		if conf_enable_news['SPORTS'][sport]['enable']:
 			print("Current sport: ", sport, "#")
 			# if dict_check_point['sport'] == sport:
 			# 	print("Process sport activated: ")
@@ -222,19 +286,39 @@ def main_extract_news(driver, dict_url_news):
 				# dict_check_point['sport'] = sport
 				print(sport, news_url)
 				wait_update_page(driver, news_url, "section__mainTitle")
-				click_show_more_news(driver,  conf_enable_news['MAX_OLDER_DATE_ALLOWED'])
-				list_upate_news = get_list_recent_news(driver, sport, conf_enable_news['MAX_OLDER_DATE_ALLOWED'])
 
-				extract_news_info(driver, list_upate_news, dict_check_point)
-				# dict_check_point['index'] = 0
+				new_test = False
 
+				if new_test:
+					check_process_news(driver, sport, conf_enable_news['MAX_OLDER_DATE_ALLOWED'])
+				else:
+					click_show_more_news(driver,  conf_enable_news['MAX_OLDER_DATE_ALLOWED'])
+					list_upate_news = get_list_recent_news(driver, sport, conf_enable_news['MAX_OLDER_DATE_ALLOWED'])
+
+					extract_news_info(driver, list_upate_news, dict_check_point)
+					# dict_check_point['index'] = 0
+
+def initial_settings_m1(driver):
+	# GET SPORTS AND SPORTS LINKS
+	if not os.path.isfile('check_points/sports_url_m1.json'):
+		driver.get('https://www.flashscore.com/news/football/')
+		dict_url_news_m1 = get_sports_links_news(driver)
+		save_check_point('check_points/sports_url_m1.json', dict_url_news_m1)
+
+	# BUILD CONFIG_M1
+	if not os.path.isfile('check_points/CONFIG_M1.json'):
+		dict_enable_news = {'SPORTS':{}}
+		dict_url_news_m1 = load_json('check_points/sports_url_m1.json')
+		for sport in dict_url_news_m1.keys():
+			dict_enable_news['SPORTS'][sport] = True
+		dict_enable_news['MAX_OLDER_DATE_ALLOWED'] = 31
+		save_check_point('check_points/CONFIG_M1.json', dict_enable_news)
 
 CONFIG = load_json('check_points/CONFIG.json')
 database_enable = CONFIG['DATA_BASE']
 
-
 if __name__ == "__main__":	
 	driver = launch_navigator('https://www.flashscore.com', database_enable)
-	login(driver, email_= "jignacio@jweglobal.com", password_ = "Caracas5050@\n")
-	dict_url_news_m1 = load_json('check_points/sports_url_m1.json')
-	main_extract_news(driver, dict_url_news_m1)
+	initial_settings_m1(driver)
+	login(driver, email_= "jignacio@jweglobal.com", password_ = "Caracas5050@\n")	
+	main_extract_news(driver)

@@ -28,5 +28,15 @@ def save_ligue_tornament_info(dict_ligue_tornament):
 	cur.execute(query, dict_ligue_tornament)														 
 	con.commit()																					 
 
+def save_sport_database(sport_dict):
+	try:
+		query = "INSERT INTO sport VALUES(%(sport_id)s, %(is_active)s, %(desc_i18n)s,\
+										 %(logo)s, %(sport_mode)s, %(name_i18n)s, %(point_name)s)"
+		cur = con.cursor()
+		cur.execute(query, sport_dict)
+		con.commit
+	except:
+		con.rollback()
+
 if database_enable:
 	con = getdb()
