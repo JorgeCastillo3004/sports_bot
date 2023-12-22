@@ -1,0 +1,69 @@
+{
+    "SPORTS": {
+        "FOOTBALL": {
+            "enable": true,
+            "mode": "BY_TEAM"
+        },
+        "TENNIS": {
+            "enable": true,
+            "mode": "BOTH"
+        },
+        "BASKETBALL": {
+            "enable": true,
+            "mode": "BY_TEAM"
+        },
+        "FEATURES": {
+            "enable": true,
+            "mode": "BY_TEAM"
+        },
+        "AMERICAN_SPORTS": {
+            "enable": true,
+            "mode": "BY_TEAM"
+        },
+        "CRICKET": {
+            "enable": true,
+            "mode": "BOTH"
+        },
+        "GOLF": {
+            "enable": true,
+            "mode": "INDIVIDUAL"
+        },
+        "MOTORSPORT": {
+            "enable": true,
+            "mode": "INDIVIDUAL"
+        },
+        "HOCKEY": {
+            "enable": true,
+            "mode": "BY_TEAM"
+        },
+        "RUGBY_UNION": {
+            "enable": true,
+            "mode": "BY_TEAM"
+        },
+        "WINTER_SPORTS": {
+            "enable": false,
+            "mode": "BY_TEAM"
+        },
+        "COMBAT_SPORTS": {
+            "enable": true,
+            "mode": "INDIVIDUAL"
+        },
+        "ROAD_CYCLING": {
+            "enable": false,
+            "mode": "BY_TEAM"
+        },
+        "ATHLETICS": {
+            "enable": false,
+            "mode": "BY_TEAM"
+        },
+        "AFRICAN_FOOTBALL": {
+            "enable": false,
+            "mode": "BY_TEAM"
+        },
+        "GHANA": {
+            "enable": false,
+            "mode": "BY_TEAM"
+        }
+    },
+    "MAX_OLDER_DATE_ALLOWED": 31
+}
