@@ -121,13 +121,13 @@ def main_m2(driver, flag_news = False):
 	
 	dict_with_issues = {}
 	for sport, flag_load in conf_enable_news.items():
-		user_confirmation = False
+		# user_confirmation = False
 		if flag_load:			
 			print("Init: ", sport, dict_sports[sport])
 			wait_update_page(driver, dict_sports[sport], "container__heading")
 			
 			dict_ligues_tornaments = find_ligues_torneos(driver)
-			if not user_confirmation:
+			# if not user_confirmation:
 				# for ligue_tournament, ligue_tournament_url in dict_ligues_tornaments.items():
 				# 	print(ligue_tournament)
 				# user_input = input("Type y to continue")
