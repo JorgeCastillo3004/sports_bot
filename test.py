@@ -26,13 +26,12 @@ def save_news_database(dict_news):
 		cur.execute(query, dict_news)
 		con.commit
 
-def save_sport_database(dict_news):
-	{sport_id : '', is_active : '', desc_i18n : '', logo : '', sport_mode : '', name_i18n : '', point_name: ''}
+def save_sport_database(sport_dict):
 
 	query = "INSERT INTO sport VALUES(%(sport_id)s, %(is_active)s, %(desc_i18n)s,\
 					 %(logo)s, %(sport_mode)s, %(name_i18n)s, %(point_name)s)"
 	cur = con.cursor()
-	cur.execute(query, dict_news)
+	cur.execute(query, sport_dict)
 	con.commit
 
 
@@ -43,7 +42,7 @@ def create_sports_selected():
 		sport_dict = {'sport_id' : '', 'is_active' : True, 'desc_i18n' : '', 'logo' : '', 'sport_mode' : '', 'name_i18n' : '', 'point_name': ''}
 		if enable_flag:
 			print(sport, "Save in data base:")
-			sport_dict[sport] = sport
+			sport_dict[sport] = sport_dict
 			# try:
 			save_sport_database(sport_dict)
 			# except:
