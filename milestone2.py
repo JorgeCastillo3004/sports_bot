@@ -130,7 +130,7 @@ def main_m2(driver, flag_news = False):
 			if not user_confirmation:
 				for ligue_tournament, ligue_tournament_url in dict_ligues_tornaments.items():
 					print(ligue_tournament)
-				user_input = input("Type y to continue")
+				# user_input = input("Type y to continue")
 				# if user_input == 'y':
 				# 	user_confirmation = True
 				# if user_input == 's':

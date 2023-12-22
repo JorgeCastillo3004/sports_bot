@@ -54,7 +54,7 @@ def save_season_database(season_dict):
 	query = "INSERT INTO season VALUES(%(season_id)s, %(season_name)s, %(season_end)s,\
 									 %(season_start)s, %(league_id)s)"
 	cur = con.cursor()
-	cur.execute(query, sport_dict)
+	cur.execute(query, season_dict)
 	con.commit
 
 if database_enable:
