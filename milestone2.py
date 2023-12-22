@@ -92,7 +92,7 @@ def get_ligues_data(driver):
 	season_id = random_id()
 	ligue_tornamen = {"league_id":league_id,"season_id":season_id, 'sport':sport, 'league_country': league_country,
 					 'league_name': league_name,'season_name':season_name, 'league_logo':image_path,
-					  'league_name_i18n':'', 'season_end':'', 'season_end':'', 'season_start':''}
+					  'league_name_i18n':'', 'season_end':datetime.now(), 'season_start':datetime.now()}
 	return ligue_tornamen
 
 def find_ligues_torneos(driver):
