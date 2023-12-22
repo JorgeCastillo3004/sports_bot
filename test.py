@@ -44,11 +44,11 @@ def create_sports_selected():
 		if enable_flag:
 			print(sport, "Save in data base:")
 			sport_dict[sport] = sport
-			try:
-				save_sport_database(dict_news)
-			except:
-				print("Previously created ")
-				
+			# try:
+			save_sport_database(sport_dict)
+			# except:
+			# 	print("Previously created ")
+
 args = parser.parse_args()
 option = args.option
 table = args.table
@@ -61,12 +61,6 @@ create_sports_selected()
 # dict_news = dict_news = {'news_id':"asd223ddsf13", 'title':"insert new news" ,'news_summary':"summary.text",\
 #                                  'news_content':"body_html", 'image':"image_path",\
 #                                 'published':datetime.now(),'news_tags': "mentions"}     
-#save_news_database(dict_news)
-CONFIG_M1 = load_json('check_points/CONFIG_M1.json')
-
-for sport, enable_flag in CONFIG_M1.items():
-	save_sport_database(dict_news)
-
 
 if option  == 1:
 	print("Select all from news")
