@@ -9,7 +9,7 @@ import psycopg2
 from common_functions import *
 # from main import database_enable
 # from common_functions import utc_time_naive
-# from data_base import *
+from data_base import *
 
 # import argparse
 # parser = argparse.ArgumentParser()
