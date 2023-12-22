@@ -43,10 +43,11 @@ def create_sports_selected():
 		if enable_flag:
 			print(sport, "Save in data base:")
 			sport_dict[sport] = sport_dict
-			# try:
-			save_sport_database(sport_dict)
-			# except:
-			# 	print("Previously created ")
+			sport_dict['sport_mode'] = sport_dict[sport]['mode']
+			try:
+				save_sport_database(sport_dict)
+			except:
+				print("Previously created ")
 
 args = parser.parse_args()
 option = args.option
