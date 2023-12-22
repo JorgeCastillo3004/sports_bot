@@ -40,6 +40,7 @@ def create_sports_selected():
 	CONFIG_M1 = load_json('check_points/CONFIG_M1.json')
 	for sport, enable_mode in CONFIG_M1['SPORTS'].items():
 		sport_dict = {'sport_id' : '', 'is_active' : True, 'desc_i18n' : '', 'logo' : '', 'sport_mode' : '', 'name_i18n' : '', 'point_name': ''}
+		print(enable_mode['enable'])
 		if enable_mode['enable']:
 			print(sport, "Save in data base:")
 			sport_dict[sport] = sport_dict
