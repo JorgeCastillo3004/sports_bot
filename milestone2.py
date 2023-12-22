@@ -185,6 +185,7 @@ if __name__ == "__main__":
 	driver = launch_navigator('https://www.flashscore.com', database_enable)
 	login(driver, email_= "jignacio@jweglobal.com", password_ = "Caracas5050@\n")
 	initial_settings_m2(driver)
+	create_sports_selected_in_db()
 	main_m2(driver, flag_news = False)
 	if database_enable:
 		con.close()
