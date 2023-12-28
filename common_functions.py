@@ -26,10 +26,18 @@ time_difference_naive = utc_time_naive - local_time_naive
 def int_folders():
 	if not os.path.exists('check_points'):
 		os.mkdir('check_points')
+	if not os.path.exists('check_points/results/'):
+		os.mkdir("check_points/results/")
+	if not os.path.exists('check_points/fixtures/'):
+		os.mkdir("check_points/fixtures/")
+	if not os.path.exists('check_points/standings/'):
+		os.mkdir("check_points/standings/")
 	if not os.path.exists('images'):
 		os.mkdir("images")
 	if not os.path.exists('images/logos'):
 		os.mkdir('images/logos')
+	if not os.path.exists('images/players'):
+		os.mkdir('images/players')
 	if not os.path.exists('images/news'):
 		os.mkdir("images/news")
 	if not os.path.exists('images/news/small_images'):
