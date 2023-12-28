@@ -2,7 +2,7 @@ create table league
 (
     league_id        varchar(40) not null
         primary key,
-    league_country   varchar(3),
+    league_country   varchar(80),
     league_logo      varchar(70),
     league_name      varchar(35),
     league_name_i18n varchar(255)
@@ -19,8 +19,8 @@ create table news
     image        varchar(255),
     published    timestamp(6),
     news_summary varchar(8196),
-    news_tags    varchar(255),
-    title        varchar(400)
+    news_tags    varchar(350),
+    title        varchar(600)
 );
 
 alter table news
@@ -30,11 +30,11 @@ create table player
 (
     player_id       varchar(40) not null
         primary key,
-    player_country  varchar(3),
+    player_country  varchar(40),
     player_dob      date,
     player_name     varchar(70),
     player_photo    varchar(128),
-    player_position varchar(3)
+    player_position varchar(40)
 );
 
 alter table player
@@ -46,7 +46,7 @@ create table season
         primary key,
     season_name  varchar(35),
     season_end   date,
-    season_start date,
+    season  _start date,
     league_id    varchar(40) not null
         constraint fks8kd4aueryljws3a8kj228jvm
             references league
@@ -80,20 +80,20 @@ create table stadium
     stadium_id varchar(255) not null
         primary key,
     capacity   integer,
-    country    varchar(3),
+    country    varchar(40),
     desc_i18n  varchar(1024),
     name       varchar(255),
     photo      varchar(255)
 );
 
-alter table stadium
+alter table stadiumlea
     owner to wohhu;
 
 create table tournament
 (
     tournament_id   varchar(255) not null
         primary key,
-    team_country    varchar(3),
+    team_country    varchar(40),
     desc_i18n       varchar(1024),
     end_date        date,
     logo            varchar(128),
@@ -110,7 +110,7 @@ create table team
 (
     team_id       varchar(40)  not null
         primary key,
-    team_country  varchar(3),
+    team_country  varchar(40),
     team_desc     varchar(255),
     team_logo     varchar(128),
     team_name     varchar(128),
@@ -149,7 +149,7 @@ create table match
 (
     match_id      varchar(255) not null
         primary key,
-    match_country varchar(3),
+    match_country varchar(40),
     end_time      time(6),
     match_date    date,
     name          varchar(70),
