@@ -27,16 +27,23 @@ def save_news_database(dict_news):
 		con.commit
 
 def save_sport_database(sport_dict):
+	try:
+		query = "INSERT INTO sport VALUES(%(sport_id)s, %(is_active)s, %(desc_i18n)s,\
+										 %(logo)s, %(sport_mode)s, %(name_i18n)s, %(point_name)s)"
+		cur = con.cursor()
+		cur.execute(query, sport_dict)
+		con.commit
+	except:
+		con.rollback()
 
-	query = "INSERT INTO sport VALUES(%(sport_id)s, %(is_active)s, %(desc_i18n)s,\
-					 %(logo)s, %(sport_mode)s, %(name_i18n)s, %(point_name)s)"
+def save_season_database(season_dict):
+	query = "INSERT INTO season VALUES(%(season_id)s, %(season_name)s, %(season_end)s,\
+									 %(season_start)s, %(league_id)s)"
 	cur = con.cursor()
 	cur.execute(query, sport_dict)
 	con.commit
 
-
-
-def create_sports_selected():
+def create_sports_selected_in_db():
 	CONFIG_M1 = load_json('check_points/CONFIG_M1.json')
 	for sport, enable_mode in CONFIG_M1['SPORTS'].items():
 		sport_dict = {'sport_id' : '', 'is_active' : True, 'desc_i18n' : '', 'logo' : '', 'sport_mode' : '', 'name_i18n' : '', 'point_name': ''}
@@ -45,10 +52,7 @@ def create_sports_selected():
 			print(sport, "Save in data base:")
 			sport_dict[sport] = sport_dict
 			sport_dict['sport_mode'] = enable_mode['mode']
-			# try:
 			save_sport_database(sport_dict)
-			# except:
-			# 	print("Previously created ")
 
 args = parser.parse_args()
 option = args.option
@@ -58,7 +62,7 @@ print("Option: ", option)
 print("Table: ", table)
 con = getdb()
 print("Connections stablished")
-create_sports_selected()
+# create_sports_selected()
 # dict_news = dict_news = {'news_id':"asd223ddsf13", 'title':"insert new news" ,'news_summary':"summary.text",\
 #                                  'news_content':"body_html", 'image':"image_path",\
 #                                 'published':datetime.now(),'news_tags': "mentions"}     
