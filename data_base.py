@@ -37,7 +37,7 @@ def save_season_database(season_dict):
 
 def save_tournament(dict_tournament):
 	query = "INSERT INTO season VALUES(%(tournament_id)s, %(team_country)s, %(desc_i18n)s,\
-									 %(end_date)s, %(logo)s), %(name_i18n)s), %(season)s), %(start_date)s, %(tournament_year)s)"
+									 %(end_date)s, %(logo)s, %(name_i18n)s, %(season)s, %(start_date)s, %(tournament_year)s)"
 	cur = con.cursor()
 	cur.execute(query, dict_tournament)
 	con.commit
