@@ -50,7 +50,9 @@ def save_team_info(dict_team):
 	con.commit()
 
 def save_league_team_entity(dict_team):
-	query = "INSERT INTO team_players_entity VALUES(%(player_meta)s, %(season_id)s, %(team_id)s, %(player_id)s"
+	print("Dict keys: ", dict_team.keys())
+	query = "INSERT INTO league_team VALUES(%(instance_id)s, %(team_meta)s, %(team_position)s, %(league_id)s, %(season_id)s, %(team_id)s)"
+	print("Query: ", query)
 	cur = con.cursor()
 	cur.execute(query, dict_team)
 	con.commit()
