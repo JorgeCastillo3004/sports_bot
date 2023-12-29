@@ -64,11 +64,11 @@ def save_league_team_entity(dict_team):
 	con.commit()
 
 def save_team_info(dict_team):
-	query = "INSERT INTO league_team VALUES(%(instance_id)s, %(team_meta)s, %(team_position)s, %(league_id)s, %(season_id)s\
-									 ,%(team_id)s)"
+	print("dict_team: ", dict_team)
+	query = "INSERT INTO league_team VALUES(%(instance_id)s, %(team_meta)s, %(team_position)s, %(league_id)s, %(season_id)s, %(team_id)s)"
 	cur = con.cursor()
 	cur.execute(query, dict_team)
-	con.commit
+	con.commit()
 
 def create_sport_dict(sport, sport_mode):
 	sport_dict = {'sport_id' : sport, 'is_active' : True, 'desc_i18n' : '', 'logo' : '',\
