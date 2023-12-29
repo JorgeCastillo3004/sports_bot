@@ -504,7 +504,7 @@ def navigate_through_players(driver, dict_squad):
 			break ### URGENT DELETE #######
 		break ### URGENT DELETE #######
 
-def navigate_through_teams(driver, sport_id, tournament_id, season_id, section = 'standings'):
+def navigate_through_teams(driver, sport_id, league_id, tournament_id, season_id, section = 'standings'):
 	base_dir = 'check_points/{}/'.format(section)
 	list_files = os.listdir(base_dir)
 
@@ -518,11 +518,11 @@ def navigate_through_teams(driver, sport_id, tournament_id, season_id, section =
 			
 			wait_update_page(driver, team_info['team_url'], 'heading')
 
-			dict_team = get_teams_data(driver, sport_id, tournament_id, season_id, team_info)
+			dict_team = get_teams_data(driver, sport_id, league_id, season_id, team_info)
 
-			dict_tournament = {'tournament_id':random_id(), 'team_country':dict_team['team_country'], 'desc_i18n':'','end_date':datetime.now(),\
+			dict_tournament = {'tournament_id':tournament_id, 'team_country':dict_team['team_country'], 'desc_i18n':'','end_date':datetime.now(),\
 			  'logo':'', 'name_i18n':'', 'season':season_id, 'start_date':datetime.now(), 'tournament_year':2023}
-			dict_team['tournament_id'] = dict_tournament['tournament_id']
+			dict_team['tournament_id'] = tournament_id
 			print("Save in database teams info")
 			if database_enable:
 				save_tournament(dict_tournament)
@@ -567,6 +567,7 @@ def main_m2(driver, flag_news = False):
 					if pin_activate:
 						print("Extract ligue info: ")
 						league_tornamen_info = get_ligues_data(driver)
+						league_tornamen_info['tournament_id'] = random_id()
 						if database_enable:
 							save_ligue_info(league_tornamen_info)
 							save_season_database(league_tornamen_info)
@@ -581,8 +582,8 @@ def main_m2(driver, flag_news = False):
 							dict_teams_availables = get_teams_info(driver)							
 							league_name = league_tornamen_info['league_name'].replace(' ', '_')
 							save_check_point('check_points/standings/{}.json'.format(league_name), dict_teams_availables)
-							navigate_through_teams(driver, sport, league_tornamen_info['league_id'], league_tornamen_info['season_id'], section = 'standings')
-
+							navigate_through_teams(driver, sport, league_tornamen_info['league_id'], league_tornamen_info['tournament_id'], league_tornamen_info['season_id'], section = 'standings')
+							
 
 						# Loop over teams link and complete information available.#####
 						###############################################################

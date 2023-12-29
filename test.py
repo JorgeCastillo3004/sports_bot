@@ -12,19 +12,19 @@ parser.add_argument('--column', type=str, default='title')
 # parser.add_argument('--option', type=int, default=1, '--table', type=str, default='news')
 
 def getdb():
-		return psycopg2.connect(
-				host="localhost",
-				user="wohhu",
-				password="caracas123",
-		dbname='sports_db',
-		)
+	return psycopg2.connect(
+			host="localhost",
+			user="wohhu",
+			password="caracas123",
+	dbname='sports_db',
+	)
 
 def save_news_database(dict_news):      
-		query = "INSERT INTO news VALUES(%(news_id)s, %(news_content)s, %(image)s,\
-						 %(published)s, %(news_summary)s, %(news_tags)s, %(title)s)"
-		cur = con.cursor()
-		cur.execute(query, dict_news)
-		con.commit
+	query = "INSERT INTO news VALUES(%(news_id)s, %(news_content)s, %(image)s,\
+					 %(published)s, %(news_summary)s, %(news_tags)s, %(title)s)"
+	cur = con.cursor()
+	cur.execute(query, dict_news)
+	con.commit
 
 def save_sport_database(sport_dict):
 	try:
@@ -54,6 +54,26 @@ def create_sports_selected_in_db():
 			sport_dict['sport_mode'] = enable_mode['mode']
 			save_sport_database(sport_dict)
 
+
+
+def save_player_info(dict_team):
+	# dict_team['player_country'] dict_team['player_country'][0:2]
+	# print("Start save player info in db")
+	# list_fields = ['player_id', 'player_country', 'player_name', 'player_photo', 'player_position']
+	# print("Input dict: ", dict_team)
+	# for key in list_fields:
+	# 	print(key, dict_team[key], len(dict_team[key]))
+	query = "INSERT INTO player VALUES(%(player_id)s, %(player_country)s, %(player_dob)s,\
+	 %(player_name)s, %(player_photo)s, %(player_position)s)"
+	cur = con.cursor()
+	cur.execute(query, dict_team)
+	con.commit()
+	print("Player insert ready")
+
+dict_player = {'player_id': 'lisushtfctkblfct95988', 'player_country': 'ARGENTINA', 'player_dob': datetime.now(),\
+'player_name': 'Franco Armani', 'player_photo': 'tlbddnlkwthtwhhh.jpg', 'player_position': 'Goalkeeper'}
+save_player_info(dict_player)
+
 args = parser.parse_args()
 option = args.option
 table = args.table
@@ -66,6 +86,22 @@ print("Connections stablished")
 # dict_news = dict_news = {'news_id':"asd223ddsf13", 'title':"insert new news" ,'news_summary':"summary.text",\
 #                                  'news_content':"body_html", 'image':"image_path",\
 #                                 'published':datetime.now(),'news_tags': "mentions"}     
+
+
+def get_team_id(league_id, team_name):
+	query = "SELECT team_id FROM team WHERE league_id=={} AND team_name =={};".format(league_id, table)
+
+	cur = con.cursor()
+	cur.execute(query)
+	results = cur.fetchall()
+	return results
+
+{'player_id': 'zlimvcmkackysnle94725', 'player_country': 'AR', 'player_dob': datetime.datetime(1992, 2, 29, 0, 0), 'player_name': 'Guido Herrera', 'player_photo': 'otraeaucolpjzael.jpg', 'player_position': 'Goalkeeper'}
+
+
+results = get_team_id('lcmlzcrorxrjvdje06956', 'Boca Juniors')
+print("First test get team id")
+print(results)
 
 if option  == 1:
 	print("Select all from news")
@@ -87,7 +123,7 @@ cur = con.cursor()
 cur.execute(query)
 
 if option != 3:
-	results = cur.fetchall()   
+	results = cur.fetchall()
 
 	for result in results:
 		print(result)
