@@ -58,7 +58,7 @@ def save_league_team_entity(dict_team):
 def save_player_info(dict_team):
 	print("Start save player info in db")
 	# list_fields = ['player_id', 'player_country', 'player_name', 'player_photo', 'player_position']
-	dict_team['player_country'] dict_team['player_country'][0:2]
+	dict_team['player_country'] = dict_team['player_country'][0:2]
 	# for key in list_fields:
 	# 	print(key, dict_team[key], len(dict_team[key]))
 	print("Input dict: ", dict_team)
