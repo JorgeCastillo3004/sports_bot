@@ -581,7 +581,7 @@ def main_m2(driver, flag_news = False):
 							dict_teams_availables = get_teams_info(driver)							
 							league_name = league_tornamen_info['league_name'].replace(' ', '_')
 							save_check_point('check_points/standings/{}.json'.format(league_name), dict_teams_availables)
-							navigate_through_teams(driver, sport, league_tornamen_info['league_id'], league_tornamen_info['tournament_id'], league_tornamen_info['season_id'], section = 'standings')
+							navigate_through_teams(driver, sport, league_tornamen_info['league_id'], dict_tournament['tournament_id'], league_tornamen_info['season_id'], section = 'standings')
 							
 
 						# Loop over teams link and complete information available.#####
