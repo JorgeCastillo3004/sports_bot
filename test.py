@@ -57,12 +57,6 @@ def create_sports_selected_in_db():
 
 
 def save_player_info(dict_team):
-	# dict_team['player_country'] dict_team['player_country'][0:2]
-	# print("Start save player info in db")
-	# list_fields = ['player_id', 'player_country', 'player_name', 'player_photo', 'player_position']
-	# print("Input dict: ", dict_team)
-	# for key in list_fields:
-	# 	print(key, dict_team[key], len(dict_team[key]))
 	query = "INSERT INTO player VALUES(%(player_id)s, %(player_country)s, %(player_dob)s,\
 	 %(player_name)s, %(player_photo)s, %(player_position)s)"
 	cur = con.cursor()
@@ -80,25 +74,24 @@ con = getdb()
 print("Connections stablished")
 
 
-dict_player = {'player_id': 'lisushtfctkblfct95988', 'player_country': 'ARGENTINA', 'player_dob': datetime.now(),\
-'player_name': 'Franco Armani', 'player_photo': 'tlbddnlkwthtwhhh.jpg', 'player_position': 'Goalkeeper'}
-save_player_info(dict_player)
+# dict_player = {'player_id': 'lisushtfctkblfct95988', 'player_country': 'ARGENTINA', 'player_dob': datetime.now(),\
+# 'player_name': 'Franco Armani', 'player_photo': 'tlbddnlkwthtwhhh.jpg', 'player_position': 'Goalkeeper'}
+# save_player_info(dict_player)
 
 
-def get_team_id(league_id, team_name):
-	query = "SELECT team_id FROM team WHERE league_id=={} AND team_name =={};".format(league_id, table)
+def get_team_id(tournament_id, team_name):
+	query = "SELECT team_id FROM team WHERE tournament_id=={} AND team_name =={};".format(tournament_id, team_name)
 
 	cur = con.cursor()
 	cur.execute(query)
 	results = cur.fetchall()
 	return results
 
-{'player_id': 'zlimvcmkackysnle94725', 'player_country': 'AR', 'player_dob': datetime.datetime(1992, 2, 29, 0, 0), 'player_name': 'Guido Herrera', 'player_photo': 'otraeaucolpjzael.jpg', 'player_position': 'Goalkeeper'}
+# results = get_team_id('lcmlzcrorxrjvdje06956', 'Boca Juniors')
+# print("First test get team id")
+# print(results)
 
 
-results = get_team_id('lcmlzcrorxrjvdje06956', 'Boca Juniors')
-print("First test get team id")
-print(results)
 
 if option  == 1:
 	print("Select all from news")

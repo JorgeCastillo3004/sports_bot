@@ -518,14 +518,10 @@ def navigate_through_teams(driver, sport_id, league_id, tournament_id, season_id
 			
 			wait_update_page(driver, team_info['team_url'], 'heading')
 
-			dict_team = get_teams_data(driver, sport_id, league_id, season_id, team_info)
-
-			dict_tournament = {'tournament_id':tournament_id, 'team_country':dict_team['team_country'], 'desc_i18n':'','end_date':datetime.now(),\
-			  'logo':'', 'name_i18n':'', 'season':season_id, 'start_date':datetime.now(), 'tournament_year':2023}
+			dict_team = get_teams_data(driver, sport_id, league_id, season_id, team_info)			
 			dict_team['tournament_id'] = tournament_id
 			print("Save in database teams info")
-			if database_enable:
-				save_tournament(dict_tournament)
+			if database_enable:				
 				save_team_info(dict_team)
 				dict_team['player_meta'] = ''
 				save_league_team_entity(dict_team)
@@ -567,11 +563,14 @@ def main_m2(driver, flag_news = False):
 					if pin_activate:
 						print("Extract ligue info: ")
 						league_tornamen_info = get_ligues_data(driver)
-						league_tornamen_info['tournament_id'] = random_id()
+						dict_tournament = {'tournament_id':random_id(), 'team_country':league_tornamen_info['league_country'],\
+						 			'desc_i18n':'','end_date':datetime.now(),'logo':'', 'name_i18n':'', 'season':league_tornamen_info['season_id'],\
+						 			 'start_date':datetime.now(), 'tournament_year':2023}
+						
 						if database_enable:
 							save_ligue_info(league_tornamen_info)
 							save_season_database(league_tornamen_info)
-							# save_tournament(dict_ligue_tornament)
+							save_tournament(dict_tournament)
 						print(league_tornamen_info)
 						print("League id: ", league_tornamen_info['league_id'])
 						

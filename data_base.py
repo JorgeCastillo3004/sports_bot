@@ -19,7 +19,6 @@ def save_news_database(dict_news):
 	con.commit()
 
 def save_ligue_info(dict_ligue_tornament):
-	print("Info ligue tournament info save")
 	for field, value in dict_ligue_tornament.items():
 		print(field, value, end ='-')
 
@@ -55,20 +54,12 @@ def save_league_team_entity(dict_team):
 	cur.execute(query, dict_team)
 	con.commit()
 
-def save_player_info(dict_team):
-	print("Start save player info in db")
-	# list_fields = ['player_id', 'player_country', 'player_name', 'player_photo', 'player_position']
-	# dict_team['player_country'] = dict_team['player_country'][0:2]
-	# for key in list_fields:
-	# 	print(key, dict_team[key], len(dict_team[key]))
-	print("Input dict: ", dict_team)
-	
+def save_player_info(dict_team):	
 	query = "INSERT INTO player VALUES(%(player_id)s, %(player_country)s, %(player_dob)s,\
 	 %(player_name)s, %(player_photo)s, %(player_position)s)"
 	cur = con.cursor()
 	cur.execute(query, dict_team)
 	con.commit()
-	print("Player insert ready")
 
 # def save_team_info(dict_team):
 # 	print("dict_team: ", dict_team)
