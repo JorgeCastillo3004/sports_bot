@@ -70,10 +70,6 @@ def save_player_info(dict_team):
 	con.commit()
 	print("Player insert ready")
 
-dict_player = {'player_id': 'lisushtfctkblfct95988', 'player_country': 'ARGENTINA', 'player_dob': datetime.now(),\
-'player_name': 'Franco Armani', 'player_photo': 'tlbddnlkwthtwhhh.jpg', 'player_position': 'Goalkeeper'}
-save_player_info(dict_player)
-
 args = parser.parse_args()
 option = args.option
 table = args.table
@@ -82,10 +78,11 @@ print("Option: ", option)
 print("Table: ", table)
 con = getdb()
 print("Connections stablished")
-# create_sports_selected()
-# dict_news = dict_news = {'news_id':"asd223ddsf13", 'title':"insert new news" ,'news_summary':"summary.text",\
-#                                  'news_content':"body_html", 'image':"image_path",\
-#                                 'published':datetime.now(),'news_tags': "mentions"}     
+
+
+dict_player = {'player_id': 'lisushtfctkblfct95988', 'player_country': 'ARGENTINA', 'player_dob': datetime.now(),\
+'player_name': 'Franco Armani', 'player_photo': 'tlbddnlkwthtwhhh.jpg', 'player_position': 'Goalkeeper'}
+save_player_info(dict_player)
 
 
 def get_team_id(league_id, team_name):
