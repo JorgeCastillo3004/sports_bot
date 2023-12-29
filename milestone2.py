@@ -514,11 +514,11 @@ def navigate_through_players(driver, dict_squad):
 def navigate_through_teams(driver, sport_id, league_id, tournament_id, season_id, section = 'standings'):
 	base_dir = 'check_points/{}/'.format(section)
 	list_files = os.listdir(base_dir)
-
+	
 	for file_name in list_files:
 		file_name = os.path.join(base_dir, file_name)
 		dict_teams = load_check_point(file_name)
-
+		count = 0
 		for team_name, team_info in dict_teams.items():
 
 			print("Save team statistics in database")
@@ -538,7 +538,8 @@ def navigate_through_teams(driver, sport_id, league_id, tournament_id, season_id
 			wait_update_page(driver, squad_url, 'heading')
 			dict_squad = get_squad_dict(driver)
 			navigate_through_players(driver, dict_squad)
-			if count = 3:
+			count += 1
+			if count == 3:
 				break ### URGENT DELETE #######
 		# Remove processed file
 		os.remove(file_name)
