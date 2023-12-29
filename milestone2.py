@@ -110,7 +110,7 @@ def get_teams_data(driver, sport_id, league_id, season_id, team_info):
 	logo_path = image_path.replace('images/logos/','')
 	team_id = random_id()
 	instance_id = random_id()	
-	meta_dict = {'statistics':team_info['statistics'], 'last_results':team_info['last_results']}
+	meta_dict = str({'statistics':team_info['statistics'], 'last_results':team_info['last_results']})
 	team_info = {"team_id":team_id,"team_position":team_info['position'], "team_country":team_country,"team_desc":'', 'team_logo':logo_path,\
 			 'team_name': team_name,'sport_id': sport_id, 'league_id':league_id, 'season_id':season_id,\
 			 'instance_id':instance_id, 'team_meta':meta_dict, 'stadium':stadium}
