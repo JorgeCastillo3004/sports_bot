@@ -56,17 +56,20 @@ def save_league_team_entity(dict_team):
 	cur = con.cursor()
 	cur.execute(query, dict_team)
 	con.commit()
+	print("League team ready")
 
 def save_player_info(dict_team):
+	print("Start save player info in db")
 	list_fields = ['player_id', 'player_country', 'player_name', 'player_photo', 'player_position']
-
+	print("Input dict: ", dict_team)
 	for key in list_fields:
 		print(key, dict_team[key], len(dict_team[key]))
 	query = "INSERT INTO player VALUES(%(player_id)s, %(player_country)s, %(player_dob)s,\
 	 %(player_name)s, %(player_photo)s, %(player_position)s)"
-	cur = con.cursor()																			 
-	cur.execute(query, dict_team)														 
+	cur = con.cursor()
+	cur.execute(query, dict_team)
 	con.commit()
+	print("Player insert ready")
 
 # def save_team_info(dict_team):
 # 	print("dict_team: ", dict_team)
