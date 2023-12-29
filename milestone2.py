@@ -527,6 +527,7 @@ def navigate_through_teams(driver, sport_id, tournament_id, season_id, section =
 			if database_enable:
 				save_tournament(dict_tournament)
 				save_team_info(dict_team)
+				dict_team['player_meta'] = ''
 				save_league_team_entity(dict_team)
 
 			squad_button = driver.find_element(By.CLASS_NAME, 'tabs__tab.squad')
