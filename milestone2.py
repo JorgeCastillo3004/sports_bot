@@ -94,7 +94,7 @@ def get_ligues_data(driver):
 					  'league_name_i18n':'', 'season_end':datetime.now(), 'season_start':datetime.now()}
 	return ligue_tornamen
 
-def get_teams_data(driver, sport_id, tournament_id, season_id, team_info):
+def get_teams_data(driver, sport_id, league_id, season_id, team_info):
 	block_ligue_team = driver.find_element(By.CLASS_NAME, 'container__heading')
 
 
@@ -110,10 +110,10 @@ def get_teams_data(driver, sport_id, tournament_id, season_id, team_info):
 	logo_path = image_path.replace('images/logos/','')
 	team_id = random_id()
 	instance_id = random_id()	
-	
+	meta_dict = {'statistics':team_info['statistics'], 'last_results':team_info['last_results']}
 	team_info = {"team_id":team_id,"team_position":team_info['position'], "team_country":team_country,"team_desc":'', 'team_logo':logo_path,\
-			 'team_name': team_name,'sport_id': sport_id,'tournament_id':tournament_id, 'league_id':tournament_id, 'season_id':season_id,\
-			 'instance_id':instance_id, 'team_meta':'', 'stadium':stadium, 'statistics':team_info['statistics'], 'last_results':team_info['last_results']}
+			 'team_name': team_name,'sport_id': sport_id, 'league_id':league_id, 'season_id':season_id,\
+			 'instance_id':instance_id, 'team_meta':meta_dict, 'stadium':stadium}
 	return team_info
 
 def find_ligues_torneos(driver):
@@ -519,9 +519,14 @@ def navigate_through_teams(driver, sport_id, tournament_id, season_id, section =
 			wait_update_page(driver, team_info['team_url'], 'heading')
 
 			dict_team = get_teams_data(driver, sport_id, tournament_id, season_id, team_info)
+
+			dict_tournament = {'tournament_id':random_id(), 'team_country':dict_team['team_country'], 'desc_i18n':'','end_date':datetime.now(),\
+			  'logo':'', 'name_i18n':'', 'season':season_id, 'start_date':datetime.now(), 'tournament_year':2023}
+			dict_team['tournament_id'] = dict_tournament['tournament_id']
 			print("Save in database teams info")
 			if database_enable:
-				save_team_info(dict_team)				
+				save_tournament(dict_tournament)
+				save_team_info(dict_team)
 				save_league_team_entity(dict_team)
 
 			squad_button = driver.find_element(By.CLASS_NAME, 'tabs__tab.squad')
@@ -562,8 +567,9 @@ def main_m2(driver, flag_news = False):
 						print("Extract ligue info: ")
 						league_tornamen_info = get_ligues_data(driver)
 						if database_enable:
-							save_ligue_tornament_info(league_tornamen_info)
+							save_ligue_info(league_tornamen_info)
 							save_season_database(league_tornamen_info)
+							# save_tournament(dict_ligue_tornament)
 						print(league_tornamen_info)
 						print("League id: ", league_tornamen_info['league_id'])
 						
