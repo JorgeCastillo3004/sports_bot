@@ -318,7 +318,8 @@ def navigate_through_rounds(driver, section_name = 'results'):
 		print("last_procesed_index: ", last_procesed_index)
 
 		last_procesed_index = extract_info_results(driver, last_procesed_index, current_results, section_name)
-		more_rounds_loaded = click_show_more_rounds(driver, current_results, section_name)
+		# more_rounds_loaded = click_show_more_rounds(driver, current_results, section_name) # UNCOMENT ## URGENT DELETE
+		more_rounds_loaded = False ### URGENT DELETE
 		print("Len list results not updated: ", len(current_results))
 		if more_rounds_loaded:
 			# Update of list of current results
@@ -404,7 +405,8 @@ def get_teams_info(driver):
 										   'position':team_position, 'last_results': games_hist}
 	return dict_teams_availables
 
-def get_complete_match_info(driver, section='results'):
+def get_complete_match_info(driver, sport, league_id, season_id, section = 'results'):
+    
 	base_dir = 'check_points/{}/'.format(section)
 	list_folders = os.listdir(base_dir)
 
@@ -426,6 +428,11 @@ def get_complete_match_info(driver, section='results'):
 				event_info['statistic_info'] = get_statistics_game(driver)
 
 				print(event_info, '\n')
+				print("Save in data base match info")
+				if database_enable:
+					print("save in db")
+				stop_validate()
+
 		print("folder_path to delete: ", folder_path)
 		shutil.rmtree(folder_path)
 		stop_validate()
@@ -531,7 +538,8 @@ def navigate_through_teams(driver, sport_id, league_id, tournament_id, season_id
 			wait_update_page(driver, squad_url, 'heading')
 			dict_squad = get_squad_dict(driver)
 			navigate_through_players(driver, dict_squad)
-			# break ### URGENT DELETE #######
+			if count = 3:
+				break ### URGENT DELETE #######
 		# Remove processed file
 		os.remove(file_name)
 #####################################################################
@@ -572,32 +580,39 @@ def main_m2(driver, flag_news = False):
 							save_season_database(league_tornamen_info)
 							save_tournament(dict_tournament)
 						print(league_tornamen_info)
+						league_id = league_tornamen_info['league_id']
+						tournament_id = dict_tournament['tournament_id']
+						season_id = league_tornamen_info['season_id']
+						
 						print("League id: ", league_tornamen_info['league_id'])
 						
 						# Build dict links standings, fixtures, results
 						dict_section_links = get_sections_links(driver)
-						if sport != 'TENNIS':
-							wait_update_page(driver, dict_section_links['standings'], "container__heading")
-							dict_teams_availables = get_teams_info(driver)							
-							league_name = league_tornamen_info['league_name'].replace(' ', '_')
-							save_check_point('check_points/standings/{}.json'.format(league_name), dict_teams_availables)
-							navigate_through_teams(driver, sport, league_tornamen_info['league_id'], dict_tournament['tournament_id'], league_tornamen_info['season_id'], section = 'standings')
-							
 
-						# Loop over teams link and complete information available.#####
-						###############################################################
+						get_player_team_info = False
+						if get_player_team_info:
+							if sport != 'TENNIS':
+								wait_update_page(driver, dict_section_links['standings'], "container__heading")
+								dict_teams_availables = get_teams_info(driver)							
+								league_name = league_tornamen_info['league_name'].replace(' ', '_')
+								save_check_point('check_points/standings/{}.json'.format(league_name), dict_teams_availables)
+								navigate_through_teams(driver, sport, league_id, tournament_id, season_id, section = 'standings')
+						
+						# tournament_id = 'aftjcxzeoeftlswi03330'
+						# # Loop over teams link and complete information available.#####
+						# ###############################################################
 
 
-						###############################################################
+						# ###############################################################
 
-						wait_update_page(driver, dict_section_links['fixtures'], "container__heading")
-						navigate_through_rounds(driver, section_name = 'fixtures')
-						get_complete_match_info(driver, section='fixtures')
+						# wait_update_page(driver, dict_section_links['fixtures'], "container__heading")
+						# navigate_through_rounds(driver, section_name = 'fixtures')
+						# get_complete_match_info(driver, sport, league_id, season_id, section='fixtures')
 
-						wait_update_page(driver, dict_section_links['results'], "container__heading")
-						navigate_through_rounds(driver, section_name = 'results')
+						# wait_update_page(driver, dict_section_links['results'], "container__heading")
+						# navigate_through_rounds(driver, section_name = 'results')
 
-						get_complete_match_info(driver, section='results')
+						# get_complete_match_info(driver, sport, league_id, season_id, section='results')
 
 						print("#"*30, '\n'*2)						
 						
